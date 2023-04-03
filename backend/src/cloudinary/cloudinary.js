@@ -1,13 +1,11 @@
-const cloudinary = require('cloudinary').v2
-const fileUpload = require('express-fileupload')
+const cloudinary = require('cloudinary')
 const express=require('express')
+const dotenv=require('dotenv')
 const app=express()
 
-exports.cloudinary = cloudinary.config({
-    cloud_name: 'divscx3hc',
-    api_key: '521783356674715',
-    api_secret: 'EqkZ38Ju18PMZyIWoqSvdf-1yR8',
+cloudinary.config({
+    cloud_name: "dthqgnlbt",
+    api_key: "482885331891743",
+    api_secret: "VNKl4RlCVYZE0dAPv39_m_KWHJY",
 })
-exports.file = app.use(fileUpload ({
-    useTempFiles: true,
-}))
+module.exports=cloudinary

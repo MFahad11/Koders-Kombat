@@ -5,8 +5,5 @@ dotenv.config({ path: path.join(__dirname, '../../.env') });
 module.exports={
 
     // Database
-    MONGODB_URL: "mongodb+srv://Fahad:dellinspiron15@cluster0.cn8mayv.mongodb.net/LMS?retryWrites=true&w=majority",
-   
-  
-     
+    MONGODB_URL: "mongodb+srv://fahadahad567:hdJJl8J8de6ZPBdG@cluster0.bxxnkwo.mongodb.net/test",   
 }

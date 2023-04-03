@@ -1,0 +1,43 @@
+.aims-and-objectives-container {
+    padding: 5rem 0;
+    background-color: #F4F4F4; /* choose your desired background color */
+  }
+  
+  .aims-and-objectives-header {
+    font-size: 3rem;
+    color: #333; /* choose your desired font color */
+    margin-bottom: 2rem;
+  }
+  
+  .aims-and-objectives-text {
+    font-size: 1.5rem;
+    color: #333; /* choose your desired font color */
+    margin-bottom: 2rem;
+  }
+  
+  .aims-and-objectives-list {
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+  }
+  
+  .aims-and-objectives-list li {
+    font-size: 1.2rem;
+    color: #333; /* choose your desired font color */
+    margin-bottom: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .aims-and-objectives-header {
+      font-size: 2rem;
+    }
+  
+    .aims-and-objectives-text {
+      font-size: 1.2rem;
+    }
+  
+    .aims-and-objectives-list li {
+      font-size: 1rem;
+    }
+  }
+  
