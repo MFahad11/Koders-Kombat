@@ -6,8 +6,8 @@ import Membership from "./components/membership/Membership";
 import NavBar from "./components/navbar/Navbar";
 import RegistrationForm from "./components/register/RegistrationForm";
 import PrivateRoute from './components/Routing/PrivateRoute';
-import Home from "./components/Home/Home";
-// import Home from "./components/GeneralScreens/Home"
+import Main from "./components/Home/Main";
+import Home from "./components/GeneralScreens/Home"
 import LoginScreen from "./components/AuthScreens/LoginScreen"
 import RegisterScreen from "./components/AuthScreens/RegisterScreen"
 import ForgotPasswordScreen from "./components/AuthScreens/ForgotPasswordScreen"
@@ -16,6 +16,7 @@ import AddStory from './components/StoryScreens/AddStory';
 import DetailStory from './components/StoryScreens/DetailStory';
 import Header from './components/GeneralScreens/Header';
 import Footer from './components/GeneralScreens/Footer';
+// import Footer from "./components/footer/Footer";
 import Profile from './components/ProfileScreens/Profile';
 import EditProfile from './components/ProfileScreens/EditProfile';
 import ChangePassword from './components/ProfileScreens/ChangePassword';
@@ -37,11 +38,9 @@ function App() {
                     <Routes>
                           
                           <Route path="/" element={<LayoutsWithHeader />}>
-
                                 <Route path='*' element={<NotFound />} />
-
-                                <Route exact path='/' element={<PrivateRoute />}>
-                                      <Route exact path='/' element={<Home />} />
+                                <Route exact path='/blog' element={<PrivateRoute />}>
+                                      <Route exact path='/blog' element={<Home />} />
                                 </Route>
 
                                 <Route exact path="/story/:slug" element={<DetailStory />} />
@@ -84,7 +83,7 @@ function App() {
                           </Route>
 
                           <Route exact path="/login" element={<LoginScreen />} />
-                          <Route path="/main" exact element={<Home/>}></Route>
+                          <Route index element={<Main/>}></Route>
                           <Route exact path="/register" element={<RegisterScreen />} />
                         <Route exact path="/membership" element={<Membership/>}></Route>
                           <Route exact path="/forgotpassword" element={<ForgotPasswordScreen />} />
@@ -106,6 +105,7 @@ const LayoutsWithHeader = () => {
   return (
         <>
               <Header />
+              {/* <NavBar/> */}
               <Outlet />
               <Footer />
         </>

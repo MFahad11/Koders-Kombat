@@ -31,23 +31,23 @@ const Membership = () => {
         profileImg:data_obj.get('profileImg'),
   
       }
-      console.log(data)
+      form.reset();
       // console.log(data.profileImg)
       const response=await axios.post("http://localhost:4500/api/user/membership",data,{headers: {
         'Content-Type': 'multipart/form-data'
       }})
-      console.log(response)
+     
   };
 
   return (
     <Form noValidate validated={validated} onSubmit={handleSubmit} enctype="multipart/form-data">
       <Row className="mb-3">
-      <Form.Group as={Col} md="4" controlId="validationCustom01">
+      <Form.Group as={Col} md="5" controlId="validationCustom01">
           <Form.Label>Email</Form.Label>
           <Form.Control required type="email" placeholder="Enter email" name="email"/>
           <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
         </Form.Group>
-        <Form.Group as={Col} md="4" controlId="validationCustom02">
+        <Form.Group as={Col} md="5" controlId="validationCustom02">
           <Form.Label>Full name</Form.Label>
           <Form.Control
             required
@@ -59,7 +59,7 @@ const Membership = () => {
         </Form.Group>
       </Row>
       <Row className="mb-3">
-        <Form.Group as={Col} md="3" controlId="validationCustom03">
+        <Form.Group as={Col} md="4" controlId="validationCustom03">
         <Form.Label>Phone</Form.Label>
             <InputGroup>    
           <InputGroup.Text id="basic-addon1">+92</InputGroup.Text>
@@ -81,7 +81,7 @@ const Membership = () => {
       <option value="IBA">IBA</option>
     </Form.Select>
         </Form.Group>
-        <Form.Group as={Col} md="2" controlId="validationCustom03">
+        <Form.Group as={Col} md="3" controlId="validationCustom03">
         <Form.Label>Batch</Form.Label>
         <Form.Select required name="batch">
         <option value="">select</option>
@@ -94,7 +94,7 @@ const Membership = () => {
         </Form.Group>
       </Row>
       <Row className="mb-3">
-        <Form.Group as={Col} md="3" controlId="validationCustom03">
+        <Form.Group as={Col} md="4" controlId="validationCustom03">
         <Form.Label>Domain of Interest</Form.Label>
         <Form.Select required name="interest">
       <option value="">select</option>
@@ -105,7 +105,7 @@ const Membership = () => {
       <option value="blockchain">Blockchain</option>
     </Form.Select>
         </Form.Group>
-        <Form.Group as={Col} md="3" controlId="validationCustom03">
+        <Form.Group as={Col} md="6" controlId="validationCustom03">
         <Form.Label>Input picture</Form.Label>
         <Form.Control type="file" required name="profileImg" accept="image/*" onChange={handleFileChange}/>
       </Form.Group>
