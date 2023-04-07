@@ -1,6 +1,5 @@
 .hero-container {
-    height: 100vh;
-    background-color: #E2E2E2; /* choose your desired background color */
+    height: 100vh;/* choose your desired background color */
     display: flex;
     justify-content: center;
     align-items: center;

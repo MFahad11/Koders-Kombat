@@ -1,11 +1,11 @@
 .about-us-container {
     padding: 5rem 0;
-    background-color: #F9F9F9; /*choose your desired background color*/
+    /* background-color: #F9F9F9; choose your desired background color */
     /* background-image: '../../assets/background.png'; */
   }
   
   .about-us-image {
-    border-radius: 50%;
+    border-radius: 5%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   

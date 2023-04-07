@@ -1,21 +1,23 @@
 import { useEffect, useRef, useState } from 'react';
-import Container from 'react-bootstrap/Container';
+import { Container,  Image } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link as path } from 'react-router-dom';
 import { Link, animateScroll as scroll } from "react-scroll";
-import logo from '../../assets/WhatsApp Image 2022-12-12 at 23.13.37.jpg'
+import "./Navbar.css"
+
 function NavBar() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
+    
+    <Navbar collapseOnSelect >
       <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand href="#home" className='start' >Student Coding Club</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
+        <Navbar.Collapse className="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#pricing">Members</Nav.Link>
-            <Nav.Link href="#pricing">Blog</Nav.Link>
+            <Nav.Link href="#pricing" >Members</Nav.Link>
+            <Nav.Link href="#pricing" >Blog</Nav.Link>
             <Nav.Link href="#pricing">Leaderboard</Nav.Link>
             <Link
     activeClass="active" 
