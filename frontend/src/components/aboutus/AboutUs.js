@@ -1,14 +1,14 @@
 import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import './AboutUs.css';
-
+import img from '../../assets/arif-riyanto-vJP-wZ6hGBg-unsplash.jpg'
 function AboutUs() {
   return (
     <div className="about-us-container">
       <Container>
         <Row className="align-items-center">
           <Col md={6}>
-            <image src="../../assets/background.png" alt="About Us" fluid className="about-us-image" />
+            <Image src={img} alt="About Us" fluid className="about-us-image" />
           </Col>
           <Col md={6} className="text-center">
             <h2 className="about-us-header">About Our Club</h2>

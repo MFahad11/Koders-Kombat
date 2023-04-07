@@ -31,7 +31,7 @@ const sponsors = [
 
 const SponsorsPage = () => {
   return (
-    <Container>
+    <Container id='sponsor'>
       <Row>
         <Col>
           <h1 className="my-5">Our Sponsors</h1>

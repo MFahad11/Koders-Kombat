@@ -7,10 +7,10 @@ import ClubActivities from '../activities/Activities'
 import SponsorsPage from '../sponsor/Sponsor'
 import Footer from '../footer/Footer'
 
-const Home = () => {
+const Main = () => {
   return (
     <div>
-      <NavBar/>
+    <NavBar/>
       <Hero/>
       <AboutUs/>
       <AimsAndObjectives/>
@@ -21,4 +21,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Main
