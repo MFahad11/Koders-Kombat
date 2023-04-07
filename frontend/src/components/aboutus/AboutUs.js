@@ -8,7 +8,7 @@ function AboutUs() {
       <Container>
         <Row className="align-items-center">
           <Col md={6}>
-            <Image src="../../assets/arif-riyanto-vJP-wZ6hGBg-unsplash.jpg" alt="About Us" fluid className="about-us-image" />
+            <image src="../../assets/background.png" alt="About Us" fluid className="about-us-image" />
           </Col>
           <Col md={6} className="text-center">
             <h2 className="about-us-header">About Our Club</h2>

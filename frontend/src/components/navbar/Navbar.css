@@ -9,8 +9,12 @@
     align-items: center;
   }
   .navbar-brand {
-    font-size: 1.5rem; /* Increase the font size of the brand */
+    font-size: 5rem; /* Increase the font size of the brand */
     font-weight: bold; /* Set the font weight to bold */
+    color: white;
+    font-family: 'Eina';
+    background-image: "url('https://imgur.com/L2Nwvc7')";
+
   }
   
   .navbar-nav {
