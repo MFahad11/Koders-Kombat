@@ -35,9 +35,9 @@ const Header = () => {
         <header>
             <div className="averager">
 
-                <Link to="/" className="logo">
+                <Link to="/blog" className="logo">
                     <h5>
-                        MERN BLOG
+                        KodersHUB
 
                     </h5>
                 </Link>

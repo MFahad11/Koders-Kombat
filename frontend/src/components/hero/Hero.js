@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import Dialog from '../modal/Modal';
 import './Hero.css';
+import Membership from '../membership/Membership';
 
 function Hero() {
   const [show, setShow] = useState(false);
@@ -16,7 +17,7 @@ function Hero() {
           </Col>
         </Row>
       </Container>
-      <Dialog show={show} setShow={setShow}/>
+      <Dialog show={show} setShow={setShow} elem={<Membership/>} title={"Membership Form"}/>
     </div>
   );
 }

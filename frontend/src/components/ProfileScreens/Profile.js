@@ -36,7 +36,7 @@ const Profile = () => {
                 setLoading(false)
             }
             catch (error) {
-                navigate('/')
+                navigate('/blog')
             }
         }
 
@@ -50,7 +50,7 @@ const Profile = () => {
             {
                 loading ? <Loader /> :
                     <div className="Inclusive_profile_page">
-                        <Link to={'/'} >
+                        <Link to={'/blog'} >
                             <FiArrowLeft />
                         </Link>
                         <div className="profile-top-wrap">

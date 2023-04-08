@@ -29,13 +29,13 @@ const Home = () => {
 
         if (searchKey) {
           navigate({
-            pathname: '/',
+            pathname: '/blog',
             search: `?search=${searchKey}${page > 1 ? `&page=${page}` : ""}`,
           });
         }
         else {
           navigate({
-            pathname: '/',
+            pathname:'/blog',
             search: `${page > 1 ? `page=${page}` : ""}`,
           });
 
@@ -83,9 +83,6 @@ const Home = () => {
                 )
               }) : <NoStories />
             }
-            <img className="bg-planet-svg" src="planet.svg" alt="planet" />
-            <img className="bg-planet2-svg" src="planet2.svg" alt="planet" />
-            <img className="bg-planet3-svg" src="planet3.svg" alt="planet" />
 
           </div>
 

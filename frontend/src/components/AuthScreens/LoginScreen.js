@@ -22,7 +22,7 @@ const LoginScreen = () => {
 
       setTimeout(() => {
 
-        navigate("/")
+        navigate("/blog")
 
       }, 1800)
 

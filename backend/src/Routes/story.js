@@ -7,7 +7,7 @@ const { checkStoryExist, checkUserAndStoryExist } = require("../middleware/datab
 
 const router = express.Router() ;
 
-router.post("/addstory" ,getAccessToRoute, upload.single('image'),addStory)
+router.post("/addstory" ,[getAccessToRoute, upload.single('image')],addStory)
 
 
 router.post("/:slug", checkStoryExist, detailStory)

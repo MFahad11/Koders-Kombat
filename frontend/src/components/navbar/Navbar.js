@@ -1,39 +1,101 @@
-import { useEffect, useRef, useState } from 'react';
-import { Container,  Image } from 'react-bootstrap';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import { Link as path } from 'react-router-dom';
+import { useEffect, useRef, useState } from "react";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import { NavLink } from "react-router-dom";
 import { Link, animateScroll as scroll } from "react-scroll";
-import "./Navbar.css"
-
+import logo from "../../assets/WhatsApp Image 2022-12-12 at 23.13.37.jpg";
+import Dialog from "../modal/Modal";
+import Calendar from "../calendar/Calendar";
 function NavBar() {
+  const [show, setShow] = useState(false);
   return (
     
-    <Navbar collapseOnSelect >
+    <Navbar collapseOnSelect fixed="top" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#home" className='start' >Student Coding Club</Navbar.Brand>
+        <Link
+          activeClass="active"
+          to="hero"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={400}
+          style={{ textDecoration: "none" }}
+        >
+          <Navbar.Brand href="#home">
+            <img
+              alt=""
+              src={logo}
+              width="30"
+              height="30"
+              className="d-inline-block align-top"
+            />{" "}
+            KoderKombat
+          </Navbar.Brand>
+        </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse className="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#pricing"  >Members</Nav.Link>
-            <Nav.Link href="#pricing" >Blog</Nav.Link>
-            <Nav.Link href="#pricing">Leaderboard</Nav.Link>
+            <Nav.Link href="#pricing" >Members</Nav.Link>
+            <Nav.Link><NavLink to='/blog' style={{textDecoration:"none"}}>Blog</NavLink></Nav.Link>
             <Link
-    activeClass="active" 
-    to="sponsor"
-    spy={true}
-    smooth={true}
-    offset={-70}
-    duration={400}
-><Nav.Link>Sponsor</Nav.Link></Link>
+              activeClass="active"
+              to="sponsor"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={400}
+            >
+              <Nav.Link>Sponsor</Nav.Link>
+            </Link>
 
             <NavDropdown title="Events" id="collasible-nav-dropdown">
-              <NavDropdown.Item>Calendar</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Ongoing
+              <NavDropdown.Item onClick={()=>{setShow(true)}}>Calendar</NavDropdown.Item>
+              <Dialog show={show} setShow={setShow} elem={<Calendar/>} title={"Future/Ongoing Events"}/>
+              
+              <NavDropdown.Item>
+                {" "}
+                <Link
+                  activeClass="active"
+                  to="event"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={400}
+                  offset={600}
+                >
+                  Ongoing Events
+                </Link>
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Gallery</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item>
+                {" "}
+                <Link
+                  activeClass="active"
+                  to="event"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={400}
+                >
+                  Past Events
+                </Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                {" "}
+                <Link
+                  activeClass="active"
+                  to="event"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={400}
+                  offset={1100}
+                >
+                  Future Events
+                </Link>
+              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Nav>

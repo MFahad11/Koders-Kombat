@@ -35,7 +35,7 @@ const PrivateRoute =( ) => {
             setAuth(false)
             setActiveUser({})
 
-            navigate("/")
+            navigate("/blog")
 
             setError("You are not authorized please login"); 
         }

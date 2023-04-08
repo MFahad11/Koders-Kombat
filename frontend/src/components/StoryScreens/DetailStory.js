@@ -34,6 +34,7 @@ const DetailStory = () => {
             authorization: `Bearer ${localStorage.getItem("authToken")}`,
           },
         });
+        console.log(data.user)
         activeUser = data.user
 
         setActiveUser(activeUser)
@@ -44,7 +45,7 @@ const DetailStory = () => {
       }
 
       try {
-        const { data } = await axios.post(`/story/${slug}`, { activeUser })
+        const { data } = await axios.post(`http://localhost:4500/api/story/${slug}`, { activeUser })
         setStory(data.data)
         setLikeStatus(data.likeStatus)
         setLikeCount(data.data.likeCount)
@@ -164,7 +165,7 @@ const DetailStory = () => {
             <div className='Inclusive-detailStory-page'>
 
               <div className="top_detail_wrapper">
-                <Link to={'/'} >
+                <Link to={'/blog'} >
                   <FiArrowLeft />
                 </Link>
                 <h5>{story.title}</h5>
@@ -234,7 +235,7 @@ const DetailStory = () => {
               <div className='story-content' >
 
                 <div className="story-banner-img">
-                  <img src={`/storyImages/${story.image}`} alt={story.title} />
+                  <img src={story.image} alt={story.title} />
 
                 </div>
 

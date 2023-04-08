@@ -24,7 +24,7 @@ import NotFound from './components/GeneralScreens/NotFound';
 import EditStory from './components/StoryScreens/EditStory';
 import ReadListPage from './components/ProfileScreens/ReadListPage';
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import { Outlet } from 'react-router-dom'
 import Hero from "./components/hero/Hero";
 
@@ -38,10 +38,11 @@ function App() {
                     <Routes>
                           
                           <Route path="/" element={<LayoutsWithHeader />}>
-                                <Route path='*' element={<NotFound />} />
-                                <Route exact path='/blog' element={<PrivateRoute />}>
-                                      <Route exact path='/blog' element={<Home />} />
+                          <Route path='*' element={<NotFound />} />
+                                <Route path='/blog' element={<PrivateRoute />}>
+                                      <Route path='/blog' element={<Home />} />
                                 </Route>
+
 
                                 <Route exact path="/story/:slug" element={<DetailStory />} />
 
@@ -84,8 +85,14 @@ function App() {
 
                           <Route exact path="/login" element={<LoginScreen />} />
                           <Route index element={<Main/>}></Route>
+                          {/* <Route exact path="/">
+                                <Navigate to="/main" />
+                          </Route> */}
                           <Route exact path="/register" element={<RegisterScreen />} />
                         <Route exact path="/membership" element={<Membership/>}></Route>
+                        <Route exact path='/registeration' element={<RegistrationForm/>}></Route>
+                        <Route exact path="/calendar" element={<Calendar/>}></Route>
+
                           <Route exact path="/forgotpassword" element={<ForgotPasswordScreen />} />
 
                           <Route exact path="/resetpassword" element={<ResetPasswordScreen />} />

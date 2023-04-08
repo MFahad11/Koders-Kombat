@@ -31,6 +31,7 @@ const Membership = () => {
         profileImg:data_obj.get('profileImg'),
   
       }
+      console.log(data)
       form.reset();
       // console.log(data.profileImg)
       const response=await axios.post("http://localhost:4500/api/user/membership",data,{headers: {
