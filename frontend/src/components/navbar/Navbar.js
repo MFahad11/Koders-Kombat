@@ -61,7 +61,6 @@ function NavBar() {
                   to="event"
                   spy={true}
                   smooth={true}
-                  offset={-70}
                   duration={400}
                   offset={600}
                 >
@@ -89,7 +88,6 @@ function NavBar() {
                   to="event"
                   spy={true}
                   smooth={true}
-                  offset={-70}
                   duration={400}
                   offset={1100}
                 >
