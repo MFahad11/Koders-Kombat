@@ -8,12 +8,13 @@ import { Link, animateScroll as scroll } from "react-scroll";
 import logo from "../../assets/WhatsApp Image 2022-12-12 at 23.13.37.jpg";
 import Dialog from "../modal/Modal";
 import Calendar from "../calendar/Calendar";
+import './Navbar.css'
 function NavBar() {
   const [show, setShow] = useState(false);
   return (
     
-    <Navbar collapseOnSelect fixed="top" bg="dark" variant="dark">
-      <Container>
+    <Navbar collapseOnSelect >
+      <Container >
         <Link
           activeClass="active"
           to="hero"
@@ -23,22 +24,25 @@ function NavBar() {
           duration={400}
           style={{ textDecoration: "none" }}
         >
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="#home" className="start" style={{color : "white", fontSize:'1.5rem'}}>
             <img
               alt=""
               src={logo}
               width="30"
               height="30"
               className="d-inline-block align-top"
+
             />{" "}
-            KoderKombat
+            WebKode
           </Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse className="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#pricing" >Members</Nav.Link>
-            <Nav.Link><NavLink to='/blog' style={{textDecoration:"none"}}>Blog</NavLink></Nav.Link>
+            <NavLink to='/blog' style={{fontSize: "1rem", 
+    marginRight: "15px", 
+    color: 'white', textDecoration : 'none' , marginTop : '7px'}}>BLOG</NavLink>
             <Link
               activeClass="active"
               to="sponsor"

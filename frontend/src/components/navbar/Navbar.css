@@ -1,12 +1,17 @@
-  .tag{
-    display: flex;
-    align-items: center;
-  }
-  .navbar-brand {
+ 
+  .navbar-brand  {
     font-size: 5rem; 
     font-weight: bold; 
     color: white;
   }
+  #collasible-nav-dropdown{
+    font-size: 1rem; 
+    margin-right: 15px; 
+    color: white; 
+    text-transform: uppercase;
+
+  }
+ 
   
   .navbar-nav {
     margin-left: auto; 
@@ -26,3 +31,8 @@
     color: white;
   }
 
+  .main{
+    padding: 0;
+    align-items: normal;
+    
+  }
