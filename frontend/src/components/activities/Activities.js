@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button, Carousel } from 'react-bootstrap';
 import './Activities.css';
 
 function ClubActivities() {
@@ -78,7 +78,18 @@ function ClubActivities() {
     const eventEndDate = new Date(event.endDate);
     return eventStartDate <= now && eventEndDate >= now;
   });
-  
+  const renderCarouselItems = (events) => {
+    const items = [];
+    for (let i = 0; i < events.length; i += 3) {
+      const eventGroup = events.slice(i, i + 3);
+      items.push(
+        <Carousel.Item key={i}>
+          <Row>{renderEventCards(eventGroup)}</Row>
+        </Carousel.Item>
+      );
+    }
+    return items;
+  };
   const renderEventCards = (events) => {
     return events.map((event, index) => {
       return (
@@ -100,7 +111,7 @@ function ClubActivities() {
   };
 
   return (
-    <div className="club-activities-container">
+    <div className="club-activities-container" id='event'>
       <Container>
         <Row className="justify-content-center mb-4">
           <Col md={8} className="text-center">
@@ -111,22 +122,28 @@ function ClubActivities() {
 
         {pastEvents.length > 0 && (
           <>
-            <h3 className="club-activities-subheader">Past Events</h3>
-            <Row className="justify-content-center">{renderEventCards(pastEvents)}</Row>
+          <h3>Past Events</h3>
+      <Carousel interval={null} touch={true} fade={false}>
+        {renderCarouselItems(pastEvents)}
+      </Carousel>
           </>
         )}
 
         {ongoingEvents.length > 0 && (
           <>
-            <h3 className="club-activities-subheader">Ongoing Events</h3>
-            <Row className="justify-content-center">{renderEventCards(ongoingEvents)}</Row>
+          <h3>Ongoing Events</h3>
+      <Carousel interval={null} touch={true} fade={false}>
+        {renderCarouselItems(ongoingEvents)}
+      </Carousel>
           </>
         )}
 
         {upcomingEvents.length > 0 && (
           <>
-            <h3 className="club-activities-subheader">Upcoming Events</h3>
-            <Row className="justify-content-center">{renderEventCards(upcomingEvents)}</Row>
+          <h3>Upcoming Events</h3>
+      <Carousel interval={null} touch={true} fade={false}>
+        {renderCarouselItems(upcomingEvents)}
+      </Carousel>
          </>)
         }
     </Container>

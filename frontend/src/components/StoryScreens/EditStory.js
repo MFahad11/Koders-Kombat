@@ -56,7 +56,7 @@ const EditStory = () => {
             setSuccess('Edit Story successfully ')
 
             setTimeout(() => {
-                navigate('/')
+                navigate('/blog')
             }, 2500)
 
         }

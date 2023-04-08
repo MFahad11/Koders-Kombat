@@ -1,34 +1,37 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
+import Dialog from '../modal/Modal';
+import { useNavigate } from 'react-router-dom';
 
-function RegistrationForm() {
+function RegisterForm() {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [participationType, setParticipationType] = useState('');
   const [teamName, setTeamName] = useState('');
   const [teamMembers, setTeamMembers] = useState([]);
-
   const handleFullNameChange = event => setFullName(event.target.value);
   const handleEmailChange = event => setEmail(event.target.value);
   const handleParticipationTypeChange = event => setParticipationType(event.target.value);
   const handleTeamNameChange = event => setTeamName(event.target.value);
   const handleTeamMembersChange = event => setTeamMembers(event.target.value.split(','));
+  const navigate=useNavigate()
 
   const handleSubmit = async(event) => {
     event.preventDefault();
     
-    const response=await axios.post('http://localhost:4500/user/register',{ fullName, email, participationType, teamName, teamMembers })
+    const response=await axios.post('http://localhost:4500/api/user/register',{ fullName, email, participationType, teamName, teamMembers })
     console.log(response)
     setFullName("");
     setEmail("");
     setParticipationType("");
     setTeamName("");
     setTeamMembers([])
+    navigate('/')
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <><Form onSubmit={handleSubmit}>
       <Form.Group controlId="participationType">
         <Form.Label>Participation Type</Form.Label>
         <Form.Control as="select" value={participationType} onChange={handleParticipationTypeChange}>
@@ -72,7 +75,15 @@ function RegistrationForm() {
 
       <Button variant="primary" type="submit">Register</Button>
     </Form>
+    </>
   );
 }
-
+const RegistrationForm = () => {
+  const [show,setShow]=useState(true)
+  return (
+    <>
+      <Dialog show={show} setShow={setShow} elem={<RegisterForm/>} title={"Registeration Form"}/>
+    </>
+  )
+}
 export default RegistrationForm;
