@@ -1,24 +1,29 @@
 .about-us-container {
-    padding: 5rem 0;
-    /* background-color: #F9F9F9; choose your desired background color */
-    /* background-image: '../../assets/background.png'; */
+  color: rgba(0, 0, 0, 0.87);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+  overflow: hidden;
+  background-color: rgba(60, 60, 60, 0.4);
+  padding: 32px;
+  margin-left: 32px;
+  margin-right: 32px;
   }
   
-  .about-us-image {
-    border-radius: 5%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
   
   .about-us-header {
     font-size: 3rem;
-    color: #333; /* choose your desired font color */
-    margin-bottom: 2rem;
+    color: white; 
+    display: block;
+    margin-bottom:8px ;
+
   }
   
   .about-us-text {
-    font-size: 1.2rem;
-    color: #333; /* choose your desired font color */
+    font-size: 1rem;
+    color: white; /* choose your desired font color */
     line-height: 1.5;
+    font-weight: 400;
   }
 
   

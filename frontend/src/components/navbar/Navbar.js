@@ -16,7 +16,7 @@ function NavBar() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse className="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#pricing" >Members</Nav.Link>
+            <Nav.Link href="#pricing"  >Members</Nav.Link>
             <Nav.Link href="#pricing" >Blog</Nav.Link>
             <Nav.Link href="#pricing">Leaderboard</Nav.Link>
             <Link
@@ -37,9 +37,7 @@ function NavBar() {
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">Facebook</Nav.Link>
-            <Nav.Link href="#deets">Twitter</Nav.Link>
-            <Nav.Link href="#memes">Linkedin</Nav.Link>
+            <Nav.Link href="https://www.facebook.com/kodersclub">Facebook</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
