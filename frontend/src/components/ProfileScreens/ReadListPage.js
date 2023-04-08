@@ -48,7 +48,7 @@ const ReadListPage = () => {
             {loading ? <Loader /> :
 
                 <div className="Inclusive-readList-page">
-                    <Link to={'/'} >
+                    <Link to={'/blog'} >
                         <FiArrowLeft />
                     </Link>
                     <h2>Reading List </h2>

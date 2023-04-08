@@ -6,7 +6,7 @@ const StorySchema = new mongoose.Schema({
 
     author: {
         type: mongoose.Schema.ObjectId,
-        ref: "User",
+        ref: "member",
         required: true
     },
     slug: String,
@@ -31,7 +31,7 @@ const StorySchema = new mongoose.Schema({
     },
     likes: [{
         type: mongoose.Schema.ObjectId,
-        ref: "User"
+        
     }],
     likeCount: {
         type: Number,

@@ -125,7 +125,8 @@ exports.readListPage = catchAsync(async (req, res, next) => {
 
 })
 exports.createUser = catchAsync(async (req, res, next) => {
-  console.log(req.file.path)
+  console.log(req.body)
+  // console.log(req.file.path)
   const payload = {
       fullName: req.body.fullname,
       email: req.body.email,

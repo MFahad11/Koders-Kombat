@@ -11,7 +11,8 @@ import Calendar from "../calendar/Calendar";
 function NavBar() {
   const [show, setShow] = useState(false);
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
+    
+    <Navbar collapseOnSelect fixed="top" bg="dark" variant="dark">
       <Container>
         <Link
           activeClass="active"
@@ -34,7 +35,7 @@ function NavBar() {
           </Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
+        <Navbar.Collapse className="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#pricing">Members</Nav.Link>
             <Nav.Link><NavLink to='/blog' style={{textDecoration:"none"}}>Blog</NavLink></Nav.Link>
@@ -105,6 +106,7 @@ function NavBar() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+
   );
 }
 

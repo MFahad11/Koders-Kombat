@@ -19,7 +19,6 @@ const AddStory = () => {
     const [content, setContent] = useState('')
     const [success, setSuccess] = useState('')
     const [error, setError] = useState('')
-
     const clearInputs = () => {
         setTitle('')
         setContent('')
@@ -27,20 +26,25 @@ const AddStory = () => {
         editorEl.current.editor.setData('')
         imageEl.current.value = ""
     }
-
+    const handleFileChange=(event)=>{
+        setImage(event.target.files[0])
+      }
     const handleSubmit = async (e) => {
-        e.preventDefault();
+        e.preventDefault()
         const form = e.currentTarget;
-        const formdata = new FormData(form)
-        // console.log(content)
+        const formdata = new FormData(form);
         const payload={
             title:formdata.get('title'),
-            image:formdata.get('image'),
-            content:content,
+            image:formdata.get("image"),
+            content:content
         }
         console.log(payload)
         try {
-            const { data } = await axios.post("http://localhost:4500/api/story/addstory", payload, config)
+            const { data } = await axios.post("http://localhost:4500/api/story/addstory", payload,
+            {headers: {
+                'Content-Type': 'multipart/form-data',
+                authorization: `Bearer ${localStorage.getItem("authToken")}`,
+              }})
             setSuccess('Add story successfully ')
 
             clearInputs()
@@ -63,7 +67,7 @@ const AddStory = () => {
     return (
 
         <div className="Inclusive-addStory-page ">
-            <Link to={'/'} >
+            <Link to={'/blog'} >
                 <FiArrowLeft />
             </Link>
             <form onSubmit={handleSubmit} className="addStory-form" encType="multipart/form-data">
@@ -73,7 +77,7 @@ const AddStory = () => {
                     <span>
                         {success}
                     </span>
-                    <Link to="/">Go home</Link>
+                    <Link to="/blog">Go home</Link>
                 </div>}
 
                 <input

@@ -5,9 +5,9 @@ const cloudinary = require('../cloudinary/cloudinary');
 const {searchHelper, paginateHelper} =require("../helpers/query/queryHelpers")
 
 const addStory = asyncErrorWrapper(async  (req,res,next)=> {
-console.log(req.files)
-    const {title,content} = req.body 
     console.log(req.body)
+    console.log(req.file)
+    const {title,content} = req.body 
     var wordCount = content.trim().split(/\s+/).length ; 
    
     let readtime = Math.floor(wordCount /200)   ;
@@ -70,13 +70,13 @@ const getAllStories = asyncErrorWrapper( async (req,res,next) =>{
 
 const detailStory =asyncErrorWrapper(async(req,res,next)=>{
 
-    const {slug}=req.params ;
-    const {activeUser} =req.body 
+    const {slug}=req.params;
+    const {activeUser}=req.body 
 
     const story = await Story.findOne({
         slug: slug 
     }).populate("author likes")
-
+    console.log(story)
     const storyLikeUserIds = story.likes.map(json => json.id)
     const likeStatus = storyLikeUserIds.includes(activeUser._id)
 

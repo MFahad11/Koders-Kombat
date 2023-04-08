@@ -1,31 +1,32 @@
-.navbar {
-    background-color: #fff; /* Set the background color */
-    border-bottom: 1px solid #ddd; /* Add a border to the bottom of the navbar */
-    padding: 15px 0; /* Add some padding to the top and bottom of the navbar */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Add a shadow to the navbar */
-  }
-  .container{
+  .tag{
     display: flex;
     align-items: center;
   }
   .navbar-brand {
-    font-size: 1.5rem; /* Increase the font size of the brand */
-    font-weight: bold; /* Set the font weight to bold */
+    font-size: 5rem; 
+    font-weight: bold; 
+    color: white;
   }
   
   .navbar-nav {
-    margin-left: auto; /* Move the navigation links to the right */
-  }
-  .nav-link {
-    font-size: 1.1rem; /* Increase the font size of the links */
-    margin-right: 15px; /* Add some space between the links */
-    color: #333; /* Set the text color of the links */
-    text-transform: uppercase; /* Transform the text to uppercase */
+    margin-left: auto; 
+  } 
+   .nav-link {
+    font-size: 1rem; 
+    margin-right: 15px; 
+    color: white; 
+    text-transform: uppercase;
   }
   
-  .navbar-toggler-icon {
-    background-image: url('data:image/svg+xml;charset=utf-8,<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path stroke="rgba(0,0,0,0.5)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>'); /* Set the background image for the toggle button */
-    width: 30px; /* Set the width of the toggle button */
-    height: 30px; /* Set the height of the toggle button */
+  .nav-me-auto{
+    color: white;
+  }
+
+  .start{
+    color: white;
+    font-size: 2rem;
+  }
+  .start:hover{
+    color: white;
   }
   

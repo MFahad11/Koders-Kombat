@@ -1,17 +1,20 @@
 const path = require("path");
 const multer = require("multer");
-
 module.exports=multer({
   storage:multer.diskStorage({}),
-    fileFilter:(re,file,cb)=>{
-      let ext=path.extname(file.originalname)
-      console.log(ext)
-      if(ext!=='.jpg' && ext!==".jpeg" && ext!==".png"){
-        cb(new Error('File type is not supported'),false)
-        return
-      }
-      cb(null,true)
+  fileFilter: (req, file, cb) => {
+    const filetypes = /jpeg|jpg|png/;
+    const extname = filetypes.test(
+      path.extname(file.originalname).toLowerCase()
+    );
+    const mimetype = filetypes.test(file.mimetype);
+    if (extname && mimetype) {
+      return cb(null, true);
+    } else {
+      cb(new Error("Only JPG, JPEG and PNG files are allowed"));
     }
+  },
+  limits: { fileSize: 1024 * 1024 * 5 },
 })
 // cloudinary.config({
 //   cloud_name: "dtxirhjul",
