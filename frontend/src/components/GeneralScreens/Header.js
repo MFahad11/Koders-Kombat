@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate,useLocation } from "react-router-dom";
 import SearchForm from './SearchForm';
 import '../../Css/Header.css'
 import { RiPencilFill } from 'react-icons/ri'
@@ -8,8 +8,10 @@ import { BiLogOut } from 'react-icons/bi'
 import { BsBookmarks } from 'react-icons/bs'
 import SkeletonElement from '../Skeletons/SkeletonElement';
 import { AuthContext } from '../../Context/AuthContext';
+import { FiArrowLeft } from 'react-icons/fi';
 
 const Header = () => {
+    const location=useLocation().pathname
     const bool = localStorage.getItem("authToken") ? true : false
     const [auth, setAuth] = useState(bool)
     const { activeUser } = useContext(AuthContext)
@@ -27,14 +29,16 @@ const Header = () => {
 
     const handleLogout = () => {
         localStorage.removeItem("authToken");
-        navigate('/')
+        navigate('/blog')
     };
 
     return (
 
         <header>
             <div className="averager">
-
+            {location==='/blog'?<Link to={'/'}>
+                <FiArrowLeft />
+            </Link>:""}
                 <Link to="/blog" className="logo">
                     <h5>
                         KodersHUB
@@ -51,12 +55,12 @@ const Header = () => {
                             <Link className='addStory-link' to="/addstory"><RiPencilFill /> Add Story </Link>
 
 
-                            <Link to="/readList" className='readList-link'>
+                            {/* <Link to="/readList" className='readList-link'>
                                 <BsBookmarks />
                                 <span id="readListLength">
                                     {activeUser.readListLength}
                                 </span>
-                            </Link>
+                            </Link> */}
                             <div className='header-profile-wrapper '>
 
 
@@ -84,9 +88,9 @@ const Header = () => {
                         :
                         <div className="noAuth_options">
 
-                            <Link className='login-link' to="/login"> Login </Link>
+                            
 
-                            <Link className='register-link' to="/register"> Get Started</Link>
+                            <Link className='register-link' to="/login">Login</Link>
                         </div>
 
                     }

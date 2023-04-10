@@ -1,0 +1,38 @@
+.filter-sort-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  .filter-sort-container label {
+    font-weight: bold;
+  }
+  
+  @media screen and (min-width: 576px) {
+    .filter-sort-container {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    .filter-sort-container label {
+      margin-right: 1rem;
+    }
+  }
+  
+  @media screen and (max-width: 575px) {
+    .filter-sort-container div {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0.5rem;
+    }
+  
+    .filter-sort-container label {
+      margin-bottom: 0.5rem;
+    }
+  
+    .filter-sort-container input[type="radio"] {
+      margin-right: 0.5rem;
+    }
+  }
+  

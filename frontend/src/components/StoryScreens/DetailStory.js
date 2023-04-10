@@ -51,7 +51,7 @@ const DetailStory = () => {
         setLikeCount(data.data.likeCount)
         setStoryLikeUser(data.data.likes)
         setLoading(false)
-
+        console.log(data.data)
         const story_id = data.data._id;
 
         if (activeUser.readList) {
@@ -99,7 +99,7 @@ const DetailStory = () => {
     catch (error) {
       setStory({})
       localStorage.removeItem("authToken")
-      navigate("/")
+      navigate("/blog")
     }
 
   }
@@ -116,7 +116,7 @@ const DetailStory = () => {
             authorization: `Bearer ${localStorage.getItem("authToken")}`,
           },
         })
-        navigate("/")
+        navigate("/blog")
 
       }
       catch (error) {
@@ -175,7 +175,7 @@ const DetailStory = () => {
                   <ul>
                     {story.author &&
                       <li className='story-author-info'>
-                        <img src={`/userPhotos/${story.author.photo}`} alt={story.author.username} />
+                        <img src={story.author.profileImg} alt={story.author.username} />
                         <span className='story-author-username'>{story.author.username}  </span>
                       </li>
                     }
@@ -192,7 +192,7 @@ const DetailStory = () => {
                     </li>
 
                   </ul>
-
+{/* 
                   {
                     !activeUser.username &&
                     <div className='comment-info-wrap'>
@@ -207,9 +207,9 @@ const DetailStory = () => {
                       <b className='commentCount'>{story.commentCount}</b>
 
                     </div>
-                  }
+                  } */}
 
-                  {activeUser && story.author &&
+                  {/* {activeUser && story.author &&
                     story.author._id === activeUser._id ?
                     <div className="top_story_transactions">
                       <Link className='editStoryLink' to={`/story/${story.slug}/edit`}>
@@ -219,7 +219,7 @@ const DetailStory = () => {
                         <RiDeleteBin6Line />
                       </span>
                     </div> : null
-                  }
+                  } */}
                 </div>
 
               </div>

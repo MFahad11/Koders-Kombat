@@ -4,12 +4,15 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 const Membership = () => {
+  const navigate=useNavigate()
   const [file,setFile]=useState("")
   const [validated, setValidated] = useState(false);
   const handleFileChange=(event)=>{
-    console.log(event.target.files[0])
     setFile(event.target.files[0])
   }
   const handleSubmit = async (event) => {
@@ -21,7 +24,7 @@ const Membership = () => {
       setValidated(true);
       const data_obj=new FormData(form);
       
-      const data={
+      const payload={
         email:data_obj.get('email'),
         fullname:data_obj.get('full name'),
         phone:data_obj.get('phone'),
@@ -31,13 +34,22 @@ const Membership = () => {
         profileImg:data_obj.get('profileImg'),
   
       }
-      console.log(data)
       form.reset();
-      // console.log(data.profileImg)
-      const response=await axios.post("http://localhost:4500/api/user/membership",data,{headers: {
+      const response=await axios.post("http://localhost:4500/api/user/membership",payload,{headers: {
         'Content-Type': 'multipart/form-data'
       }})
-     
+      const {data}=response
+      if(response.status===200){
+        if(data.status==="create"){
+          toast.success("Your Request have been received!!")
+        }else{
+          toast.info("You are already a member")
+        }
+      }
+      else{
+        toast.error('There is an error. Retry!')
+      }
+     console.log(response)
   };
 
   return (

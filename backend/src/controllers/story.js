@@ -5,11 +5,9 @@ const cloudinary = require('../cloudinary/cloudinary');
 const {searchHelper, paginateHelper} =require("../helpers/query/queryHelpers")
 
 const addStory = asyncErrorWrapper(async  (req,res,next)=> {
-    console.log(req.body)
-    console.log(req.file)
     const {title,content} = req.body 
-    var wordCount = content.trim().split(/\s+/).length ; 
-   
+    var wordCount = content.trim().split(/\s+/).length; 
+   console.log(wordCount)
     let readtime = Math.floor(wordCount /200)   ;
 
 

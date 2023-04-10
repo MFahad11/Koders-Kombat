@@ -99,6 +99,9 @@ function NavBar() {
                 </Link>
               </NavDropdown.Item>
             </NavDropdown>
+            <NavLink to='/leaderboard' style={{fontSize: "1rem", 
+    marginRight: "15px", 
+    color: 'white', textDecoration : 'none' , marginTop : '7px'}}>Leaderboard</NavLink>
           </Nav>
           <Nav>
             <Nav.Link href="https://www.facebook.com/kodersclub">Facebook</Nav.Link>

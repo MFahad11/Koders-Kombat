@@ -21,15 +21,17 @@ const ReadListPage = () => {
             setLoading(true)
 
             try {
-                const { data } = await (await axios.get(`/user/readList`, config)).data
+                const { data } = await (await axios.get(`http://localhost:4500/api/user/readList`, config)).data
                 setReadList(data)
                 setLoading(false)
+                console.log(readList)
             }
             catch (error) {
-                navigate("/")
+                navigate("/blog")
             }
         }
         getUserReadingList()
+        
 
 
     }, [])
@@ -55,13 +57,13 @@ const ReadListPage = () => {
 
                     <div className="readList-top-block">
 
-                        <img src={`/userPhotos/${activeUser.photo}`} alt={activeUser.username} />
+                        <img src={activeUser.profileImg} alt={activeUser.username} />
 
 
                         <div className='activeUser-info-wrapper'>
 
                             <b>
-                                {activeUser.username}
+                                {activeUser.fullName}
                             </b>
 
                             <div>
@@ -87,9 +89,9 @@ const ReadListPage = () => {
 
                     <div className="readList-story-wrapper">
 
-                        {readList.length !== 0 ?
+                        {readList?.length > 0 ?
                             <>
-                                {readList.map(story => {
+                                {readList?.map(story => {
                                     return (
                                         <ReadListStoryItem key={story._id} story={story} editDate={editDate} />
 

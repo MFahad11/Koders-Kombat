@@ -2,6 +2,8 @@ import { useState } from "react";
 import axios from "axios";
 import "../../Css/Login.css"
 import { Link, useNavigate } from "react-router-dom";
+import { FiArrowLeft } from "react-icons/fi";
+import {toast} from 'react-toastify'
 const LoginScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -19,7 +21,7 @@ const LoginScreen = () => {
       );
       // console.log(data)
       localStorage.setItem("authToken", data.token);
-
+        toast.success("Logged in Success")
       setTimeout(() => {
 
         navigate("/blog")
@@ -28,6 +30,7 @@ const LoginScreen = () => {
 
     } catch (error) {
       setError(error.response.data.error);
+      toast.error("Check Credentials")
       setTimeout(() => {
         setError("");
       }, 4500);
@@ -42,14 +45,9 @@ const LoginScreen = () => {
       <div className="login-big-wrapper">
 
         <div className="section-wrapper">
-
-          <div className="top-suggest_register">
-
-            <span>Don't have an account? </span>
-            <a href="/register">Sign Up</a>
-
-          </div>
-
+        <Link to={'/blog'}>
+                <FiArrowLeft />
+            </Link>
           <div className="top-login-explain">
             <h2>Login to Your Account </h2>
 
@@ -93,20 +91,13 @@ const LoginScreen = () => {
 
               </label>
             </div>
-            <Link to="/forgotpassword" className="login-screen__forgotpassword"> Forgot Password ?
+            <Link to="" className="login-screen__forgotpassword"> Forgot Password ?
             </Link>
             <button type="submit" >
               Login
             </button>
 
           </form>
-
-
-        </div>
-
-        <div className="login-banner-section ">
-
-          <img src="login.png" alt="banner" width="400px" />
         </div>
 
       </div>

@@ -36,7 +36,7 @@ const EditStory = () => {
                 setLoading(false)
             }
             catch (error) {
-                navigate("/")
+                navigate("/blog")
             }
         }
         getStoryInfo()
@@ -82,7 +82,7 @@ const EditStory = () => {
                                 <span>
                                     {success}
                                 </span>
-                                <Link to="/">Go home</Link>
+                                <Link to="/blog">Go home</Link>
                             </div>}
 
                             <input

@@ -27,14 +27,16 @@ import ReadListPage from './components/ProfileScreens/ReadListPage';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import { Outlet } from 'react-router-dom'
 import Hero from "./components/hero/Hero";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import LeaderBoard from "./components/leaderboard/LeaderBoard";
 function App() {
 
   return (
         <Router>
 
               <div className="App">
-
+              <ToastContainer />
                     <Routes>
                           
                           <Route path="/" element={<LayoutsWithHeader />}>
@@ -92,6 +94,7 @@ function App() {
                         <Route exact path="/membership" element={<Membership/>}></Route>
                         <Route exact path='/registeration' element={<RegistrationForm/>}></Route>
                         <Route exact path="/calendar" element={<Calendar/>}></Route>
+                        <Route exact path="/leaderboard" element={<LeaderBoard/>}></Route>
 
                           <Route exact path="/forgotpassword" element={<ForgotPasswordScreen />} />
 

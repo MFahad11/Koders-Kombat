@@ -13,6 +13,6 @@ router.post("/register",userController.createParticipents);
 router.post("/login",authController.login)
 // router.get("/profile",getAccessToRoute ,profile)
 // router.post("/:slug/addStoryToReadList",getAccessToRoute ,addStoryToReadList)
-// router.get("/readList",getAccessToRoute ,readListPage)
+router.get("/readList",getAccessToRoute ,userController.readListPage)
 router.get("/private",getAccessToRoute,authController.getPrivateData)
 module.exports = router;

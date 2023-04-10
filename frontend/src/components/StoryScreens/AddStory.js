@@ -8,6 +8,7 @@ import { AuthContext } from "../../Context/AuthContext";
 import { AiOutlineUpload } from 'react-icons/ai'
 import { FiArrowLeft } from 'react-icons/fi'
 import '../../Css/AddStory.css'
+import { toast } from 'react-toastify';
 
 const AddStory = () => {
 
@@ -45,7 +46,7 @@ const AddStory = () => {
                 'Content-Type': 'multipart/form-data',
                 authorization: `Bearer ${localStorage.getItem("authToken")}`,
               }})
-            setSuccess('Add story successfully ')
+            toast.success("Story Added!!")
 
             clearInputs()
             setTimeout(() => {
@@ -54,6 +55,7 @@ const AddStory = () => {
 
         }
         catch (error) {
+            toast.error("Unable to add story")
             setTimeout(() => {
                 setError('')
 

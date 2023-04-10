@@ -2,6 +2,7 @@ const service = require('../services/user')
 const { catchAsync } = require('../helpers/error/request');
 // const asyncErrorWrapper = require("express-async-handler")
 // const User = require("../Models/user");
+const User=require('../models/schema/member')
 const Story = require("../models/schema/story");
 // const CustomError = require("../Helpers/error/CustomError");
 // const { comparePassword, validateUserInput } = require("../Helpers/input/inputHelpers");
