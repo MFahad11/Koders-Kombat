@@ -7,16 +7,15 @@ import { NavLink } from "react-router-dom";
 import { Link, animateScroll as scroll } from "react-scroll";
 import logo from "../../assets/WhatsApp Image 2022-12-12 at 23.13.37.jpg";
 import Dialog from "../modal/Modal";
+import { FaFacebook,FaLinkedin } from 'react-icons/fa';
 import Calendar from "../calendar/Calendar";
 import './Navbar.css'
 function NavBar() {
   const [show, setShow] = useState(false);
   return (
-    
-    <Navbar collapseOnSelect >
-      <Container >
+    <Navbar collapseOnSelect expand="md" style={{ backgroundColor: "rgba(0, 0, 0, 0.5);", backdropFilter: "blur(85px)" }} sticky="top">
+      <Container>
         <Link
-          activeClass="active"
           to="hero"
           spy={true}
           smooth={true}
@@ -31,85 +30,43 @@ function NavBar() {
               width="30"
               height="30"
               className="d-inline-block align-top"
-
             />{" "}
             WebKode
           </Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse className="responsive-navbar-nav">
+        <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#pricing" >Members</Nav.Link>
-            <NavLink to='/blog' style={{fontSize: "1rem", 
-    marginRight: "15px", 
-    color: 'white', textDecoration : 'none' , marginTop : '7px'}}>BLOG</NavLink>
-            <Link
-              activeClass="active"
-              to="sponsor"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={400}
-            >
+            <Nav.Link href="#pricing">Members</Nav.Link>
+            <NavLink to='/blog' style={{fontSize: "1rem", marginRight: "15px", color: 'white', textDecoration : 'none' , marginTop : '7px'}}>BLOG</NavLink>
+            <Link to="sponsor" spy={true} smooth={true} offset={-70} duration={400}>
               <Nav.Link>Sponsor</Nav.Link>
             </Link>
-
             <NavDropdown title="Events" id="collasible-nav-dropdown">
               <NavDropdown.Item onClick={()=>{setShow(true)}}>Calendar</NavDropdown.Item>
               <Dialog show={show} setShow={setShow} elem={<Calendar/>} title={"Future/Ongoing Events"}/>
-              
               <NavDropdown.Item>
-                {" "}
-                <Link
-                  activeClass="active"
-                  to="event"
-                  spy={true}
-                  smooth={true}
-                  duration={400}
-                  offset={600}
-                >
+                <Link to="event" spy={true} smooth={true} duration={400} offset={600}>
                   Ongoing Events
                 </Link>
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item>
-                {" "}
-                <Link
-                  activeClass="active"
-                  to="event"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={400}
-                >
+                <Link to="event" spy={true} smooth={true} offset={-70} duration={400}>
                   Past Events
                 </Link>
               </NavDropdown.Item>
               <NavDropdown.Item>
-                {" "}
-                <Link
-                  activeClass="active"
-                  to="event"
-                  spy={true}
-                  smooth={true}
-                  duration={400}
-                  offset={1100}
-                >
+                <Link to="event" spy={true} smooth={true} duration={400} offset={1100}>
                   Future Events
                 </Link>
               </NavDropdown.Item>
             </NavDropdown>
-            <NavLink to='/leaderboard' style={{fontSize: "1rem", 
-    marginRight: "15px", 
-    color: 'white', textDecoration : 'none' , marginTop : '7px'}}>Leaderboard</NavLink>
-          </Nav>
-          <Nav>
-            <Nav.Link href="https://www.facebook.com/kodersclub">Facebook</Nav.Link>
+            <NavLink to='/leaderboard' style={{fontSize: "1rem", marginRight: "15px", color: 'white', textDecoration : 'none' , marginTop : '7px'}}>LEADERBOARD</NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
-
   );
 }
 

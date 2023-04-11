@@ -4,7 +4,7 @@ import './Aims.css';
 
 function AimsAndObjectives() {
   return (
-    <div className="aims-and-objectives-container">
+<div className="aims-and-objectives-container">
       <Container>
         <Row className="justify-content-center">
           <Col md={8} className="text-center">

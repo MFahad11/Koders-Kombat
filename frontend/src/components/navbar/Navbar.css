@@ -11,8 +11,20 @@
     text-transform: uppercase;
 
   }
- 
+ .icon-container{
+  display: flex;
+  flex-direction: row;
+ }
+  .facebook-icon {
+    font-size: 1rem; /* adjust size as needed */
+    margin-right: 0.2rem;
+    color: white; /* add some space between the icon and the text */
   
+  }
+  .facebook-icon:hover {
+    color:rgb(230, 226, 226);
+  
+  }
   .navbar-nav {
     margin-left: auto; 
   } 
@@ -21,6 +33,9 @@
     margin-right: 15px; 
     color: white; 
     text-transform: uppercase;
+  }
+  .nav-link:hover {
+    color: white; 
   }
   
   .start{

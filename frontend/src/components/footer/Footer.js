@@ -1,40 +1,59 @@
-import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import './Footer.css'
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 const Footer = () => {
   return (
-    <footer>
+    <footer style={{ backgroundColor: "rgba(0, 0, 0, 0.5);",color: "#fff" ,padding: "2rem 0" }}>
       <Container>
         <Row>
-          <Col md={6}>
-            <h3>About Us</h3>
+          <Col md={4}>
+            <h4>About Us</h4>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pretium nibh dolor, quis commodo est elementum nec. Maecenas vel feugiat libero. Suspendisse commodo, risus sit amet rutrum vestibulum, velit velit commodo erat, sit amet vestibulum lorem dolor in mi. Morbi commodo porttitor sem, id euismod risus malesuada vel. Ut vitae nibh congue, commodo turpis id, porttitor lacus.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor,
+              libero in efficitur commodo, ligula ex vulputate metus, vel blandit
+              ipsum ex nec lacus.
             </p>
           </Col>
-          <Col md={3}>
-            <h3>Links</h3>
-            <ul className="list-unstyled">
-              <li><a href="/">Home</a></li>
-              <li><a href="/about">About</a></li>
-              <li><a href="/events">Events</a></li>
-              <li><a href="/members">Members</a></li>
-              <li><a href="/sponsors">Sponsors</a></li>
-            </ul>
+          <Col md={4}>
+            <h4>Contact Us</h4>
+            <p>
+              1234 Main Street <br />
+              Suite 123 <br />
+              Anytown, USA 12345 <br />
+              Phone: (123) 456-7890 <br />
+              Email: info@website.com
+            </p>
           </Col>
-          <Col md={3}>
-            <h3>Contact Us</h3>
-            <ul className="list-unstyled">
-              <li>123 Main Street</li>
-              <li>Anytown, USA 12345</li>
-              <li>Email: info@club.com</li>
-              <li>Phone: (123) 456-7890</li>
-            </ul>
-          </Col>
+          <Col md={4}>
+  <h4 style={{ color: "#fff" }}>Follow Us</h4>
+  <ul className="list-unstyled d-flex">
+    <li className="me-3">
+      <a href="#" target="_blank" rel="noreferrer">
+        <FaFacebook size={24} style={{ color: "#fff" }} />
+      </a>
+    </li>
+    <li className="me-3">
+      <a href="#" target="_blank" rel="noreferrer">
+        <FaTwitter size={24} style={{ color: "#fff" }} />
+      </a>
+    </li>
+    <li className="me-3">
+      <a href="#" target="_blank" rel="noreferrer">
+        <FaLinkedin size={24} style={{ color: "#fff" }} />
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_blank" rel="noreferrer">
+        <FaInstagram size={24} style={{ color: "#fff" }} />
+      </a>
+    </li>
+  </ul>
+</Col>
         </Row>
-        <hr />
-        <p className="text-center">
-          &copy; {new Date().getFullYear()} Coding Club. All Rights Reserved.
+        <hr style={{ borderColor: "#fff" }} />
+        <p className="text-center" style={{ marginTop: "1rem" }}>
+          &copy; {new Date().getFullYear()} WebKode. All rights reserved.
         </p>
       </Container>
     </footer>
@@ -42,3 +61,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
