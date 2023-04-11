@@ -8,3 +8,8 @@
     color: white;
     margin-bottom: 30px;
 }
+@media only screen and (max-width: 590px) {
+.slick-prev, .slick-next {
+    display: none !important;
+}
+}
