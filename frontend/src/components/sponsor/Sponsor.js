@@ -1,40 +1,42 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-
+import logo from './Corporate_Sponsor_Image.png'
+import logo1 from './virtual-meetings-sponsorships.webp'
+import './Sponsor.css'
 const sponsors = [
   {
     name: 'Company A',
-    logo: 'https://via.placeholder.com/150x50',
+    logo: logo,
     website: 'https://www.example.com',
   },
   {
     name: 'Company B',
-    logo: 'https://via.placeholder.com/150x50',
+    logo: logo1,
     website: 'https://www.example.com',
   },
   {
     name: 'Company C',
-    logo: 'https://via.placeholder.com/150x50',
+    logo: logo,
     website: 'https://www.example.com',
   },
   {
     name: 'Company D',
-    logo: 'https://via.placeholder.com/150x50',
+    logo: logo1,
     website: 'https://www.example.com',
   },
   {
     name: 'Company E',
-    logo: 'https://via.placeholder.com/150x50',
+    logo: logo,
     website: 'https://www.example.com',
   },
 ];
 
 const SponsorsPage = () => {
   return (
-    <Container id='sponsor'>
+    <Container id='sponsor' className='mb-4'>
       <Row>
-        <Col>
-          <h1 className="my-5">Our Sponsors</h1>
+        <Col className='text-center'>
+          <h2 className="my-5 sponsor-header">Our Sponsors</h2>
         </Col>
       </Row>
       <Row className="justify-content-center">

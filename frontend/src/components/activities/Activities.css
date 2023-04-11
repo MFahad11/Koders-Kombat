@@ -1,2 +1,10 @@
-
-  
+.club-activities-header{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+}
+.club-activities-text{
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 30px;
+}

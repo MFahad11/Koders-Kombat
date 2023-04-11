@@ -7,7 +7,7 @@ import Membership from '../membership/Membership';
 function Hero() {
   const [show, setShow] = useState(false);
   return (
-<div className="hero-container d-flex flex-column justify-content-center align-items-right">
+<div className="hero-container d-flex flex-column justify-content-center align-items-right" id='hero'>
   <Container fluid>
     <Row>
       <Col lg={{ span: 8, offset: 2 }} xl={{ span: 6, offset: 3 }} className="text-center">

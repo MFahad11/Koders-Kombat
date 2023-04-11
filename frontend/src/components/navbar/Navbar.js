@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import {useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -7,7 +7,6 @@ import { NavLink } from "react-router-dom";
 import { Link, animateScroll as scroll } from "react-scroll";
 import logo from "../../assets/WhatsApp Image 2022-12-12 at 23.13.37.jpg";
 import Dialog from "../modal/Modal";
-import { FaFacebook,FaLinkedin } from 'react-icons/fa';
 import Calendar from "../calendar/Calendar";
 import './Navbar.css'
 function NavBar() {
@@ -23,7 +22,7 @@ function NavBar() {
           duration={400}
           style={{ textDecoration: "none" }}
         >
-          <Navbar.Brand href="#home" className="start" style={{color : "white", fontSize:'1.5rem'}}>
+          <Navbar.Brand href="#" className="start" style={{color : "white", fontSize:'1.5rem'}}>
             <img
               alt=""
               src={logo}
@@ -39,25 +38,25 @@ function NavBar() {
           <Nav className="me-auto">
             <Nav.Link href="#pricing">Members</Nav.Link>
             <NavLink to='/blog' style={{fontSize: "1rem", marginRight: "15px", color: 'white', textDecoration : 'none' , marginTop : '7px'}}>BLOG</NavLink>
-            <Link to="sponsor" spy={true} smooth={true} offset={-70} duration={400}>
-              <Nav.Link>Sponsor</Nav.Link>
+            <Link to="sponsor" spy={true} smooth={true} offset={-70} duration={400} className="link">
+              <Nav.Link className="link">Sponsor</Nav.Link>
             </Link>
             <NavDropdown title="Events" id="collasible-nav-dropdown">
               <NavDropdown.Item onClick={()=>{setShow(true)}}>Calendar</NavDropdown.Item>
               <Dialog show={show} setShow={setShow} elem={<Calendar/>} title={"Future/Ongoing Events"}/>
               <NavDropdown.Item>
-                <Link to="event" spy={true} smooth={true} duration={400} offset={600}>
+                <Link to="event" spy={true} smooth={true} duration={400} offset={600} style={{color:"black",textDecoration:"none"}}>
                   Ongoing Events
                 </Link>
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item>
-                <Link to="event" spy={true} smooth={true} offset={-70} duration={400}>
+                <Link to="event" spy={true} smooth={true} offset={-70} duration={400} style={{color:"black",textDecoration:"none"}}>
                   Past Events
                 </Link>
               </NavDropdown.Item>
               <NavDropdown.Item>
-                <Link to="event" spy={true} smooth={true} duration={400} offset={1100}>
+                <Link to="event" spy={true} smooth={true} duration={400} offset={1100} style={{color:"black",textDecoration:"none"}}>
                   Future Events
                 </Link>
               </NavDropdown.Item>

@@ -4,7 +4,7 @@ import './Footer.css'
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 const Footer = () => {
   return (
-    <footer style={{ backgroundColor: "rgba(0, 0, 0, 0.5);",color: "#fff" ,padding: "2rem 0" }}>
+    <footer style={{ backgroundColor: "rgba(0, 0, 0, 0.5);",backdropFilter: "blur(10px)",color: "#fff" ,padding: "2rem 0" }}>
       <Container>
         <Row>
           <Col md={4}>
