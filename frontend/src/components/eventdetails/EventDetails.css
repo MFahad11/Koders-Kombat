@@ -1,44 +1,47 @@
-.event-detail-container {
-    display: flex;
+.event-detail-page {
+  color: white !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: rgba(0, 0, 0, 0.87);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+  overflow: hidden;
+  background-color: rgba(60, 60, 60, 0.4);
+  padding: 32px;
+  margin-left: 32px;
+  margin-right: 32px;
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 767px) {
+  .event-detail-page {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background-color: #f5f5f5;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    margin: 20px;
+    margin: 0;
+    padding: 16px;
   }
-  
-  .event-detail-title {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .event-detail-date {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .event-detail-location {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .event-detail-description {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .event-detail-register {
-    font-size: 18px;
-    font-weight: bold;
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .event-detail-register:hover {
-    text-decoration: underline;
-  }
-  
+}
+
+
+.event-image-gallery {
+  margin-bottom: 30px;
+}
+
+.event-details {
+
+  padding: 30px;
+}
+
+.event-details h1 {
+  margin-top: 0;
+}
+
+.event-details p {
+  margin-bottom: 20px;
+}
+
+.event-details button {
+  margin-top: 20px;
+}

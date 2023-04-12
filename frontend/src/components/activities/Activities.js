@@ -375,7 +375,9 @@ function ClubActivities() {
           <Card.Body className="event-card-body">
             <Card.Title>{event.title}</Card.Title>
             <Card.Text>{event.description}</Card.Text>
-            <Button variant="primary" onClick={()=>{navigate(`/event/detail`,
+            <Button variant="primary" onClick={()=>{
+              
+              navigate(`/event/detail`,
 {
 state: {
   ...event

@@ -1,1 +1,15 @@
 @import "~react-image-gallery/styles/css/image-gallery.css";
+.image-gallery {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .image-gallery-slide img {
+    object-fit: contain;
+    max-height: 50vh;
+  }
+  
+  .image-gallery-thumbnail-image img {
+    object-fit: contain;
+    max-height: 10vh;
+  }

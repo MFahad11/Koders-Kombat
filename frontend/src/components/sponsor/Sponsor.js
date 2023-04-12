@@ -35,7 +35,8 @@ const SponsorsPage = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <Container id='sponsor' className='mb-4'>
+    <div className='sponsor-container'>
+    <Container id='sponsor'>
       <Row>
         <Col className='text-center'>
           <h2 className="my-5 sponsor-header">Our Sponsors</h2>
@@ -52,7 +53,7 @@ const SponsorsPage = () => {
                 transition: 'transform 0.3s ease-in-out'
               }}
             >
-              <Card.Body>
+              <Card.Body style={{backgroundColor:""}}>
                 <a href={sponsor.website} target="_blank" rel="noopener noreferrer">
                   <Card.Img src={sponsor.logo} className="img-fluid" alt={`${sponsor.name} logo`} />
                 </a>
@@ -61,7 +62,7 @@ const SponsorsPage = () => {
           </Col>
         ))}
       </Row>
-    </Container>
+    </Container></div>
   );
 };
 

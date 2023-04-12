@@ -1,34 +1,44 @@
-import React, { useState } from 'react';
-import ImageGallery from 'react-image-gallery';
-import { useLocation } from 'react-router-dom';
-
+import React from 'react';
+import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Container, Row, Col, Button } from 'react-bootstrap';
+import Gallery from '../gallery/Gallery';
+import './EventDetails.css'
 const EventDetailPage = () => {
-  const {state}=useLocation()
-  console.log(state)
-  // const [galleryImages, setGalleryImages] = useState([
-  //   {
-  //     original: event.image,
-  //     thumbnail: event.image,
-  //     description: event.title
-  //   },
-  //   // add additional images to galleryImages as needed
-  // ]);
+  const {state}=useLocation();
 
   return (
+<>
     <div className="event-detail-page">
-      <div className="event-image-gallery">
-        {/* <ImageGallery items={state.image} showPlayButton={false} showFullscreenButton={false} /> */}
-      </div>
-
-      <div className="event-details">
-        <h1>{state.title}</h1>
-        <p>{state.date}</p>
-        <p>{state.description}</p>
-        <button>RSVP</button>
-      </div>
-    </div>
+    
+      <Container>
+        <Row>
+          <Col md={6}>
+            <div className="event-image-gallery">
+              <Gallery />
+            </div>
+          </Col>
+          <Col md={6}>
+            <div className="event-details">
+              <h1>{state.title}</h1>
+              <p>{state.date}</p>
+              <p>{state.description}</p>
+              {
+                state.startDate && (<Button className='me-2'>
+<NavLink to='/registeration' style={{textDecoration:"none",color:"white"}}>
+                  Register
+                </NavLink>
+              
+              
+              </Button>)}
+              <Button>
+              <NavLink to='/' style={{textDecoration:"none",color:"white"}}>Back</NavLink>
+              </Button>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </div></>
   );
 };
 
 export default EventDetailPage;
-

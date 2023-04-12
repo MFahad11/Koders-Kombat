@@ -5,7 +5,7 @@ import Membership from '../membership/Membership';
 import { useNavigate } from 'react-router-dom';
 function Dialog({show,setShow,elem,title}) {
   const navigate=useNavigate()
-  const handleClose = () =>{ setShow(false);navigate('/')};
+  const handleClose = () =>{ setShow(false);navigate(-1)};
   const handleShow = () => setShow(true);
   return (
     <>
