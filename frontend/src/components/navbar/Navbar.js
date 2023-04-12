@@ -45,18 +45,18 @@ function NavBar() {
               <NavDropdown.Item onClick={()=>{setShow(true)}}>Calendar</NavDropdown.Item>
               <Dialog show={show} setShow={setShow} elem={<Calendar/>} title={"Future/Ongoing Events"}/>
               <NavDropdown.Item>
-                <Link to="event" spy={true} smooth={true} duration={400} offset={600} style={{color:"black",textDecoration:"none"}}>
+                <Link to="event" spy={true} smooth={true} duration={400} offset={700} style={{color:"black",textDecoration:"none"}}>
                   Ongoing Events
                 </Link>
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item>
-                <Link to="event" spy={true} smooth={true} offset={-70} duration={400} style={{color:"black",textDecoration:"none"}}>
+                <Link to="event" spy={true} smooth={true} offset={-70} duration={600} style={{color:"black",textDecoration:"none"}}>
                   Past Events
                 </Link>
               </NavDropdown.Item>
               <NavDropdown.Item>
-                <Link to="event" spy={true} smooth={true} duration={400} offset={1100} style={{color:"black",textDecoration:"none"}}>
+                <Link to="event" spy={true} smooth={true} duration={400} offset={1300} style={{color:"black",textDecoration:"none"}}>
                   Future Events
                 </Link>
               </NavDropdown.Item>

@@ -9,58 +9,58 @@
   //     title: 'Hackathon 2021',
   //     description: 'Our annual hackathon where participants compete to create the best project in a limited time period.',
   //     date: 'January 30, 2021',
-  //     image: 'https://via.placeholder.com/300x200',
+  //     image: pic,
   //   },
   //   {
   //     title: 'Workshop on React',
   //     description: 'A workshop focused on learning the basics of React, a popular JavaScript library for building user interfaces.',
   //     date: 'March 15, 2021',
-  //     image: 'https://via.placeholder.com/300x200',
+  //     image: pic,
   //   },
   //   {
   //       title: 'Hackathon 2021',
   //       description: 'Our annual hackathon where participants compete to create the best project in a limited time period.',
   //       date: 'January 30, 2021',
-  //       image: 'https://via.placeholder.com/300x200',
+  //       image: pic,
   //     },
   //   {
   //     title: 'Web Development Bootcamp',
   //     description: 'An 8-week bootcamp covering the basics of web development, including HTML, CSS, and JavaScript.',
   //     startDate: 'April 1, 2023',
   //     endDate: 'May 27, 2023',
-  //     image: 'https://via.placeholder.com/300x200',
+  //     image: pic,
   //   },
   //   {
   //       title: 'Web Development Bootcamp',
   //       description: 'An 8-week bootcamp covering the basics of web development, including HTML, CSS, and JavaScript.',
   //       startDate: 'April 1, 2023',
   //       endDate: 'May 27, 2023',
-  //       image: 'https://via.placeholder.com/300x200',
+  //       image: pic,
   //     },
   //     {
   //       title: 'Web Development Bootcamp',
   //       description: 'An 8-week bootcamp covering the basics of web development, including HTML, CSS, and JavaScript.',
   //       startDate: 'April 1, 2023',
   //       endDate: 'May 27, 2023',
-  //       image: 'https://via.placeholder.com/300x200',
+  //       image: pic,
   //     },
   //   {
   //     title: 'Guest Speaker Series',
   //     description: 'A series of talks from industry professionals on topics such as software engineering, data science, and UX design.',
   //     date: 'June 15-30, 2023',
-  //     image: 'https://via.placeholder.com/300x200',
+  //     image: pic,
   //   },
   //   {
   //       title: 'Guest Speaker Series',
   //       description: 'A series of talks from industry professionals on topics such as software engineering, data science, and UX design.',
   //       date: 'June 15-30, 2023',
-  //       image: 'https://via.placeholder.com/300x200',
+  //       image: pic,
   //     },
   //     {
   //       title: 'Guest Speaker Series',
   //       description: 'A series of talks from industry professionals on topics such as software engineering, data science, and UX design.',
   //       date: 'June 15-30, 2023',
-  //       image: 'https://via.placeholder.com/300x200',
+  //       image: pic,
   //     },
   // ];
 //   const pastEvents = events.filter((event) => {
@@ -242,84 +242,88 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './Activities.css';
-
+import pic from './OIP.jpeg'
+import pic1 from './react.png'
+import pic2 from './ai.png'
+import { useNavigate } from 'react-router-dom';
 function ClubActivities() {
+  const navigate=useNavigate()
   const now = new Date();
   const events = [
     {
       title: 'Hackathon 2021',
       description: 'Our annual hackathon where participants compete to create the best project in a limited time period.',
       date: 'January 30, 2021',
-      image: 'https://via.placeholder.com/300x200',
+      image: pic,
     },
     {
       title: 'Workshop on React',
       description: 'A workshop focused on learning the basics of React, a popular JavaScript library for building user interfaces.',
       date: 'March 15, 2021',
-      image: 'https://via.placeholder.com/300x200',
+      image: pic1,
     },
     {
         title: 'Hackathon 2021',
         description: 'Our annual hackathon where participants compete to create the best project in a limited time period.',
         date: 'January 30, 2021',
-        image: 'https://via.placeholder.com/300x200',
+        image: pic2,
       },
       {
         title: 'Hackathon 2020',
         description: 'Our annual hackathon where participants compete to create the best project in a limited time period.',
         date: 'January 30, 2021',
-        image: 'https://via.placeholder.com/300x200',
+        image: pic,
       },
       {
         title: 'Workshop onact',
         description: 'A workshop focused on learning the basics of React, a popular JavaScript library for building user interfaces.',
         date: 'March 15, 2021',
-        image: 'https://via.placeholder.com/300x200',
+        image: pic,
       },
       {
           title: 'Hackat 2021',
           description: 'Our annual hackathon where participants compete to create the best project in a limited time period.',
           date: 'January 30, 2021',
-          image: 'https://via.placeholder.com/300x200',
+          image: pic,
         },
     {
       title: 'Web Development Bootcamp',
       description: 'An 8-week bootcamp covering the basics of web development, including HTML, CSS, and JavaScript.',
       startDate: 'April 1, 2023',
       endDate: 'May 27, 2023',
-      image: 'https://via.placeholder.com/300x200',
+      image: pic,
     },
     {
         title: 'Web Development Bootcamp',
         description: 'An 8-week bootcamp covering the basics of web development, including HTML, CSS, and JavaScript.',
         startDate: 'April 1, 2023',
         endDate: 'May 27, 2023',
-        image: 'https://via.placeholder.com/300x200',
+        image: pic,
       },
       {
         title: 'Web Development Bootcamp',
         description: 'An 8-week bootcamp covering the basics of web development, including HTML, CSS, and JavaScript.',
         startDate: 'April 1, 2023',
         endDate: 'May 27, 2023',
-        image: 'https://via.placeholder.com/300x200',
+        image: pic,
       },
     {
       title: 'Guest Speaker Series',
       description: 'A series of talks from industry professionals on topics such as software engineering, data science, and UX design.',
       date: 'June 15-30, 2023',
-      image: 'https://via.placeholder.com/300x200',
+      image: pic,
     },
     {
         title: 'Guest Speaker Series',
         description: 'A series of talks from industry professionals on topics such as software engineering, data science, and UX design.',
         date: 'June 15-30, 2023',
-        image: 'https://via.placeholder.com/300x200',
+        image: pic,
       },
       {
         title: 'Guest Speaker Series',
         description: 'A series of talks from industry professionals on topics such as software engineering, data science, and UX design.',
         date: 'June 15-30, 2023',
-        image: 'https://via.placeholder.com/300x200',
+        image: pic,
       },
   ];
   const pastEvents = events.filter((event) => {
@@ -368,10 +372,15 @@ function ClubActivities() {
 <Col key={index} md={4} className="mb-4">
         <Card className="m-2">
           <Card.Img variant="top" src={event.image} />
-          <Card.Body>
+          <Card.Body className="event-card-body">
             <Card.Title>{event.title}</Card.Title>
             <Card.Text>{event.description}</Card.Text>
-            <Button variant="primary">
+            <Button variant="primary" onClick={()=>{navigate(`/event/detail`,
+{
+state: {
+  ...event
+}
+})}}>
               {event.startDate ? "Register Now" : "Learn More"}
             </Button>
           </Card.Body>
@@ -399,27 +408,29 @@ function ClubActivities() {
             </p>
           </Col>
         </Row>
-
         {pastEvents.length > 0 && (
-          <>
-            <h3>Past Events</h3>
-            <Slider {...settings}>{renderEventCards(pastEvents)}</Slider>
-          </>
-        )}
+  <>
+    <h3>Past Events</h3>
+    <Slider {...settings}>{renderEventCards(pastEvents)}</Slider>
+    <hr className="hr" />
+  </>
+)}
 
-        {ongoingEvents.length > 0 && (
-          <>
-            <h3>Ongoing Events</h3>
-            <Slider {...settings}>{renderEventCards(ongoingEvents)}</Slider>
-          </>
-        )}
+{ongoingEvents.length > 0 && (
+  <>
+    <h3>Ongoing Events</h3>
+    <Slider {...settings}>{renderEventCards(ongoingEvents)}</Slider>
+    <hr className="hr" />
+  </>
+)}
 
-        {upcomingEvents.length > 0 && (
-          <>
-            <h3>Upcoming Events</h3>
-            <Slider {...settings}>{renderEventCards(upcomingEvents)}</Slider>
-          </>
-        )}
+{upcomingEvents.length > 0 && (
+  <>
+    <h3>Upcoming Events</h3>
+    <Slider {...settings}>{renderEventCards(upcomingEvents)}</Slider>
+  </>
+)}
+
       </Container>
     </div>
   );

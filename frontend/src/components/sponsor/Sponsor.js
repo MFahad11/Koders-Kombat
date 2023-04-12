@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import logo from './Corporate_Sponsor_Image.png'
 import logo1 from './virtual-meetings-sponsorships.webp'
@@ -32,6 +32,8 @@ const sponsors = [
 ];
 
 const SponsorsPage = () => {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
   return (
     <Container id='sponsor' className='mb-4'>
       <Row>
@@ -40,9 +42,16 @@ const SponsorsPage = () => {
         </Col>
       </Row>
       <Row className="justify-content-center">
-        {sponsors.map((sponsor) =>{ return (
+        {sponsors.map((sponsor, index) => (
           <Col md={4} key={sponsor.name}>
-            <Card className="my-4">
+            <Card className="my-4"
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+              style={{
+                transform: hoveredIndex === index ? 'scale(1.1)' : 'scale(0.96)',
+                transition: 'transform 0.3s ease-in-out'
+              }}
+            >
               <Card.Body>
                 <a href={sponsor.website} target="_blank" rel="noopener noreferrer">
                   <Card.Img src={sponsor.logo} className="img-fluid" alt={`${sponsor.name} logo`} />
@@ -50,7 +59,7 @@ const SponsorsPage = () => {
               </Card.Body>
             </Card>
           </Col>
-        )})}
+        ))}
       </Row>
     </Container>
   );
