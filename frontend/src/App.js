@@ -30,6 +30,7 @@ import Hero from "./components/hero/Hero";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import LeaderBoard from "./components/leaderboard/LeaderBoard";
+import EventDetailPage from "./components/eventdetails/EventDetails";
 function App() {
 
   return (
@@ -95,7 +96,8 @@ function App() {
                         <Route exact path='/registeration' element={<RegistrationForm/>}></Route>
                         <Route exact path="/calendar" element={<Calendar/>}></Route>
                         <Route exact path="/leaderboard" element={<LeaderBoard/>}></Route>
-
+                        <Route exact path="/leaderboard" element={<LeaderBoard/>}></Route>
+                        <Route exact path="/event/detail" element={<EventDetailPage/>}></Route>
                           <Route exact path="/forgotpassword" element={<ForgotPasswordScreen />} />
 
                           <Route exact path="/resetpassword" element={<ResetPasswordScreen />} />

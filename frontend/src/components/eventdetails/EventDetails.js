@@ -1,18 +1,34 @@
-import React from 'react';
-import './EventDetails.css';
-import { Link } from 'react-router-dom';
-import { NavLink } from 'react-router-dom';
+import React, { useState } from 'react';
+import ImageGallery from 'react-image-gallery';
+import { useLocation } from 'react-router-dom';
 
-const EventDetail = ({props}) => {
+const EventDetailPage = () => {
+  const {state}=useLocation()
+  console.log(state)
+  // const [galleryImages, setGalleryImages] = useState([
+  //   {
+  //     original: event.image,
+  //     thumbnail: event.image,
+  //     description: event.title
+  //   },
+  //   // add additional images to galleryImages as needed
+  // ]);
+
   return (
-    <div className="event-detail-container">
-      <h1 className="event-detail-title">{props.name}</h1>
-      <div className="event-detail-date">Start-date: {props.start.toLocaleString()} - End-date: {props.end.toLocaleString()}</div>
-      <div className="event-detail-location">Location: {props.location}</div>
-      <div className="event-detail-description">Details: {props.description}</div>
-      {props.registerLink && <NavLink className="event-detail-register" to='/registeration' >Register now</NavLink>}
+    <div className="event-detail-page">
+      <div className="event-image-gallery">
+        {/* <ImageGallery items={state.image} showPlayButton={false} showFullscreenButton={false} /> */}
+      </div>
+
+      <div className="event-details">
+        <h1>{state.title}</h1>
+        <p>{state.date}</p>
+        <p>{state.description}</p>
+        <button>RSVP</button>
+      </div>
     </div>
   );
 };
 
-export default EventDetail;
+export default EventDetailPage;
+

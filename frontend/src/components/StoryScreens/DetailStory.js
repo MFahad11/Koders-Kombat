@@ -176,7 +176,7 @@ const DetailStory = () => {
                     {story.author &&
                       <li className='story-author-info'>
                         <img src={story.author.profileImg} alt={story.author.username} />
-                        <span className='story-author-username'>{story.author.username}  </span>
+                        <span className='story-author-username'>{story.author.fullName}  </span>
                       </li>
                     }
                     <li className='story-createdAt'>
