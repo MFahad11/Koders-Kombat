@@ -23,20 +23,14 @@ function NavBar() {
           style={{ textDecoration: "none" }}
         >
           <Navbar.Brand href="#" className="start" style={{color : "white", fontSize:'1.5rem'}}>
-            <img
-              alt=""
-              src={logo}
-              width="30"
-              height="30"
-              className="d-inline-block align-top"
-            />{" "}
             WebKode
           </Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#pricing">Members</Nav.Link>
+          <Link to="member" spy={true} smooth={true} offset={-70} duration={400} className="link">
+            <Nav.Link className="link">Members</Nav.Link></Link>
             <NavLink to='/blog' style={{fontSize: "1rem", marginRight: "15px", color: 'white', textDecoration : 'none' , marginTop : '7px'}}>BLOG</NavLink>
             <Link to="sponsor" spy={true} smooth={true} offset={-70} duration={400} className="link">
               <Nav.Link className="link">Sponsor</Nav.Link>

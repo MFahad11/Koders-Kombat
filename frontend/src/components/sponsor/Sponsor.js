@@ -39,7 +39,7 @@ const SponsorsPage = () => {
     <Container id='sponsor'>
       <Row>
         <Col className='text-center'>
-          <h2 className="my-5 sponsor-header">Our Sponsors</h2>
+          <h2 className=" sponsor-header">Our Sponsors</h2>
         </Col>
       </Row>
       <Row className="justify-content-center">
