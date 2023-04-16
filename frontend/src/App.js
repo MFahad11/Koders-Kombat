@@ -93,7 +93,7 @@ function App() {
                           </Route> */}
                           <Route exact path="/register" element={<RegisterScreen />} />
                         <Route exact path="/membership" element={<Membership/>}></Route>
-                        <Route exact path='/registeration' element={<RegistrationForm/>}></Route>
+                        <Route exact path='/registeration/:type' element={<RegistrationForm/>}></Route>
                         <Route exact path="/calendar" element={<Calendar/>}></Route>
                         <Route exact path="/leaderboard" element={<LeaderBoard/>}></Route>
                         <Route exact path="/leaderboard" element={<LeaderBoard/>}></Route>

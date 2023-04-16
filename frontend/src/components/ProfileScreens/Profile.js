@@ -29,8 +29,8 @@ const Profile = () => {
             setLoading(true)
 
             try {
-                const { data } = await axios.get("/user/profile", config)
-
+                const { data } = await axios.get("http://localhost:4500/api/user/profile", config)
+                console.log(data)
                 setUser(data.data)
 
                 setLoading(false)
@@ -53,42 +53,36 @@ const Profile = () => {
                         <Link to={'/blog'} >
                             <FiArrowLeft />
                         </Link>
-                        <div className="profile-top-wrap">
+                        {/* <div className="profile-top-wrap">
 
-                            <span>
+                            <span className='text-light'>
                                 Membership Information
                             </span>
 
                             <a href="#!">Close  Account</a>
-                        </div>
+                        </div> */}
                         <ul>
 
                             <li>
-                                <span>
+                                <span className='text-light'>
                                     Username
                                 </span>
-                                <div>
-                                    {user.username}
+                                <div className='text-light'>
+                                    {user.fullName}
                                 </div>
                             </li>
                             <li>
-                                <span>E-Mail</span>
-                                <div>
+                                <span className='text-light'>E-Mail</span>
+                                <div className='text-light'>
                                     {user.email}
                                 </div>
 
                             </li>
-                            <li>
 
-                                <span> Account Created Date </span>
-                                <div>
-                                    {editDate(user.createdAt)}
-                                </div>
-                            </li>
 
                         </ul>
 
-                        <div className='btns_wrap'>
+                        {/* <div className='btns_wrap'>
                             <button className='profileEditBtn'>
                                 <Link to="/edit_profile">
                                     Edit Profile
@@ -99,7 +93,7 @@ const Profile = () => {
                                     Change Password
                                 </Link>
                             </button>
-                        </div>
+                        </div> */}
                     </div>
             }
 

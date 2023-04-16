@@ -4,9 +4,14 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './Activities.css';
-import pic from './OIP.jpeg'
-import pic1 from './react.png'
-import pic2 from './ai.png'
+import pic from '../../assets/OIP.jpeg'
+import pic1 from '../../assets/react.png'
+import pic2 from '../../assets/ai.png'
+import pic3 from '../../assets/girl-student-learning-to-code.jpg'
+import pic4 from '../../assets/cyber.jpg'
+import pic5 from '../../assets/sqa.jpg'
+import pic6 from '../../assets/web.png'
+import pic7 from '../../assets/app.png'
 import { useNavigate } from 'react-router-dom';
 function ClubActivities() {
   const navigate=useNavigate()
@@ -17,75 +22,87 @@ function ClubActivities() {
       description: 'Our annual hackathon where participants compete to create the best project in a limited time period.',
       date: 'January 30, 2021',
       image: pic,
+      type:'hackathons'
     },
     {
       title: 'Workshop on React',
       description: 'A workshop focused on learning the basics of React, a popular JavaScript library for building user interfaces.',
       date: 'March 15, 2021',
       image: pic1,
+      type:"workshop"
     },
     {
-        title: 'Hackathon 2021',
+        title: 'AI-HUB, a masterclass',
         description: 'Our annual hackathon where participants compete to create the best project in a limited time period.',
         date: 'January 30, 2021',
         image: pic2,
+        type:'workshop'
       },
       {
         title: 'Hackathon 2020',
         description: 'Our annual hackathon where participants compete to create the best project in a limited time period.',
         date: 'January 30, 2021',
-        image: pic,
+        image: pic3,
+        type:'hackathons'
       },
       {
-        title: 'Workshop onact',
+        title: 'Workshop CyberSecurity',
         description: 'A workshop focused on learning the basics of React, a popular JavaScript library for building user interfaces.',
         date: 'March 15, 2021',
-        image: pic,
+        image: pic4,
+        type:'workshop'
       },
       {
-          title: 'Hackat 2021',
+          title: 'SQA session',
           description: 'Our annual hackathon where participants compete to create the best project in a limited time period.',
           date: 'January 30, 2021',
-          image: pic,
+          image: pic5,
+          type:'workshop'
         },
     {
       title: 'Web Development Bootcamp',
       description: 'An 8-week bootcamp covering the basics of web development, including HTML, CSS, and JavaScript.',
       startDate: 'April 1, 2023',
       endDate: 'May 27, 2023',
-      image: pic,
+      image: pic6,
+      type:'workshop'
     },
     {
-        title: 'Web Development Bootcamp',
+        title: 'App Development Bootcamp',
         description: 'An 8-week bootcamp covering the basics of web development, including HTML, CSS, and JavaScript.',
         startDate: 'April 1, 2023',
         endDate: 'May 27, 2023',
-        image: pic,
+        image: pic7,
+        type:'workshop'
       },
       {
-        title: 'Web Development Bootcamp',
-        description: 'An 8-week bootcamp covering the basics of web development, including HTML, CSS, and JavaScript.',
+        title: 'Hackathon 2023',
+        description: 'Our annual hackathon where participants compete to create the best project in a limited time period.',
         startDate: 'April 1, 2023',
         endDate: 'May 27, 2023',
         image: pic,
+        type:'hackathons'
       },
     {
       title: 'Guest Speaker Series',
       description: 'A series of talks from industry professionals on topics such as software engineering, data science, and UX design.',
       date: 'June 15-30, 2023',
       image: pic,
+      type:'workshop'
     },
     {
         title: 'Guest Speaker Series',
         description: 'A series of talks from industry professionals on topics such as software engineering, data science, and UX design.',
         date: 'June 15-30, 2023',
         image: pic,
+        type:'workshop'
       },
       {
         title: 'Guest Speaker Series',
         description: 'A series of talks from industry professionals on topics such as software engineering, data science, and UX design.',
         date: 'June 15-30, 2023',
         image: pic,
+        type:'workshop'
       },
   ];
   const pastEvents = events.filter((event) => {
@@ -174,7 +191,7 @@ state: {
         </Row>
         {pastEvents.length > 0 && (
   <>
-    <h3>Past Events</h3>
+    <h3 className='text-light'>Past Events</h3>
     <Slider {...settings}>{renderEventCards(pastEvents)}</Slider>
     <hr className="hr" />
   </>
@@ -182,7 +199,7 @@ state: {
 
 {ongoingEvents.length > 0 && (
   <>
-    <h3>Ongoing Events</h3>
+    <h3 className='text-light'>Ongoing Events</h3>
     <Slider {...settings}>{renderEventCards(ongoingEvents)}</Slider>
     <hr className="hr" />
   </>
@@ -190,7 +207,7 @@ state: {
 
 {upcomingEvents.length > 0 && (
   <>
-    <h3>Upcoming Events</h3>
+    <h3 className='text-light'>Upcoming Events</h3>
     <Slider {...settings}>{renderEventCards(upcomingEvents)}</Slider>
   </>
 )}

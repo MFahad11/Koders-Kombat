@@ -45,7 +45,7 @@ const Header = () => {
 
                     </h5>
                 </Link>
-                <SearchForm />
+                {/* <SearchForm /> */}
                 <div className='header_options'>
 
                     {auth ?

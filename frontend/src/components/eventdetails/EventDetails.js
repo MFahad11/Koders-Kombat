@@ -5,7 +5,7 @@ import Gallery from '../gallery/Gallery';
 import './EventDetails.css'
 const EventDetailPage = () => {
   const {state}=useLocation();
-
+  console.log(state)
   return (
 <>
     <div className="event-detail-page">
@@ -22,17 +22,22 @@ const EventDetailPage = () => {
               <h1>{state.title}</h1>
               <p>{state.date}</p>
               <p>{state.description}</p>
-              {
-                state.startDate && (<Button className='me-2'>
-<NavLink to='/registeration' style={{textDecoration:"none",color:"white"}}>
-                  Register
-                </NavLink>
-              
-              
-              </Button>)}
               <Button>
               <NavLink to='/' style={{textDecoration:"none",color:"white"}}>Back</NavLink>
               </Button>
+              {
+                !state.startDate?
+                state.type==="hackathons"?
+                (<Button className='ms-2'>
+<NavLink to={`/leaderboard`} style={{textDecoration:"none",color:"white"}}>
+                  Leaderboard
+                </NavLink>
+              </Button>
+              ):"":(<Button className='ms-2'>
+<NavLink to={`/registeration/${state.type}`} style={{textDecoration:"none",color:"white"}}>
+                  Register
+                </NavLink>
+              </Button>)}
             </div>
           </Col>
         </Row>

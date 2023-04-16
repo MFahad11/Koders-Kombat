@@ -11,7 +11,7 @@ router.get('/user',(req,res)=>{
 router.post("/register",userController.createParticipents);
 // router.put("/user/:id", userController.updatePayment);
 router.post("/login",authController.login)
-// router.get("/profile",getAccessToRoute ,profile)
+router.get("/profile",getAccessToRoute ,userController.profile)
 // router.post("/:slug/addStoryToReadList",getAccessToRoute ,addStoryToReadList)
 router.get("/readList",getAccessToRoute ,userController.readListPage)
 router.get("/private",getAccessToRoute,authController.getPrivateData)

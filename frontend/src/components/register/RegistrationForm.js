@@ -2,12 +2,12 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import Dialog from '../modal/Modal';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 function RegisterForm() {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
-  const [participationType, setParticipationType] = useState('');
+  const [participationType, setParticipationType] = useState("solo");
   const [teamName, setTeamName] = useState('');
   const [teamMembers, setTeamMembers] = useState([]);
   const handleFullNameChange = event => setFullName(event.target.value);
@@ -16,7 +16,8 @@ function RegisterForm() {
   const handleTeamNameChange = event => setTeamName(event.target.value);
   const handleTeamMembersChange = event => setTeamMembers(event.target.value.split(','));
   const navigate=useNavigate()
-
+  const location=useLocation().pathname.split('/')[2]
+  console.log(location)
   const handleSubmit = async(event) => {
     event.preventDefault();
     
@@ -32,14 +33,14 @@ function RegisterForm() {
 
   return (
     <><Form onSubmit={handleSubmit}>
-      <Form.Group controlId="participationType">
+{ location!=='workshop' &&     <Form.Group controlId="participationType">
         <Form.Label>Participation Type</Form.Label>
         <Form.Control as="select" value={participationType} onChange={handleParticipationTypeChange}>
           <option value="">--Please select--</option>
           <option value="solo">Solo</option>
           <option value="team">Team</option>
         </Form.Control>
-      </Form.Group>
+      </Form.Group>}
       {
         participationType==="solo" && (
           <>
@@ -73,7 +74,7 @@ function RegisterForm() {
         </>
       )}
 
-      <Button variant="primary" type="submit">Register</Button>
+      <Button variant="primary" type="submit" className='mt-2'>Register</Button>
     </Form>
     </>
   );

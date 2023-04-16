@@ -5,10 +5,11 @@ const SearchForm = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const navigate =useNavigate()
 
+
     const handleSubmit = async (e) => {
         e.preventDefault() ; 
         if(searchTerm){
-            navigate(`/?search=${searchTerm}`)
+            navigate(`/blog/?search=${searchTerm}`)
         }
 
         setSearchTerm("")
