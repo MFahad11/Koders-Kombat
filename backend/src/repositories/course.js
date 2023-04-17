@@ -6,6 +6,6 @@ exports.getCourse=async(id)=>{
     return await courseModel.findById({_id:id})
 }
 exports.updateCourse=async(id)=>{
-    // console.log(await courseModel.find({_id:id}))
+    //  await courseModel.find({_id:id}))
     return await courseModel.updateOne({_id:id},{$set:{'status':"completed"}})
 }

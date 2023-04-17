@@ -102,23 +102,27 @@ const ClubMemberProfiles = () => {
         {members.map((member) => (
           <Col key={member.id} className="col-12 col-sm-6 col-md-4">
           <Card className="member-card mb-4 m-2">
-    <Card.Header className="member-header">{member.name}</Card.Header>
-    <Card.Body>
+    <Card.Header className="member-header" style={{
+      borderBottom:"1px solid white"
+    }}>{member.name}</Card.Header>
+    <Card.Body style={{
+      borderBottom:"1px solid white"
+    }}>
       <Card.Title>{member.position}</Card.Title>
-      <Card.Text className='text-truncate'>{member.bio}</Card.Text>
+      <Card.Text className='text-truncate '>{member.bio}</Card.Text>
     </Card.Body>
     <ListGroup variant="flush">
-      <ListGroup.Item>
+      <ListGroup.Item className='member-card-footer'>
         <FaEnvelope /> {member.email}
       </ListGroup.Item>
-      <ListGroup.Item>
+      <ListGroup.Item className='member-card-footer'>
         <FaPhone /> {member.phone}
       </ListGroup.Item>
-      <ListGroup.Item>
-        <a href={member.github} target="_blank" rel="noopener noreferrer" className='me-2 fs-4'>
+      <ListGroup.Item className='member-card-footer'>
+        <a href={member.github} target="_blank" rel="noopener noreferrer" className='me-2 fs-4 text-light'>
           <AiFillGithub />
         </a>
-        <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className='fs-4'>
+        <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className='fs-4 text-light'>
           <AiFillLinkedin />
         </a>
       </ListGroup.Item>

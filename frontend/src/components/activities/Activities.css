@@ -15,7 +15,7 @@
     transition: 0.3s;
     border-radius: 5px;
     margin-bottom: 20px;
-    background-color: rgb(240, 235, 235);
+    background-color: #e0dfdf;
   }
   
   .card:hover {
@@ -33,7 +33,7 @@
   }
   
   .card-footer {
-    background-color: rgb(240, 235, 235);
+    background-color: #e0dfdf;
     border-top: none;
   }
   

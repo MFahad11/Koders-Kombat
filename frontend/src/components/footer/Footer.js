@@ -18,11 +18,12 @@ const Footer = () => {
           <Col md={4}>
             <h4>Contact Us</h4>
             <p>
-              1234 Main Street <br />
-              Suite 123 <br />
-              Anytown, USA 12345 <br />
+            
+            NED Colony Ring St <br />
+              NED University Of Engineering & Technology <br />
+              Karachi, Sindh, Pakistan<br />
               Phone: (123) 456-7890 <br />
-              Email: info@website.com
+              Email: info@gmail.com
             </p>
           </Col>
           <Col md={4}>

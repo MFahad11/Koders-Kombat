@@ -58,7 +58,7 @@ module.exports=multer({
 
 //       req.body.imageURL = result.secure_url
 //       const a = req.body.imageURL
-//      console.log(a);
+//       a);
 
 //       next();
 //     });

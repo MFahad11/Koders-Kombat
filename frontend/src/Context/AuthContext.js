@@ -15,11 +15,11 @@ const AuthContextProvider = props => {
 
 
   useEffect(() => {
-    console.log(`Bearer ${localStorage.getItem("authToken")}`)
+
     const controlAuth = async () => {
       try {
         const { data } = await axios.get("http://localhost:4500/api/user/private", config);
-        console.log(data)
+        
         setActiveUser(data.user)
       }
       catch (error) {

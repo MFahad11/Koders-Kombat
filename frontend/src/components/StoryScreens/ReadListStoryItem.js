@@ -3,7 +3,7 @@ import { AiFillStar } from 'react-icons/ai'
 import { BsThreeDots, BsBookmarkFill } from 'react-icons/bs'
 
 const ReadListStoryItem = ({ story, editDate }) => {
-    console.log({ story, editDate })
+    
     const truncateContent = (content) => {
         const trimmedString = content.substr(0, 130);
         return trimmedString

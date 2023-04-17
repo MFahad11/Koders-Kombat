@@ -35,7 +35,7 @@ exports.createUser = async (payload,path) => {
     }
     transporter.sendMail(message).then(()=>{
       response["email"]="sended"
-      console.log(2)
+
     }).catch(error=>{
       console.log(error)
     })
@@ -77,7 +77,7 @@ exports.createUser = async (payload,path) => {
       }
       transporter.sendMail(message).then(()=>{
         response["email"]="sended"
-        console.log(2)
+        
       }).catch(error=>{
         console.log(error)
       })

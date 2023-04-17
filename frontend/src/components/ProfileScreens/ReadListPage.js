@@ -24,7 +24,7 @@ const ReadListPage = () => {
                 const { data } = await (await axios.get(`http://localhost:4500/api/user/readList`, config)).data
                 setReadList(data)
                 setLoading(false)
-                console.log(readList)
+                
             }
             catch (error) {
                 navigate("/blog")

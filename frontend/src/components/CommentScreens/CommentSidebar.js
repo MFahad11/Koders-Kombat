@@ -22,7 +22,7 @@ const CommentSidebar = ({ slug, sidebarShowStatus, setSidebarShowStatus, activeU
       setCount(data.count)
     }
     catch (error) {
-      console.log(error.response.data.error);
+       console.log(error.response.data.error);
     }
   }
 

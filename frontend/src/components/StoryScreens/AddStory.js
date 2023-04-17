@@ -39,7 +39,7 @@ const AddStory = () => {
             image:formdata.get("image"),
             content:content
         }
-        console.log(payload)
+        
         try {
             const { data } = await axios.post("http://localhost:4500/api/story/addstory", payload,
             {headers: {

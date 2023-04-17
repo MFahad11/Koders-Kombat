@@ -30,7 +30,7 @@ const Profile = () => {
 
             try {
                 const { data } = await axios.get("http://localhost:4500/api/user/profile", config)
-                console.log(data)
+                 
                 setUser(data.data)
 
                 setLoading(false)

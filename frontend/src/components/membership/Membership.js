@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
@@ -20,37 +20,41 @@ const Membership = () => {
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.stopPropagation();
-    }
+    } else if (!event.target.email.value || !event.target['full name'].value || !event.target.phone.value || !event.target.university.value || !event.target.batch.value || !event.target.interest.value || !event.target.profileImg.files[0]) {
+      // Check if any required field is empty
+      toast.error("Please fill in all required fields");
+    } else {
       setValidated(true);
-      const data_obj=new FormData(form);
-      
-      const payload={
-        email:data_obj.get('email'),
-        fullname:data_obj.get('full name'),
-        phone:data_obj.get('phone'),
-        university:data_obj.get('university'),
-        batch:data_obj.get('batch'),
-        interest:data_obj.get('interest'),
-        profileImg:data_obj.get('profileImg'),
-  
-      }
+      const data_obj = new FormData(form);
+      const payload = {
+        email: data_obj.get('email'),
+        fullname: data_obj.get('full name'),
+        phone: data_obj.get('phone'),
+        university: data_obj.get('university'),
+        batch: data_obj.get('batch'),
+        interest: data_obj.get('interest'),
+        profileImg: data_obj.get('profileImg'),
+      };
       form.reset();
-      const response=await axios.post("http://localhost:4500/api/user/membership",payload,{headers: {
-        'Content-Type': 'multipart/form-data'
-      }})
-      const {data}=response
-      if(response.status===200){
-        if(data.status==="create"){
+      const response = await axios.post("http://localhost:4500/api/user/membership", payload, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      });
+      const { data } = response;
+      if (response.status === 200) {
+        if (data.status === "create") {
           toast.success("Your Request have been received!!")
-        }else{
+        } else {
           toast.info("You are already a member")
         }
-      }
-      else{
+      } else {
         toast.error('There is an error. Retry!')
       }
-     console.log(response)
+      navigate('/');
+    }
   };
+  
 
   return (
     <Form noValidate validated={validated} onSubmit={handleSubmit} enctype="multipart/form-data">

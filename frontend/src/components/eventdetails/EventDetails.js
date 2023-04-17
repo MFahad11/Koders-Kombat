@@ -5,7 +5,7 @@ import Gallery from '../gallery/Gallery';
 import './EventDetails.css'
 const EventDetailPage = () => {
   const {state}=useLocation();
-  console.log(state)
+
   return (
 <>
     <div className="event-detail-page">

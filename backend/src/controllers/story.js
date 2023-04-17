@@ -7,7 +7,7 @@ const {searchHelper, paginateHelper} =require("../helpers/query/queryHelpers")
 const addStory = asyncErrorWrapper(async  (req,res,next)=> {
     const {title,content} = req.body 
     var wordCount = content.trim().split(/\s+/).length; 
-   console.log(wordCount)
+
     let readtime = Math.floor(wordCount /200)   ;
 
 
@@ -74,7 +74,7 @@ const detailStory =asyncErrorWrapper(async(req,res,next)=>{
     const story = await Story.findOne({
         slug: slug 
     }).populate("author likes")
-    console.log(story)
+
     const storyLikeUserIds = story.likes.map(json => json.id)
     const likeStatus = storyLikeUserIds.includes(activeUser._id)
 

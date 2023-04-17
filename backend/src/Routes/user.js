@@ -5,9 +5,6 @@ const authController=require('../controllers/auth')
 const upload=require('../middleware/multer')
 const { getAccessToRoute } = require("../middleware/auth");
 router.post("/membership", upload.single("profileImg"),userController.createUser);
-router.get('/user',(req,res)=>{
-    console.log(1)
-})
 router.post("/register",userController.createParticipents);
 // router.put("/user/:id", userController.updatePayment);
 router.post("/login",authController.login)

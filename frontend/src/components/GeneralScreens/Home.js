@@ -26,7 +26,7 @@ const Home = () => {
       try {
 
         const { data } = await axios.get(`http://localhost:4500/api/story/getAllStories?search=${searchKey || ""}&page=${page}`)
-        console.log(data)
+        
         if (searchKey) {
           navigate({
             pathname: '/blog',

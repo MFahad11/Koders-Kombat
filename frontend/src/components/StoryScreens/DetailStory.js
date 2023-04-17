@@ -34,7 +34,6 @@ const DetailStory = () => {
             authorization: `Bearer ${localStorage.getItem("authToken")}`,
           },
         });
-        console.log(data.user)
         activeUser = data.user
 
         setActiveUser(activeUser)
@@ -51,7 +50,7 @@ const DetailStory = () => {
         setLikeCount(data.data.likeCount)
         setStoryLikeUser(data.data.likes)
         setLoading(false)
-        console.log(data.data)
+        
         const story_id = data.data._id;
 
         if (activeUser.readList) {

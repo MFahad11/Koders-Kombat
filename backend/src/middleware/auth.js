@@ -10,12 +10,9 @@ const getAccessToRoute = asyncErrorWrapper(async(req,res,next) =>{
     // const {"herllokodpcnc"} =process.env ;
 
     if(!isTokenIncluded(req)) {
-
         return next(new CustomError("You are not authorized to access this route ", 401))
     }
-
     const accessToken = getAccessTokenFromHeader(req)
-
     const decoded = jwt.verify(accessToken,"herllokodpcnc") ;
 
     const user = await memberModel.findById(decoded.id)
