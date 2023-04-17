@@ -30,22 +30,17 @@ const Footer = () => {
   <h4 style={{ color: "#fff" }}>Follow Us</h4>
   <ul className="list-unstyled d-flex">
     <li className="me-3">
-      <a href="#" target="_blank" rel="noreferrer">
+      <a href="https://www.facebook.com/profile.php?id=100087510656043" target="_blank" rel="noreferrer">
         <FaFacebook size={24} style={{ color: "#fff" }} />
       </a>
     </li>
     <li className="me-3">
-      <a href="#" target="_blank" rel="noreferrer">
-        <FaTwitter size={24} style={{ color: "#fff" }} />
-      </a>
-    </li>
-    <li className="me-3">
-      <a href="#" target="_blank" rel="noreferrer">
+      <a href="https://www.linkedin.com/company/koderz-club/" target="_blank" rel="noreferrer">
         <FaLinkedin size={24} style={{ color: "#fff" }} />
       </a>
     </li>
     <li>
-      <a href="#" target="_blank" rel="noreferrer">
+      <a href="https://www.instagram.com/koderzclub/" target="_blank" rel="noreferrer">
         <FaInstagram size={24} style={{ color: "#fff" }} />
       </a>
     </li>
