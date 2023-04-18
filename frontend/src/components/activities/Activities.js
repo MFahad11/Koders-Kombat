@@ -62,7 +62,7 @@ function ClubActivities() {
     {
       title: 'Web Development Bootcamp',
       description: 'An 8-week bootcamp covering the basics of web development, including HTML, CSS, and JavaScript.',
-      startDate: 'April 1, 2023',
+      start: 'April 1, 2023',
       endDate: 'May 27, 2023',
       image: pic6,
       type:'workshop'
@@ -70,15 +70,16 @@ function ClubActivities() {
     {
         title: 'App Development Bootcamp',
         description: 'An 8-week bootcamp covering the basics of web development, including HTML, CSS, and JavaScript.',
-        startDate: 'April 1, 2023',
+        start: 'April 1, 2023',
         endDate: 'May 27, 2023',
         image: pic7,
         type:'workshop'
       },
+
       {
         title: 'Hackathon 2023',
         description: 'Our annual hackathon where participants compete to create the best project in a limited time period.',
-        startDate: 'April 1, 2023',
+        start: 'April 1, 2023',
         endDate: 'May 27, 2023',
         image: pic,
         type:'hackathons'
@@ -116,9 +117,9 @@ function ClubActivities() {
   });
 
   const ongoingEvents = events.filter((event) => {
-    const eventStartDate = new Date(event.startDate);
+    const eventstart = new Date(event.start);
     const eventEndDate = new Date(event.endDate);
-    return eventStartDate <= now && eventEndDate >= now;
+    return eventstart <= now && eventEndDate >= now;
   });
 
   const settings = {
@@ -162,13 +163,13 @@ state: {
   ...event
 }
 })}}>
-              {event.startDate ? "Register Now" : "Learn More"}
+              {event.start ? "Register Now" : "Learn More"}
             </Button>
           </Card.Body>
           <Card.Footer>
             <small className="text-muted">
-              {event.startDate
-                ? `Starts on ${event.startDate}`
+              {event.start
+                ? `Starts on ${event.start}`
                 : `Date: ${event.date}`}
             </small>
           </Card.Footer>

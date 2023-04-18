@@ -7,8 +7,10 @@ import './Calendar.css'
 import Dialog from '../modal/Modal';
 import Membership from '../membership/Membership';
 import EventDetails from '../eventdetails/EventDetails';
+import { Navigate, useNavigate } from 'react-router-dom';
 Modal.setAppElement("#root")
 const Calendar = () => {
+  const navigate=useNavigate()
   const [searchQuery, setSearchQuery] = useState('');
   const [eventTypeFilter, setEventTypeFilter] = useState('all');
   const [show, setShow] = useState(false);
@@ -33,7 +35,7 @@ const Calendar = () => {
   start: '2023-06-30',
   name: 'Code for a Cause',
   end: '2023-07-02',
-  type: 'hackathon',
+  type: 'hackathons',
   location: '456 Elm St, Anytown USA',
   description: 'Join us for a weekend of hacking for a good cause. Work on real-world projects that make a positive impact in your community.',
   registerLink: 'https://example.com/hackathon-registration'
@@ -66,13 +68,15 @@ const Calendar = () => {
         );
       });    
       function handleEventClick(event) {
-setShow(true)
-setData({
+        navigate(`/event/detail`,
+{
+state: {
   title:event.event.title,
   ...event.event.extendedProps,
-  ...event.event._instance.range
+  ...event.event._instance.range,
+  type:event.event.extendedProps.type.toUpperCase()
+}
 })
-setType(event.event.extendedProps.type.toUpperCase())
       }
   return (
     <>
@@ -88,7 +92,7 @@ setType(event.event.extendedProps.type.toUpperCase())
       </div>
       <FullCalendar plugins={[dayGridPlugin]} initialView="dayGridMonth" events={filteredEvents}
         eventClick={(event) => handleEventClick(event)} editable={true}/>
-        <Dialog show={show} setShow={setShow} elem={<EventDetails props={data}/>} title={type}/>
+        {/* <Dialog show={show} setShow={setShow} elem={<EventDetails props={data}/>} title={type}/> */}
     </>
   )
 }

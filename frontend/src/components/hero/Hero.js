@@ -17,7 +17,7 @@ function Hero() {
       </Col>
     </Row>
   </Container>
-  <Dialog show={show} setShow={setShow} elem={<Membership />} title={"Membership Form"} />
+  <Dialog show={show} setShow={setShow} elem={<Membership />} title={"Membership Form"} navigate='/'/>
 </div>
 
 

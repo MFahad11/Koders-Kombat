@@ -5,7 +5,7 @@ import App from './App';
 import AuthContextProvider from './Context/AuthContext'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <AuthContextProvider>
+    // <AuthContextProvider>
        <App />
-    </AuthContextProvider>
+    // </AuthContextProvider>
 );

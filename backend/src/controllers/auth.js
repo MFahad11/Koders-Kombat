@@ -1,7 +1,7 @@
 const asyncErrorWrapper = require("express-async-handler")
 // const User = require("../Models/user");
 const { catchAsync } = require('../helpers/error/request');
-// const CustomError = require("../helpers/error/CustomError");
+const CustomError = require("../helpers/error/CustomError");
 const { sendToken } = require("../helpers/auth/tokenHelpers");
 // const sendEmail = require("../Helpers/Librari es/sendEmail");
 const { validateUserInput,comparePassword } = require("../helpers/input/inputHelpers");
@@ -33,9 +33,7 @@ const getPrivateData = asyncErrorWrapper((req,res,next) =>{
 // // })
 
 const login  = catchAsync (async(req,res,next) => {
-
     const {email,password} = req.body 
-
     if(!validateUserInput(email,password)) {
 
         return next(new CustomError("Please check your inputs",400))

@@ -19,6 +19,7 @@ const LoginScreen = () => {
         "http://localhost:4500/api/user/login",
         { email, password }
       );
+      console.log(data)
       // console.log(data)
       localStorage.setItem("authToken", data.token);
         toast.success("Logged in Success")

@@ -1,10 +1,7 @@
-import Blog from "./components/blog/Blog";
 import Calendar from "./components/calendar/Calendar";
-import Gallery from "./components/gallery/Gallery";
-import HeroSection from "./components/hero/Hero";
 import Membership from "./components/membership/Membership";
-import NavBar from "./components/navbar/Navbar";
 import RegistrationForm from "./components/register/RegistrationForm";
+import AuthContextProvider from './Context/AuthContext'
 import PrivateRoute from './components/Routing/PrivateRoute';
 import Main from "./components/Home/Main";
 import Home from "./components/GeneralScreens/Home"
@@ -24,10 +21,9 @@ import NotFound from './components/GeneralScreens/NotFound';
 import EditStory from './components/StoryScreens/EditStory';
 import ReadListPage from './components/ProfileScreens/ReadListPage';
 
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import { Outlet } from 'react-router-dom'
-import Hero from "./components/hero/Hero";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import LeaderBoard from "./components/leaderboard/LeaderBoard";
 import EventDetailPage from "./components/eventdetails/EventDetails";
@@ -88,9 +84,6 @@ function App() {
 
                           <Route exact path="/login" element={<LoginScreen />} />
                           <Route index element={<Main/>}></Route>
-                          {/* <Route exact path="/">
-                                <Navigate to="/main" />
-                          </Route> */}
                           <Route exact path="/register" element={<RegisterScreen />} />
                         <Route exact path="/membership" element={<Membership/>}></Route>
                         <Route exact path='/registeration/:type' element={<RegistrationForm/>}></Route>
@@ -116,10 +109,11 @@ function App() {
 const LayoutsWithHeader = () => {
   return (
         <>
+        <AuthContextProvider>
               <Header />
               {/* <NavBar/> */}
               <Outlet />
-              <Footer />
+              <Footer /></AuthContextProvider>
         </>
   );
 }

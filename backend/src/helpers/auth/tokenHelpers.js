@@ -1,6 +1,6 @@
 
 const isTokenIncluded =(req) => {
-   
+    if(req.headers.authorization.split(" ")[1]==="null"){return false}
     return (
         req.headers.authorization && req.headers.authorization.startsWith("Bearer")
     )
