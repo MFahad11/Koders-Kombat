@@ -4,7 +4,7 @@ import './LeaderBoard.css'
 import Dialog from '../modal/Modal';
 const events = [
   {
-    "name": "Solo Event",
+    "name": "Hackbot Fest",
     "type": "solo",
     "leaderboard": [
       {
@@ -28,7 +28,7 @@ const events = [
     ]
   },
   {
-    "name": "Team Event",
+    "name": "Code Gangs",
     "type": "team",
     "leaderboard": [
       {
@@ -64,7 +64,7 @@ const events = [
     ]
   },
   {
-    "name": "Sol Event",
+    "name": "Code in dark",
     "type": "solo",
     "leaderboard": [
       {

@@ -20,9 +20,9 @@ const Calendar = () => {
 // Workshop event
 {
   title: 'Web Development Workshop',
-  start: '2023-05-15',
+  start: '2023-05-02',
   name: 'Introduction to HTML and CSS',
-  end: '2023-05-15',
+  end: '2023-05-02',
   type: 'workshop',
   location: '123 Main St, Anytown USA',
   description: 'Learn the basics of building web pages with HTML and CSS.',
@@ -32,9 +32,9 @@ const Calendar = () => {
 // Hackathon event
 {
   title: 'Hackathon',
-  start: '2023-06-30',
+  start: '2023-05-15',
   name: 'Code for a Cause',
-  end: '2023-07-02',
+  end: '2023-05-17',
   type: 'hackathons',
   location: '456 Elm St, Anytown USA',
   description: 'Join us for a weekend of hacking for a good cause. Work on real-world projects that make a positive impact in your community.',
@@ -44,9 +44,9 @@ const Calendar = () => {
 // Guest lecture event
 {
   title: 'Guest Lecture Series',
-  start: '2023-08-10',
+  start: '2023-05-22',
   name: 'Artificial Intelligence and Ethics',
-  end: '2023-08-10',
+  end: '2023-05-22',
   type: 'lecture',
   location: '789 Oak St, Anytown USA',
   description: 'Join us for a thought-provoking talk on the ethical considerations surrounding artificial intelligence.',
@@ -74,7 +74,7 @@ state: {
   title:event.event.title,
   ...event.event.extendedProps,
   ...event.event._instance.range,
-  type:event.event.extendedProps.type.toUpperCase()
+  type:event.event.extendedProps.type
 }
 })
       }

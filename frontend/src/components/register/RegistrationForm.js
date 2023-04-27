@@ -46,7 +46,7 @@ function RegisterForm() {
   }
   return (
     <><Form noValidate validated={validated} onSubmit={handleSubmit}>
-{ location!=='workshop' &&     <Form.Group controlId="participationType">
+{ location!=='workshop' && <Form.Group controlId="participationType">
         <Form.Label>Participation Type</Form.Label>
         <Form.Control required as="select" value={participationType} onChange={handleParticipationTypeChange}>
           <option value="">--Please select--</option>
