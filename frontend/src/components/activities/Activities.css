@@ -9,13 +9,14 @@
     color: white;
     margin-bottom: 20px;
 }
-.card {
+.event-card{
   /* background-color:  rgb(234, 231, 230); */
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    background-color: #e0dfdf;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background-color: rgb(201, 117, 81,0.6) !important;
+    /* background-color: #e0dfdf; */
   }
   
   .card:hover {
@@ -33,12 +34,12 @@
   }
   
   .card-footer {
-    background-color: #e0dfdf;
+    background-color: rgb(201, 117, 81,0.1) !important;
     border-top: none;
   }
   
   .card-footer small {
-    color: gray;
+    color: white;
   }
   
   .btn-primary {
@@ -50,8 +51,8 @@
     font-weight: bold;
   }
   .event-card-body {
-    
     padding: 1rem;
+    
   }
   .hr {
     border-top: 3px solid rgb(255, 255, 255);
