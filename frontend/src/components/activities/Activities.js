@@ -150,11 +150,11 @@ function ClubActivities() {
     return events.map((event, index) => {
       return (
 <Col key={index} md={4} className="mb-4">
-        <Card className="m-2">
+        <Card className="m-2 event-card" >
           <Card.Img variant="top" src={event.image} />
           <Card.Body className="event-card-body">
-            <Card.Title>{event.title}</Card.Title>
-            <Card.Text>{event.description}</Card.Text>
+            <Card.Title className='text-light'>{event.title}</Card.Title>
+            <Card.Text className='text-light'>{event.description}</Card.Text>
             <Button variant="primary" onClick={()=>{
               
               navigate(`/event/detail`,
@@ -167,7 +167,7 @@ state: {
             </Button>
           </Card.Body>
           <Card.Footer>
-            <small className="text-muted">
+            <small className="text-lights">
               {event.start
                 ? `Starts on ${event.start}`
                 : `Date: ${event.date}`}
