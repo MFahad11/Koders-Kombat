@@ -9,19 +9,19 @@ const events = [
     "leaderboard": [
       {
         "rank": 1,
-        "name": "John Doe",
+        "name": "Sameed Hussain",
         "score": 1500,
         "department": "CSIT"
       },
       {
         "rank": 2,
-        "name": "Jane Smith",
+        "name": "Mark Zuckerberg",
         "score": 1300,
         "department": "SE"
       },
       {
         "rank": 3,
-        "name": "Bob Johnson",
+        "name": "Elon Musk",
         "score": 1200,
         "department": "CIS"
       }
@@ -33,31 +33,31 @@ const events = [
     "leaderboard": [
       {
         "rank": 1,
-        "name": "Team Alpha",
+        "name": "Co'De Grace",
         "score": 3000,
         "department": "CIS"
       },
       {
         "rank": 2,
-        "name": "Team Bravo",
+        "name": "Team Pluto",
         "score": 2800,
         "department": "SE"
       },
       {
         "rank": 3,
-        "name": "Team Charlie",
+        "name": "Team No Name",
         "score": 2700,
         "department": "CSIT"
       },
       {
         "rank": 4,
-        "name": "Team Delta",
+        "name": "Shinning Stars",
         "score": 2600,
         "department": "CSIT"
       },
       {
         "rank": 5,
-        "name": "Team Echo",
+        "name": "Tech Army",
         "score": 2500,
         "department": "SE"
       }
@@ -69,19 +69,19 @@ const events = [
     "leaderboard": [
       {
         "rank": 1,
-        "name": "Jon Doe",
+        "name": "Sameed Hussain",
         "score": 1500,
         "department": "CIS"
       },
       {
         "rank": 2,
-        "name": "Jan Smith",
+        "name": "Mark Zuckerberg",
         "score": 1300,
         "department": "SE"
       },
       {
         "rank": 3,
-        "name": "Bob Johnson",
+        "name": "Elon Musk",
         "score": 1200,
         "department": "CSIT"
       }
