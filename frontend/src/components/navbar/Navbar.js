@@ -56,6 +56,31 @@ function NavBar() {
               </NavDropdown.Item>
             </NavDropdown>
             <NavLink to='/leaderboard' style={{fontSize: "1rem", marginRight: "15px", color: 'white', textDecoration : 'none' , marginTop : '7px'}}>LEADERBOARD</NavLink>
+            <NavDropdown title="Communities" id="collasible-nav-dropdown">
+              {/* <NavDropdown.Item onClick={()=>{setShow(true)}}>Calendar</NavDropdown.Item>
+              <Dialog show={show} setShow={setShow} elem={<Calendar/>} title={"Future/Ongoing Events"} navigate="/"/> */}
+              <NavDropdown.Item>
+                <Link to="event" spy={true} smooth={true} duration={400} offset={700} style={{color:"black",textDecoration:"none"}}>
+                  Artificial Intelligence
+                </Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                <Link to="event" spy={true} smooth={true} duration={400} offset={700} style={{color:"black",textDecoration:"none"}}>
+                  Data Science
+                </Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                <Link to="event" spy={true} smooth={true} duration={400} offset={700} style={{color:"black",textDecoration:"none"}}>
+                  Cyber Security
+                </Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                <Link to="event" spy={true} smooth={true} duration={400} offset={700} style={{color:"black",textDecoration:"none"}}>
+                  Blockchain
+                </Link>
+              </NavDropdown.Item>
+              {/* <NavDropdown.Divider /> */}
+            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Container>

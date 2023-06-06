@@ -19,10 +19,11 @@ exports.createUser = async (payload,path) => {
         link:'https://mailgen.js/'
       }
     })
+    const interest=payload.interest
     let res={
       body:{
         name:payload.fullName||"Participent",
-        intro: ['Congrats!! You are now a member',`This is your password ${response.pass}`],
+        intro: ['Congrats!! You are now a member',`Your domain is <strong>${interest.toUpperCase()}</strong>`,`This is your password ${response.pass}`],
         outro:"Excited to work with you"
       }
     }
