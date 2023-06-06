@@ -85,26 +85,70 @@ function ClubActivities() {
         type:'hackathons'
       },
     {
-      title: 'Guest Speaker Series',
-      description: 'A series of talks from industry professionals on topics such as software engineering, data science, and UX design.',
-      date: 'June 15-30, 2023',
+      title: 'CodeCraft',
+      description: 'A coding event where participants compete to design and implement the most elegant and efficient software solutions.',
+      start: 'June 1, 2023',
+      endDate: 'June 10, 2023',
       image: pic,
       type:'workshop'
     },
     {
-        title: 'Guest Speaker Series',
-        description: 'A series of talks from industry professionals on topics such as software engineering, data science, and UX design.',
-        date: 'June 15-30, 2023',
+        title: 'CodeSwap',
+        description: "A collaborative coding event where programmers pair up to exchange and improve each other's code, fostering learning and innovation.",
+        start: 'June 3, 2023',
+        endDate: 'June 13, 2023',
         image: pic,
         type:'workshop'
       },
       {
         title: 'Guest Speaker Series',
-        description: 'A series of talks from industry professionals on topics such as software engineering, data science, and UX design.',
-        date: 'June 15-30, 2023',
+        description: 'A series of challenges revolving around data analysis, cleaning, visualizations.',
+        start: 'June 21, 2023',
+        endDate: 'June 30, 2023',
         image: pic,
         type:'workshop'
       },
+      {
+        title: 'Data Fusion Quest: Where Patterns Unveil',
+        description: 'A series of challenges revolving around data analysis, cleaning, visualizations.',
+        start: 'July 1, 2023',
+        endDate: 'July 10, 2023',
+        image: pic,
+        type:'workshop'
+      },
+      {
+        title: 'Code Review',
+        description: "A collaborative process where programmers analyze and assess each other's code to improve its quality, readability, and efficiency.",
+        start: 'July 11, 2023',
+        endDate: 'July 20, 2023',
+        image: pic,
+        type:'workshop'
+      },
+      {
+        title: 'Bug Fixing Marathon',
+        description: 'A focused event where developers dedicate time to identifying and fixing software bugs to enhance the stability and functionality of an application.',
+        start: 'July 21, 2023',
+        endDate: 'July 30, 2023',
+        image: pic,
+        type:'workshop'
+      },
+      {
+        title: 'Open Source Contribution Day',
+        description: 'A community-driven event encouraging developers to contribute to open source projects by submitting code enhancements, bug fixes, or new features.',
+        start: 'August 1, 2023',
+        endDate: 'August 10, 2023',
+        image: pic,
+        type:'workshop'
+      },
+      {
+        title: 'Algorithmic Programming Contest',
+        description: 'A timed competition where participants solve complex algorithmic problems using efficient coding techniques to achieve the highest score.',
+        start: 'August 11, 2023',
+        endDate: 'August 20, 2023',
+        image: pic,
+        type:'workshop'
+      },
+      
   ];
   const pastEvents = events.filter((event) => {
     const eventDate = new Date(event.date);

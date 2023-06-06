@@ -25,7 +25,7 @@ function RegisterForm() {
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.stopPropagation();
-    } else if (!fullName || !email || !participationType || !teamName || !teamMembers.length) {
+    } else if (!fullName || !email || !participationType) {
       // Check if any required field is empty
       toast.error("Please fill in all required fields");
     } else {

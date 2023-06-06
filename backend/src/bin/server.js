@@ -7,14 +7,8 @@ const path=require('path')
 // const IndexRoute = require("../Routes/index")
 // const connectDatabase = require("./Helpers/database/connectDatabase")
 // const customErrorHandler = require("./Middlewares/Errors/customErrorHandler")
-const courseRoute=require('../Routes/course')
-const lectureRoute=require('../Routes/lecture')
 const userRoute=require('../Routes/user')
-const compilerRoute=require("../Routes/compiler")
 const storyRoute=require('../Routes/story')
-const paymentRoute=require("../Routes/payment")
-const lectureModel=require("../models/schema/lecture")
-const questionRoute=require("../Routes/question")
 var bodyParser = require('body-parser');
 const cookieParser = require("cookie-parser");
 require("../bootstrap/index");

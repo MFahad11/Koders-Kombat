@@ -12,17 +12,18 @@ const Membership = () => {
   const navigate=useNavigate()
   const [file,setFile]=useState("")
   const [validated, setValidated] = useState(false);
+  const [disabled,setDisabled]=useState(false)
   const handleFileChange=(event)=>{
     setFile(event.target.files[0])
   }
   const handleSubmit = async (event) => {
+    setDisabled(true)
     event.preventDefault();
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
-      event.stopPropagation();
-    } else if (!event.target.email.value || !event.target['full name'].value || !event.target.phone.value || !event.target.university.value || !event.target.batch.value || !event.target.interest.value || !event.target.profileImg.files[0]) {
-      // Check if any required field is empty
       toast.error("Please fill in all required fields");
+      setDisabled(false)
+      event.stopPropagation();
     } else {
       setValidated(true);
       const data_obj = new FormData(form);
@@ -35,7 +36,7 @@ const Membership = () => {
         interest: data_obj.get('interest'),
         profileImg: data_obj.get('profileImg'),
       };
-      form.reset();
+      // form.reset();
       const response = await axios.post("http://localhost:4500/api/user/membership", payload, {
         headers: {
           'Content-Type': 'multipart/form-data'
@@ -47,8 +48,10 @@ const Membership = () => {
           toast.success("Your Request have been received!!")
         } else {
           toast.info("You are already a member")
+          setDisabled(false)
         }
       } else {
+        setDisabled(false)
         toast.error('There is an error. Retry!')
       }
       navigate('/');
@@ -61,7 +64,7 @@ const Membership = () => {
       <Row className="mb-3">
       <Form.Group as={Col} md="5" controlId="validationCustom01">
           <Form.Label>Email</Form.Label>
-          <Form.Control required type="email" placeholder="Enter email" name="email"/>
+          <Form.Control required type="email" placeholder="Enter email" name="email" readOnly={disabled}/>
           <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
         </Form.Group>
         <Form.Group as={Col} md="5" controlId="validationCustom02">
@@ -71,6 +74,7 @@ const Membership = () => {
             type="text"
             placeholder="Full name"
             name="full name"
+            readOnly={disabled}
           />
           <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
         </Form.Group>
@@ -85,13 +89,14 @@ const Membership = () => {
             type="text"
             placeholder="phone"
             name='phone'
+            readOnly={disabled}
           />
           </InputGroup>
           <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
         </Form.Group>
         <Form.Group as={Col} md="3" controlId="validationCustom03">
         <Form.Label>University</Form.Label>
-        <Form.Select required name="university">
+        <Form.Select required name="university" disabled={disabled}>
       <option value="">select</option>
       <option value="NED University">NED University</option>
       <option value="Karachi University">Karachi University</option>
@@ -100,7 +105,7 @@ const Membership = () => {
         </Form.Group>
         <Form.Group as={Col} md="3" controlId="validationCustom03">
         <Form.Label>Batch</Form.Label>
-        <Form.Select required name="batch">
+        <Form.Select required name="batch" disabled={disabled}>
         <option value="">select</option>
         <option value="2018">2018</option>
         <option value="2019">2019</option>
@@ -113,7 +118,7 @@ const Membership = () => {
       <Row className="mb-3">
         <Form.Group as={Col} md="4" controlId="validationCustom03">
         <Form.Label>Domain of Interest</Form.Label>
-        <Form.Select required name="interest">
+        <Form.Select required name="interest" disabled={disabled}>
       <option value="">select</option>
       <option value="web development">Web development</option>
       <option value="app development">App development</option>
@@ -124,7 +129,7 @@ const Membership = () => {
         </Form.Group>
         <Form.Group as={Col} md="6" controlId="validationCustom03">
         <Form.Label>Input picture</Form.Label>
-        <Form.Control type="file" required name="profileImg" accept="image/*" onChange={handleFileChange}/>
+        <Form.Control type="file" required name="profileImg" accept="image/*" onChange={handleFileChange} readOnly={disabled}/>
       </Form.Group>
       </Row>
       <Form.Group className="mb-3">
@@ -135,7 +140,7 @@ const Membership = () => {
           feedbackType="invalid"
         />
       </Form.Group>
-      <Button type="submit">Submit form</Button>
+      <Button type="submit" disabled={disabled}>Submit form</Button>
     </Form>
   );
 }
