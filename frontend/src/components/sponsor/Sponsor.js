@@ -1,34 +1,34 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import logo from './Corporate_Sponsor_Image.png'
-import logo1 from './virtual-meetings-sponsorships.webp'
+import logo from './Copy of Gaditek-logo.png'
+import logo1 from './oct_daily.jpg'
 import './Sponsor.css'
 const sponsors = [
   {
-    name: 'Company A',
+    name: 'Gaditek',
     logo: logo,
-    website: 'https://www.example.com',
+    website: 'https://www.gaditek.com/',
   },
   {
-    name: 'Company B',
+    name: 'Oct Daily',
     logo: logo1,
-    website: 'https://www.example.com',
+    website: 'https://www.linkedin.com/company/octdaily?trk=public_post_main-feed-card-text',
   },
-  {
-    name: 'Company C',
-    logo: logo,
-    website: 'https://www.example.com',
-  },
-  {
-    name: 'Company D',
-    logo: logo1,
-    website: 'https://www.example.com',
-  },
-  {
-    name: 'Company E',
-    logo: logo,
-    website: 'https://www.example.com',
-  },
+  // {
+  //   name: 'Company C',
+  //   logo: logo,
+  //   website: 'https://www.example.com',
+  // },
+  // {
+  //   name: 'Company D',
+  //   logo: logo1,
+  //   website: 'https://www.example.com',
+  // },
+  // {
+  //   name: 'Company E',
+  //   logo: logo,
+  //   website: 'https://www.example.com',
+  // },
 ];
 
 const SponsorsPage = () => {

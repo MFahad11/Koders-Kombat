@@ -16,11 +16,11 @@ const Communities = () => {
     }, []);
   
     return (
-        <Container className="d-flex flex-column justify-content-center align-items-center" style={{ minHeight: '100vh' }}>
-        <h1 className="text-center mb-4">Welcome to {pathname} Community</h1>
+        <Container className="d-flex flex-column justify-content-center align-items-end" style={{ minHeight: '100vh'}}>
+        <h1 class="text-cemter align-items-end" style={{color : "white"}} >Welcome to {pathname} Community</h1>
         {showRecruitment && (
           <div className="recruitment-container text-center">
-            <h2 className="recruitment-text">Recruitments are live</h2>
+            <h2 className="recruitment-text" style={{color : "white"}}>Communities to go live soon!<br></br>Stay Tuned</h2>
             <Button variant="primary" className="shake-on-hover">Join Now</Button>
           </div>
         )}

@@ -10,79 +10,91 @@ const events = [
       {
         "rank": 1,
         "name": "Sameed Hussain",
-        "score": 1500,
         "department": "CSIT"
       },
       {
         "rank": 2,
-        "name": "Mark Zuckerberg",
-        "score": 1300,
-        "department": "SE"
+        "name": "Akhlaq Ahmed Shaikh",
+   
+        "department": "CSIT"
       },
       {
         "rank": 3,
-        "name": "Elon Musk",
-        "score": 1200,
-        "department": "CIS"
+        "name": "Fahad Ahad",
+    
+        "department": "CSIT"
       }
     ]
   },
   {
-    "name": "Code Gangs",
+    "name": "Koderz Kombat'22",
+    "type": "team",
+    "leaderboard": [
+      {
+        "rank": 1,
+        "name": "Code Morphers",
+       
+        "department": "SE"
+      },
+      {
+        "rank": 2,
+        "name": "Team Pluto",
+       
+        "department": "CSIT"
+      },
+      {
+        "rank": 3,
+        "name": "Tiest Developers",
+        
+        "department": "TIEST(CS)"
+      },
+      
+    ]
+  },
+  {
+    "name": "Koderz Kombat'23",
+    "type": "team",
+    "leaderboard": [
+      {
+        "rank": 1,
+        "name": "Runtime TError",
+     
+        "department": "CSIT"
+      },
+      {
+        "rank": 2,
+        "name": "Phoneix_Editz",
+    
+        "department": "CSIT(AI)"
+      },
+      {
+        "rank": 3,
+        "name": "ASM",
+    
+        "department": "CSIT"
+      }
+    ]
+  },
+  {
+    "name": "WEB KODE'23",
     "type": "team",
     "leaderboard": [
       {
         "rank": 1,
         "name": "Co'De Grace",
-        "score": 3000,
-        "department": "CIS"
+        
+        "department": "CSIT"
       },
       {
         "rank": 2,
         "name": "Team Pluto",
-        "score": 2800,
-        "department": "SE"
-      },
-      {
-        "rank": 3,
-        "name": "Team No Name",
-        "score": 2700,
+     
         "department": "CSIT"
       },
       {
-        "rank": 4,
-        "name": "Shinning Stars",
-        "score": 2600,
-        "department": "CSIT"
-      },
-      {
-        "rank": 5,
-        "name": "Tech Army",
-        "score": 2500,
-        "department": "SE"
-      }
-    ]
-  },
-  {
-    "name": "Code in dark",
-    "type": "solo",
-    "leaderboard": [
-      {
-        "rank": 1,
-        "name": "Sameed Hussain",
-        "score": 1500,
-        "department": "CIS"
-      },
-      {
-        "rank": 2,
-        "name": "Mark Zuckerberg",
-        "score": 1300,
-        "department": "SE"
-      },
-      {
         "rank": 3,
-        "name": "Elon Musk",
-        "score": 1200,
+        "name": "TIEST Developers",
+    
         "department": "CSIT"
       }
     ]
@@ -166,7 +178,6 @@ function Leaderboard() {
       <tr>
         <th>Rank</th>
         <th>Name</th>
-        <th>Score</th>
         <th>Department</th>
       </tr>
     </thead>
@@ -176,7 +187,6 @@ function Leaderboard() {
         <tr key={leaderboardItem.rank}>
           <td>{leaderboardItem.rank}</td>
           <td>{leaderboardItem.name}</td>
-          <td>{leaderboardItem.score}</td>
           <td>{leaderboardItem.department}</td>
         </tr>
       ))}

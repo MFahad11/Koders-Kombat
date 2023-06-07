@@ -10,9 +10,7 @@ const Footer = () => {
           <Col md={4}>
             <h4>About Us</h4>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor,
-              libero in efficitur commodo, ligula ex vulputate metus, vel blandit
-              ipsum ex nec lacus.
+            We are a community of students who love coding and building cool projects together. Our club is open to students of all levels, from beginners to experienced developers.We believe that learning to code should be fun and collaborative. That's why we organize regular meetups, workshops, and hackathons to bring our members together and provide opportunities for them to learn and grow.
             </p>
           </Col>
           <Col md={4}>
