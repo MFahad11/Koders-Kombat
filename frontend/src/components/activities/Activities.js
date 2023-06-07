@@ -12,6 +12,8 @@ import pic4 from "../../assets/cyber.jpg";
 import pic5 from "../../assets/sqa.jpg";
 import pic6 from "../../assets/web.png";
 import pic7 from "../../assets/app.png";
+import logo1 from "../../assets/WhatsApp Image 2023-06-07 at 10.31.25 PM (1).jpeg"
+import logo2 from "../../assets/WhatsApp Image 2023-06-07 at 10.31.25 PM.jpeg"
 import { useNavigate } from "react-router-dom";
 import EventScheduleTable from "../tables/Table";
 function ClubActivities() {
@@ -68,7 +70,7 @@ function ClubActivities() {
     },
 
     {
-      title: "CodeCraft",
+      title: "WEB KODE",
       description:
         "A coding event where participants compete to design and implement the most elegant and efficient software solutions.",
       start: "June 1, 2023",
@@ -77,7 +79,7 @@ function ClubActivities() {
       type: "workshop",
     },
     {
-      title: "CodeSwap",
+      title: "KODERS KOMBAT",
       description:
         "A collaborative coding event where programmers pair up to exchange and improve each other's code, fostering learning and innovation.",
       start: "June 3, 2023",
@@ -228,15 +230,46 @@ function ClubActivities() {
       </Row>
       {ongoingEvents.length > 0 && (
         <Row className="justify-content-center">
-          <Col xs={12} lg={4} className="event-table-container">
-            <h3 className="event-heading text-center text-light">{ongoingEvents[0].title}</h3>
+          <Col xs={12} lg={5} className="event-table-container">
+            {/* <span>Date</span><h3 className="event-heading text-center text-light"><img className="me-2 rounded-circle img-fluid" src={logo1} style={{ width: '50px', height: '50px' }} />{ongoingEvents[0].title}</h3><a>ffff</a>
+             */}
+             <Row className="align-items-center">
+  <Col xs={3}>
+  <span className="text-light">Date:09:06:2023</span>
+  </Col>
+  <Col xs={6} className="d-flex justify-content-center">
+    <h3 className="event-heading text-center text-light">
+      <img className="me-2 rounded-circle img-fluid" src={logo1} style={{ width: '50px', height: '50px' }} />
+      {ongoingEvents[0].title}
+    </h3>
+  </Col>
+  <Col xs={3}>
+  <Button className="btn btn-primary shake-on-hover" style={{ backgroundColor: "rgb(201, 117, 81)", borderColor: "rgb(201, 117, 81)" }} disabled>Register</Button>
+
+  </Col>
+</Row>
             <hr className="hr" />
             
               <EventScheduleTable/>
             
           </Col>
-          <Col xs={12} lg={4} className="event-table-container ">
-            <h3 className="event-heading text-center text-light">{ongoingEvents[1].title}</h3>
+          <Col xs={12} lg={5} className="event-table-container ">
+          {/* <h3 className="event-heading text-center text-light"><img className="me-2 rounded-circle img-fluid" src={logo1} style={{ width: '50px', height: '50px' }} />{ongoingEvents[1].title}</h3> */}
+            {/* <h3 className="event-heading text-center text-light">{ongoingEvents[1].title}</h3> */}
+            <Row className="align-items-center">
+  <Col xs={3}>
+    <span className="text-light">Date:09:06:2023</span>
+  </Col>
+  <Col xs={6} className="d-flex justify-content-center">
+    <h3 className="event-heading text-center text-light">
+      <img className="me-2 rounded-circle img-fluid" src={logo2} style={{ width: '50px', height: '50px' }} />
+      {ongoingEvents[1].title}
+    </h3>
+  </Col>
+  <Col xs={3}>
+  <Button className="btn btn-primary shake-on-hover" style={{ backgroundColor: "rgb(201, 117, 81)", borderColor: "rgb(201, 117, 81)" }} disabled>Register</Button>
+  </Col>
+</Row>
             <hr className="hr" />
             
             <EventScheduleTable/>
