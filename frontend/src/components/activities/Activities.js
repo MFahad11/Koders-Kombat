@@ -62,7 +62,7 @@ function ClubActivities() {
       title: "SQA session",
       description:
         "Our annual hackathon where participants compete to create the best project in a limited time period.",
-      date: "January 30, 2021",
+      date: "January 30, 202w1",
       image: pic5,
       type: "workshop",
     },
