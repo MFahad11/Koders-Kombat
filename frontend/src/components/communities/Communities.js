@@ -9,22 +9,28 @@ const Communities = () => {
     console.log(location.pathname.split('/')[2].split("%20"))
     let pathname = location.pathname.split('/')[2].replace("%20",' ')
     // pathname=pathname.split("/")
-    const [showRecruitment, setShowRecruitment] = useState(false);
+    const [showText, setShowText] = useState(false);
 
     useEffect(() => {
-      setShowRecruitment(true);
+      const timeout = setTimeout(() => {
+        setShowText(true);
+      }, 1000);
+  
+      return () => clearTimeout(timeout);
     }, []);
   
+  
     return (
-        <Container className="d-flex flex-column justify-content-center align-items-end" style={{ minHeight: '100vh'}}>
-        <h1 class="text-cemter align-items-end" style={{color : "white"}} >Welcome to {pathname} Community</h1>
-        {showRecruitment && (
-          <div className="recruitment-container text-center">
-            <h2 className="recruitment-text" style={{color : "white"}}>Communities to go live soon!<br></br>Stay Tuned</h2>
-            <Button variant="primary" className="shake-on-hover">Join Now</Button>
-          </div>
-        )}
-      </Container>
+<Container className="d-flex flex-column justify-content-center align-items-center" style={{ minHeight: '100vh' }}>
+  <h1 className="text-center typing-animation" style={{ color: 'white' }}>Welcome to {pathname} Community</h1>
+  {showText && (
+    <div className="recruitment-container d-flex flex-column justify-content-center align-items-center">
+      <h2 className="recruitment-text text-center typing-animation" style={{ color: 'white' }}>Communities to go live soon!</h2>
+      {/* <h3 className='text-light typing-animation'>Stay Tuned</h3> */}
+      {/* <Button variant="primary" className="shake-on-hover">Join Now</Button> */}
+    </div>
+  )}
+</Container>
     );;
 };
 

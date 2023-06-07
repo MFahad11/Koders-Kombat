@@ -11,7 +11,7 @@ const sponsors = [
   },
   {
     name: 'Oct Daily',
-    logo: logo1,
+    logo: logo,
     website: 'https://www.linkedin.com/company/octdaily?trk=public_post_main-feed-card-text',
   },
   // {

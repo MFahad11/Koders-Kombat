@@ -3,6 +3,7 @@ const nodemailer=require('nodemailer')
 const Mailgen=require('mailgen')
 exports.createUser = async (payload,path) => {
    const response=await userRepo.create(payload,path);
+  //  console.log(response)
    if(response.status==='create'){
     let config={
       service:"gmail",

@@ -97,8 +97,7 @@
     font-weight: bold;
     margin-bottom: 1.2rem;
     word-wrap: break-word;
-    font-family: 'Hammersmith One', sans-serif;
-    font-family: 'Londrina Solid', cursive;
+
 }
 
 .story-card .story-text {
@@ -115,6 +114,6 @@
 }
 
 .story-card .story-createdAt {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
     color: rgb(48, 47, 47);
 }

@@ -2,16 +2,10 @@
     transition: transform 0.3s;
   }
   
-  .shake-on-hover:hover {
-    animation: shake 0.8s;
-    animation-iteration-count: infinite;
-  }
+
   
-  @keyframes shake {
-    0% { transform: translateX(0); }
-    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
-    20%, 40%, 60%, 80% { transform: translateX(5px); }
-    100% { transform: translateX(0); }
+  .shake-on-hover {
+    animation: shake 0.5s forwards;
   }
   .recruitment-container {
     animation: fadeIn 1s;
@@ -19,6 +13,20 @@
   
   .recruitment-text {
     animation: slideUp 1s;
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  .typing-animation {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s steps(40, end);
   }
   
   @keyframes fadeIn {

@@ -135,6 +135,7 @@ exports.createUser = catchAsync(async (req, res, next) => {
       university:req.body.university,
       batch:req.body.batch,
       interest:req.body.interest,
+      domain:req.body.domain,
     };
     res.body = await service.createUser(payload,req.file.path);
     return res.json(res.body);

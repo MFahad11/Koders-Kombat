@@ -34,6 +34,7 @@ const Membership = () => {
         university: data_obj.get('university'),
         batch: data_obj.get('batch'),
         interest: data_obj.get('interest'),
+        domain: data_obj.get('domain'),
         profileImg: data_obj.get('profileImg'),
       };
       // form.reset();
@@ -60,7 +61,7 @@ const Membership = () => {
   
 
   return (
-    <Form noValidate validated={validated} onSubmit={handleSubmit} enctype="multipart/form-data">
+    <Form noValidate validated={validated} onSubmit={handleSubmit} encType="multipart/form-data">
       <Row className="mb-3">
       <Form.Group as={Col} md="5" controlId="validationCustom01">
           <Form.Label>Email <span className="text-danger">*</span></Form.Label>
@@ -82,22 +83,30 @@ const Membership = () => {
       <Row className="mb-3">
         <Form.Group as={Col} md="4" controlId="validationCustom03">
         <Form.Label>Phone <span className="text-danger">*</span></Form.Label>
-            <InputGroup>    
-          <InputGroup.Text id="basic-addon1">+92</InputGroup.Text>
-          <Form.Control
-            required
-            type="text"
-            placeholder="phone"
-            name='phone'
-            readOnly={disabled}
-          />
-          </InputGroup>
+        <InputGroup>
+  <InputGroup.Text id="basic-addon1">+92</InputGroup.Text>
+  <Form.Control
+    required
+    type="text"
+    placeholder="Phone"
+    name='phone'
+    pattern="[0-9]{11}"
+    title="Phone number must be 11 digits"
+    readOnly={disabled}
+    minLength={11}
+    maxLength={11}
+    
+    onInput={(e) => {
+      e.target.value = e.target.value.replace(/[^0-9]/g, "");
+    }}
+  />
+</InputGroup>
           <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
         </Form.Group>
         <Form.Group as={Col} md="3" controlId="validationCustom03">
         <Form.Label>University <span className="text-danger">*</span></Form.Label>
         <Form.Select required name="university" disabled={disabled}>
-      <option value="">select</option>
+      {/* <option value="">select</option> */}
       <option value="NED University">NED University</option>
       <option value="Karachi University">Karachi University</option>
       <option value="IBA">IBA</option>
@@ -106,7 +115,7 @@ const Membership = () => {
         <Form.Group as={Col} md="3" controlId="validationCustom03">
         <Form.Label>Batch <span className="text-danger">*</span></Form.Label>
         <Form.Select required name="batch" disabled={disabled}>
-        <option value="">select</option>
+        {/* <option value="">select</option> */}
         <option value="2018">2018</option>
         <option value="2019">2019</option>
         <option value="2020">2020</option>
@@ -116,18 +125,32 @@ const Membership = () => {
         </Form.Group>
       </Row>
       <Row className="mb-3">
-        <Form.Group as={Col} md="4" controlId="validationCustom03">
+        <Form.Group as={Col} md="5" controlId="validationCustom03">
         <Form.Label>Domain of Interest <span className="text-danger">*</span></Form.Label>
         <Form.Select required name="interest" disabled={disabled}>
-      <option value="">select</option>
-      <option value="web development">Web development</option>
-      <option value="app development">App development</option>
+      {/* <option value="">select</option> */}
+      {/* <option value="web development">Web development</option> */}
+      <option value="computer science">Computer Science</option>
       <option value="artificial intelligence">Artificial Intelligence</option>
       <option value="cyber security">Cyber Security</option>
-      <option value="blockchain">Blockchain</option>
+      <option value="data science">Data Science</option>
     </Form.Select>
         </Form.Group>
-        <Form.Group as={Col} md="6" controlId="validationCustom03">
+        <Form.Group as={Col} md="5" controlId="validationCustom03">
+        <Form.Label>Domain <span className="text-danger">*</span></Form.Label>
+        <Form.Select required name="domain" disabled={disabled}>
+      {/* <option value="">select</option> */}
+      <option value="lead">Lead</option>
+      <option value="technical">Technical</option>
+      <option value="graphicss">Graphics</option>
+      <option value="marketing">Marketing</option>
+      <option value="social media">Social Media</option>
+      {/* <option value="blockchain">Blockchain</option> */}
+    </Form.Select>
+        </Form.Group>
+      </Row>
+      <Row className="mb-3">
+<Form.Group as={Col} md="6" controlId="validationCustom03">
         <Form.Label>Input picture <span className="text-danger">*</span></Form.Label>
         <Form.Control type="file" required name="profileImg" accept="image/*" onChange={handleFileChange} readOnly={disabled}/>
       </Form.Group>

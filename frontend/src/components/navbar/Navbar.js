@@ -23,7 +23,7 @@ function NavBar() {
           style={{ textDecoration: "none" }}
         >
           <Navbar.Brand href="#" className="start" style={{color : "white", fontSize:'1.5rem'}}>
-            WebKode
+            TechTribe
           </Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -59,6 +59,12 @@ function NavBar() {
             <NavDropdown title="Communities" id="collasible-nav-dropdown">
               {/* <NavDropdown.Item onClick={()=>{setShow(true)}}>Calendar</NavDropdown.Item>
               <Dialog show={show} setShow={setShow} elem={<Calendar/>} title={"Future/Ongoing Events"} navigate="/"/> */}
+              <NavDropdown.Item>
+                <Link  style={{color:"black",textDecoration:"none"}}>
+              <NavLink to='/communities/Computer Science' style={{fontSize: "1rem", marginRight: "15px", color: 'black', textDecoration : 'none' , marginTop : '7px'}}>Computer Science</NavLink>
+                  
+                </Link>
+              </NavDropdown.Item>
               <NavDropdown.Item>
                 <Link  style={{color:"black",textDecoration:"none"}}>
               <NavLink to='/communities/Artificial Intelligence' style={{fontSize: "1rem", marginRight: "15px", color: 'black', textDecoration : 'none' , marginTop : '7px'}}>Artificial Intelligence</NavLink>

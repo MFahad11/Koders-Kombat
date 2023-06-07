@@ -27,6 +27,10 @@ const memberSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    domain:{
+        type: String,
+        required: true
+    },
     password: {
         type: String,
         // required: [true, "Please enter your password"],

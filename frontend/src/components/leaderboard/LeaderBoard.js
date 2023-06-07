@@ -104,11 +104,13 @@ const events = [
 function Leaderboard() {
   const [eventType, setEventType] = useState(events[0].type);
   const [eventName, setEventName] = useState(events[0].name);
+  const[click,setClick]=useState(0)
   const [searchText, setSearchText] = useState('');
 
   const handleEventTypeChange = (event) => {
     setEventType(event.target.name);
     setEventName(events.find(e => e.type === event.target.name).name);
+    setClick(1)
   };
 
   const handleEventNameChange = (event) => {
@@ -126,7 +128,7 @@ function Leaderboard() {
   <div className="leaderboard-dropdowns">
     <Dropdown className="leaderboard-dropdown">
       <Dropdown.Toggle variant="primary" id="event-type-dropdown">
-        Type
+        {click===0?"Type":eventType.toUpperCase()}
       </Dropdown.Toggle>
       <Dropdown.Menu>
         <Dropdown.Item

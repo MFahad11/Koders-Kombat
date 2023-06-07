@@ -250,7 +250,7 @@ function ClubActivities() {
 </Row>
             <hr className="hr" />
             
-              <EventScheduleTable/>
+              <EventScheduleTable index={0}/>
             
           </Col>
           <Col xs={12} lg={5} className="event-table-container ">
@@ -272,7 +272,7 @@ function ClubActivities() {
 </Row>
             <hr className="hr" />
             
-            <EventScheduleTable/>
+            <EventScheduleTable index={1}/>
             
           </Col>
         </Row>
