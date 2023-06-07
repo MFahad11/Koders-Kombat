@@ -23,7 +23,7 @@ function EventScheduleTable({index}) {
     <Table bordered={false} className="event-schedule-table text-light">
       <thead>
         <tr>
-          <th>Time</th>
+          <th width ="17%">Time</th>
           <th>Event</th>
           <th>Venue</th>
         </tr>
