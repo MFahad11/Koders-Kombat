@@ -63,12 +63,12 @@ const Membership = () => {
     <Form noValidate validated={validated} onSubmit={handleSubmit} enctype="multipart/form-data">
       <Row className="mb-3">
       <Form.Group as={Col} md="5" controlId="validationCustom01">
-          <Form.Label>Email</Form.Label>
+          <Form.Label>Email <span className="text-danger">*</span></Form.Label>
           <Form.Control required type="email" placeholder="Enter email" name="email" readOnly={disabled}/>
           <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
         </Form.Group>
         <Form.Group as={Col} md="5" controlId="validationCustom02">
-          <Form.Label>Full name</Form.Label>
+          <Form.Label>Full name <span className="text-danger">*</span></Form.Label>
           <Form.Control
             required
             type="text"
@@ -81,7 +81,7 @@ const Membership = () => {
       </Row>
       <Row className="mb-3">
         <Form.Group as={Col} md="4" controlId="validationCustom03">
-        <Form.Label>Phone</Form.Label>
+        <Form.Label>Phone <span className="text-danger">*</span></Form.Label>
             <InputGroup>    
           <InputGroup.Text id="basic-addon1">+92</InputGroup.Text>
           <Form.Control
@@ -95,7 +95,7 @@ const Membership = () => {
           <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
         </Form.Group>
         <Form.Group as={Col} md="3" controlId="validationCustom03">
-        <Form.Label>University</Form.Label>
+        <Form.Label>University <span className="text-danger">*</span></Form.Label>
         <Form.Select required name="university" disabled={disabled}>
       <option value="">select</option>
       <option value="NED University">NED University</option>
@@ -104,7 +104,7 @@ const Membership = () => {
     </Form.Select>
         </Form.Group>
         <Form.Group as={Col} md="3" controlId="validationCustom03">
-        <Form.Label>Batch</Form.Label>
+        <Form.Label>Batch <span className="text-danger">*</span></Form.Label>
         <Form.Select required name="batch" disabled={disabled}>
         <option value="">select</option>
         <option value="2018">2018</option>
@@ -117,7 +117,7 @@ const Membership = () => {
       </Row>
       <Row className="mb-3">
         <Form.Group as={Col} md="4" controlId="validationCustom03">
-        <Form.Label>Domain of Interest</Form.Label>
+        <Form.Label>Domain of Interest <span className="text-danger">*</span></Form.Label>
         <Form.Select required name="interest" disabled={disabled}>
       <option value="">select</option>
       <option value="web development">Web development</option>
@@ -128,7 +128,7 @@ const Membership = () => {
     </Form.Select>
         </Form.Group>
         <Form.Group as={Col} md="6" controlId="validationCustom03">
-        <Form.Label>Input picture</Form.Label>
+        <Form.Label>Input picture <span className="text-danger">*</span></Form.Label>
         <Form.Control type="file" required name="profileImg" accept="image/*" onChange={handleFileChange} readOnly={disabled}/>
       </Form.Group>
       </Row>

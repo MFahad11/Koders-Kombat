@@ -1,154 +1,144 @@
-import React from 'react';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import './Activities.css';
-import pic from '../../assets/OIP.jpeg'
-import pic1 from '../../assets/react.png'
-import pic2 from '../../assets/ai.png'
-import pic3 from '../../assets/girl-student-learning-to-code.jpg'
-import pic4 from '../../assets/cyber.jpg'
-import pic5 from '../../assets/sqa.jpg'
-import pic6 from '../../assets/web.png'
-import pic7 from '../../assets/app.png'
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "./Activities.css";
+import pic from "../../assets/OIP.jpeg";
+import pic1 from "../../assets/react.png";
+import pic2 from "../../assets/ai.png";
+import pic3 from "../../assets/girl-student-learning-to-code.jpg";
+import pic4 from "../../assets/cyber.jpg";
+import pic5 from "../../assets/sqa.jpg";
+import pic6 from "../../assets/web.png";
+import pic7 from "../../assets/app.png";
+import { useNavigate } from "react-router-dom";
+import EventScheduleTable from "../tables/Table";
 function ClubActivities() {
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   const now = new Date();
   const events = [
     {
-      title: 'Hackathon 2021',
-      description: 'Our annual hackathon where participants compete to create the best project in a limited time period.',
-      date: 'January 30, 2021',
+      title: "Hackathon 2021",
+      description:
+        "Our annual hackathon where participants compete to create the best project in a limited time period.",
+      date: "January 30, 2021",
       image: pic,
-      type:'hackathons'
+      type: "hackathons",
     },
     {
-      title: 'Workshop on React',
-      description: 'A workshop focused on learning the basics of React, a popular JavaScript library for building user interfaces.',
-      date: 'March 15, 2021',
+      title: "Workshop on React",
+      description:
+        "A workshop focused on learning the basics of React, a popular JavaScript library for building user interfaces.",
+      date: "March 15, 2021",
       image: pic1,
-      type:"workshop"
+      type: "workshop",
     },
     {
-        title: 'AI-HUB, a masterclass',
-        description: 'Our annual hackathon where participants compete to create the best project in a limited time period.',
-        date: 'January 30, 2021',
-        image: pic2,
-        type:'workshop'
-      },
-      {
-        title: 'Hackathon 2020',
-        description: 'Our annual hackathon where participants compete to create the best project in a limited time period.',
-        date: 'January 30, 2021',
-        image: pic3,
-        type:'hackathons'
-      },
-      {
-        title: 'Workshop CyberSecurity',
-        description: 'A workshop focused on learning the basics of React, a popular JavaScript library for building user interfaces.',
-        date: 'March 15, 2021',
-        image: pic4,
-        type:'workshop'
-      },
-      {
-          title: 'SQA session',
-          description: 'Our annual hackathon where participants compete to create the best project in a limited time period.',
-          date: 'January 30, 2021',
-          image: pic5,
-          type:'workshop'
-        },
-    {
-      title: 'Web Development Bootcamp',
-      description: 'An 8-week bootcamp covering the basics of web development, including HTML, CSS, and JavaScript.',
-      start: 'April 1, 2023',
-      endDate: 'May 27, 2023',
-      image: pic6,
-      type:'workshop'
+      title: "AI-HUB, a masterclass",
+      description:
+        "Our annual hackathon where participants compete to create the best project in a limited time period.",
+      date: "January 30, 2021",
+      image: pic2,
+      type: "workshop",
     },
     {
-        title: 'App Development Bootcamp',
-        description: 'An 8-week bootcamp covering the basics of web development, including HTML, CSS, and JavaScript.',
-        start: 'April 1, 2023',
-        endDate: 'May 27, 2023',
-        image: pic7,
-        type:'workshop'
-      },
+      title: "Hackathon 2020",
+      description:
+        "Our annual hackathon where participants compete to create the best project in a limited time period.",
+      date: "January 30, 2021",
+      image: pic3,
+      type: "hackathons",
+    },
+    {
+      title: "Workshop CyberSecurity",
+      description:
+        "A workshop focused on learning the basics of React, a popular JavaScript library for building user interfaces.",
+      date: "March 15, 2021",
+      image: pic4,
+      type: "workshop",
+    },
+    {
+      title: "SQA session",
+      description:
+        "Our annual hackathon where participants compete to create the best project in a limited time period.",
+      date: "January 30, 2021",
+      image: pic5,
+      type: "workshop",
+    },
 
-      {
-        title: 'Hackathon 2023',
-        description: 'Our annual hackathon where participants compete to create the best project in a limited time period.',
-        start: 'April 1, 2023',
-        endDate: 'May 27, 2023',
-        image: pic,
-        type:'hackathons'
-      },
     {
-      title: 'CodeCraft',
-      description: 'A coding event where participants compete to design and implement the most elegant and efficient software solutions.',
-      start: 'June 1, 2023',
-      endDate: 'June 10, 2023',
+      title: "CodeCraft",
+      description:
+        "A coding event where participants compete to design and implement the most elegant and efficient software solutions.",
+      start: "June 1, 2023",
+      endDate: "June 10, 2023",
       image: pic,
-      type:'workshop'
+      type: "workshop",
     },
     {
-        title: 'CodeSwap',
-        description: "A collaborative coding event where programmers pair up to exchange and improve each other's code, fostering learning and innovation.",
-        start: 'June 3, 2023',
-        endDate: 'June 13, 2023',
-        image: pic,
-        type:'workshop'
-      },
-      {
-        title: 'Guest Speaker Series',
-        description: 'A series of challenges revolving around data analysis, cleaning, visualizations.',
-        start: 'June 21, 2023',
-        endDate: 'June 30, 2023',
-        image: pic,
-        type:'workshop'
-      },
-      {
-        title: 'Data Fusion Quest: Where Patterns Unveil',
-        description: 'A series of challenges revolving around data analysis, cleaning, visualizations.',
-        start: 'July 1, 2023',
-        endDate: 'July 10, 2023',
-        image: pic,
-        type:'workshop'
-      },
-      {
-        title: 'Code Review',
-        description: "A collaborative process where programmers analyze and assess each other's code to improve its quality, readability, and efficiency.",
-        start: 'July 11, 2023',
-        endDate: 'July 20, 2023',
-        image: pic,
-        type:'workshop'
-      },
-      {
-        title: 'Bug Fixing Marathon',
-        description: 'A focused event where developers dedicate time to identifying and fixing software bugs to enhance the stability and functionality of an application.',
-        start: 'July 21, 2023',
-        endDate: 'July 30, 2023',
-        image: pic,
-        type:'workshop'
-      },
-      {
-        title: 'Open Source Contribution Day',
-        description: 'A community-driven event encouraging developers to contribute to open source projects by submitting code enhancements, bug fixes, or new features.',
-        start: 'August 1, 2023',
-        endDate: 'August 10, 2023',
-        image: pic,
-        type:'workshop'
-      },
-      {
-        title: 'Algorithmic Programming Contest',
-        description: 'A timed competition where participants solve complex algorithmic problems using efficient coding techniques to achieve the highest score.',
-        start: 'August 11, 2023',
-        endDate: 'August 20, 2023',
-        image: pic,
-        type:'workshop'
-      },
-      
+      title: "CodeSwap",
+      description:
+        "A collaborative coding event where programmers pair up to exchange and improve each other's code, fostering learning and innovation.",
+      start: "June 3, 2023",
+      endDate: "June 13, 2023",
+      image: pic,
+      type: "workshop",
+    },
+    {
+      title: "Guest Speaker Series",
+      description:
+        "A series of challenging and engaging activities revolving around data analysis, cleaning, visualizations, and interpretation.",
+      date: "June 21, 2023",
+      // endDate: 'June 30, 2023',
+      image: pic,
+      type: "workshop",
+    },
+    {
+      title: "Data Quest: Patterns Unveil",
+      description:
+        "A series of challenging and engaging activities revolving around data analysis, cleaning, visualizations, and interpretation.",
+      date: "July 1, 2023",
+      // endDate: 'July 10, 2023',
+      image: pic,
+      type: "workshop",
+    },
+    {
+      title: "Code Review",
+      description:
+        "A collaborative process where programmers analyze and assess each other's code to improve its quality, readability, and efficiency.",
+      date: "July 11, 2023",
+      // endDate: 'July 20, 2023',
+      image: pic,
+      type: "workshop",
+    },
+    {
+      title: "Bug Fixing Marathon",
+      description:
+        "A focused event where developers dedicate time to identifying and fixing software bugs to enhance the stability and functionality of an application.",
+      date: "July 21, 2023",
+      // endDate: 'July 30, 2023',
+      image: pic,
+      type: "workshop",
+    },
+    {
+      title: "Open Source Contribution Day",
+      description:
+        "A community-driven event encouraging developers to contribute to open source projects by submitting code enhancements, bug fixes, or new features.",
+      date: "August 1, 2023",
+      // endDate: 'August 10, 2023',
+      image: pic,
+      type: "workshop",
+    },
+    {
+      title: "Algorithmic Programming Contest",
+      description:
+        "A timed competition where participants solve complex algorithmic problems using efficient coding techniques to achieve the highest score.",
+      date: "August 11, 2023",
+      // endDate: 'August 20, 2023',
+      image: pic,
+      type: "workshop",
+    },
   ];
   const pastEvents = events.filter((event) => {
     const eventDate = new Date(event.date);
@@ -193,37 +183,70 @@ function ClubActivities() {
   const renderEventCards = (events) => {
     return events.map((event, index) => {
       return (
-<Col key={index} md={4} className="mb-4">
-        <Card className="m-2 event-card" >
-          <Card.Img variant="top" src={event.image} />
-          <Card.Body className="event-card-body">
-            <Card.Title className='text-light'>{event.title}</Card.Title>
-            <Card.Text className='text-light'>{event.description}</Card.Text>
-            <Button variant="primary" onClick={()=>{
-              
-              navigate(`/event/detail`,
-{
-state: {
-  ...event
-}
-})}}>
-              {event.start ? "Register Now" : "Learn More"}
-            </Button>
-          </Card.Body>
-          <Card.Footer>
-            <small className="text-lights">
-              {event.start
-                ? `Starts on ${event.start}`
-                : `Date: ${event.date}`}
-            </small>
-          </Card.Footer>
-        </Card>
-      </Col>
+        <Col key={index} md={4} className="mb-4">
+          <Card className="m-2 event-card">
+            <Card.Img variant="top" src={event.image} />
+            <Card.Body className="event-card-body">
+              <Card.Title className="text-light">{event.title}</Card.Title>
+              <Card.Text className="text-light">{event.description}</Card.Text>
+              <Button
+                variant="primary"
+                onClick={() => {
+                  navigate(`/event/detail`, {
+                    state: {
+                      ...event,
+                    },
+                  });
+                }}
+              >
+                {event.start ? "Register Now" : "Learn More"}
+              </Button>
+            </Card.Body>
+            <Card.Footer>
+              <small className="text-lights">
+                {event.start
+                  ? `Starts on ${event.start}`
+                  : `Date: ${event.date}`}
+              </small>
+            </Card.Footer>
+          </Card>
+        </Col>
       );
     });
   };
 
   return (
+    <><div className="club-activities-container" id="event">
+    <Container>
+      <Row className="justify-content-center mb-4">
+        <Col md={8} className="text-center">
+          <h2 className="club-activities-header">Events</h2>
+          <p className="club-activities-text">
+            Check out our ongoing events below.
+          </p>
+        </Col>
+      </Row>
+      {ongoingEvents.length > 0 && (
+        <Row className="justify-content-center">
+          <Col xs={12} lg={4} className="event-table-container">
+            <h3 className="event-heading text-center text-light">{ongoingEvents[0].title}</h3>
+            <hr className="hr" />
+            
+              <EventScheduleTable/>
+            
+          </Col>
+          <Col xs={12} lg={4} className="event-table-container ">
+            <h3 className="event-heading text-center text-light">{ongoingEvents[1].title}</h3>
+            <hr className="hr" />
+            
+            <EventScheduleTable/>
+            
+          </Col>
+        </Row>
+      )}
+    </Container>
+  </div>
+  
     <div className="club-activities-container" id="event">
       <Container>
         <Row className="justify-content-center mb-4">
@@ -235,30 +258,21 @@ state: {
           </Col>
         </Row>
         {pastEvents.length > 0 && (
-  <>
-    <h3 className='text-light'>Past Events</h3>
-    <Slider {...settings}>{renderEventCards(pastEvents)}</Slider>
-    <hr className="hr" />
-  </>
-)}
+          <>
+            <h3 className="text-light">Past Events</h3>
+            <Slider {...settings}>{renderEventCards(pastEvents)}</Slider>
+            <hr className="hr" />
+          </>
+        )}
 
-{ongoingEvents.length > 0 && (
-  <>
-    <h3 className='text-light'>Ongoing Events</h3>
-    <Slider {...settings}>{renderEventCards(ongoingEvents)}</Slider>
-    <hr className="hr" />
-  </>
-)}
-
-{upcomingEvents.length > 0 && (
-  <>
-    <h3 className='text-light'>Upcoming Events</h3>
-    <Slider {...settings}>{renderEventCards(upcomingEvents)}</Slider>
-  </>
-)}
-
+        {upcomingEvents.length > 0 && (
+          <>
+            <h3 className="text-light">Upcoming Events</h3>
+            <Slider {...settings}>{renderEventCards(upcomingEvents)}</Slider>
+          </>
+        )}
       </Container>
-    </div>
+    </div></>
   );
 }
 

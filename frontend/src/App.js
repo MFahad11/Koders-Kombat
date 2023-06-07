@@ -27,6 +27,7 @@ import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import LeaderBoard from "./components/leaderboard/LeaderBoard";
 import EventDetailPage from "./components/eventdetails/EventDetails";
+import Communities from "./components/communities/Communities";
 function App() {
 
   return (
@@ -91,6 +92,7 @@ function App() {
                         <Route exact path="/leaderboard" element={<LeaderBoard/>}></Route>
                         <Route exact path="/leaderboard" element={<LeaderBoard/>}></Route>
                         <Route exact path="/event/detail" element={<EventDetailPage/>}></Route>
+                        <Route exact path="/communities/:name" element={<Communities/>}></Route>
                           <Route exact path="/forgotpassword" element={<ForgotPasswordScreen />} />
 
                           <Route exact path="/resetpassword" element={<ResetPasswordScreen />} />

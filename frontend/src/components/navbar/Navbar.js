@@ -60,25 +60,24 @@ function NavBar() {
               {/* <NavDropdown.Item onClick={()=>{setShow(true)}}>Calendar</NavDropdown.Item>
               <Dialog show={show} setShow={setShow} elem={<Calendar/>} title={"Future/Ongoing Events"} navigate="/"/> */}
               <NavDropdown.Item>
-                <Link to="event" spy={true} smooth={true} duration={400} offset={700} style={{color:"black",textDecoration:"none"}}>
-                  Artificial Intelligence
+                <Link  style={{color:"black",textDecoration:"none"}}>
+              <NavLink to='/communities/Artificial Intelligence' style={{fontSize: "1rem", marginRight: "15px", color: 'black', textDecoration : 'none' , marginTop : '7px'}}>Artificial Intelligence</NavLink>
+                  
                 </Link>
               </NavDropdown.Item>
               <NavDropdown.Item>
-                <Link to="event" spy={true} smooth={true} duration={400} offset={700} style={{color:"black",textDecoration:"none"}}>
-                  Data Science
+              <Link  style={{color:"black",textDecoration:"none"}}>
+              <NavLink to='/communities/Data Science' style={{fontSize: "1rem", marginRight: "15px", color: 'black', textDecoration : 'none' , marginTop : '7px'}}>Data Science</NavLink>
+                  
                 </Link>
               </NavDropdown.Item>
               <NavDropdown.Item>
-                <Link to="event" spy={true} smooth={true} duration={400} offset={700} style={{color:"black",textDecoration:"none"}}>
-                  Cyber Security
+              <Link  style={{color:"black",textDecoration:"none"}}>
+              <NavLink to='/communities/Cyber Security' style={{fontSize: "1rem", marginRight: "15px", color: 'black', textDecoration : 'none' , marginTop : '7px'}}>Cyber Security</NavLink>
+                  
                 </Link>
               </NavDropdown.Item>
-              <NavDropdown.Item>
-                <Link to="event" spy={true} smooth={true} duration={400} offset={700} style={{color:"black",textDecoration:"none"}}>
-                  Blockchain
-                </Link>
-              </NavDropdown.Item>
+
               {/* <NavDropdown.Divider /> */}
             </NavDropdown>
           </Nav>

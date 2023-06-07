@@ -80,3 +80,34 @@
     display: none !important;
 }
 }
+.event-heading {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.event-table-container .tbody, td, tfoot, th, thead, tr {
+  
+
+    border-style: none;
+    border-width: none;
+}
+.event-table-container {
+  margin-bottom: 24px;
+}
+
+@media only screen and (min-width: 768px) {
+  .justify-content-center {
+    justify-content: center;
+  }
+
+  .justify-content-center > .event-table-container {
+    margin-right: 4rem;
+  }
+
+  .justify-content-center > .event-table-container:last-child {
+    margin-right: 0;
+  }
+}
