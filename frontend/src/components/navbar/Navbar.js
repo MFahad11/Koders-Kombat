@@ -23,7 +23,7 @@ function NavBar() {
           style={{ textDecoration: "none" }}
         >
           <Navbar.Brand href="#" className="start" style={{color : "white", fontSize:'1.5rem'}}>
-            WebKode
+            TechTribe
           </Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
