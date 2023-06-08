@@ -46,9 +46,10 @@ const Footer = () => {
 </Col>
         </Row>
         <hr style={{ borderColor: "#fff" }} />
-        <p className="text-center" style={{ marginTop: "1rem" }}>
-          &copy; {new Date().getFullYear()} WebKode. All rights reserved.
-        </p>
+        <p className="text-center fs-0.5" style={{ marginTop: "1rem" }}>
+        Made with ❤️ by the TechTribe Team</p>
+        <p className="text-center fw-bold fs-7" style={{ marginTop: "0rem" }}>
+        Co'De Grace</p>
       </Container>
     </footer>
   );

@@ -14,12 +14,25 @@ import iconics_22_main from "../../assets/iconics_22_main.jpg"
 import hackathon_22_main from "../../assets/hackathon_22_main.jpg"
 import itec_22_main from "../../assets/itec_22_main.jpg"
 import koderzkombat_22_main from "../../assets/koderzkombat_22_main.jpg"
+import itec_23_main_future from "../../assets/itec_23_main_future.jpg"
+import webkode_23_future from "../../assets/webkode_23_future.jpg"
+import koderzkombat_23_future from "../../assets/koderzkombat_23_future.jpg"
 import { useNavigate } from "react-router-dom";
 import EventScheduleTable from "../tables/Table";
 function ClubActivities() {
   const navigate = useNavigate();
   const now = new Date();
   const events = [
+    {
+      title: "Koderz Kombat 2022 ",
+      description:
+        "The most awaited Koderz Kombat which puts to test participants' problem-solving skills. The winners qualified for round 2 where they had to build a chatmbot and optimize a problem.",
+      longDescription:
+      "The Department of Computer Science & Information technology has always aimed to polish the technical skills and to nurture expertise for its undergraduate students by conducting credible coding competitions for all the CS & IT Programmes. These competitions help our students in keeping up their momentum with other techies around and keep them aware of emerging technologies. Participants would be exposed to strengthening their programming skills and career-changing opportunities by getting themselves involved in coding contests. Koders Kombat is being organized with the help of Koders Club, an official Computer Science & Information Technology community, with a sensational mission of enticing all the tech-enthusiasts to boost their competence and problem solving skills. Considering the significance of technical backing, it is mandatory for every student to appear in these coding competitions.",
+      date: "December 15, 2022",
+      image: koderzkombat_22_main,
+      type: "hackathons",
+    },
     {
       title: "ICONICS 2022",
       description: "ICONICS provides an international forum for the presentation and dissemination of technological advances, research and innovation in the fast paced field of Computer Science and Software Engineering.",
@@ -46,20 +59,10 @@ function ClubActivities() {
         "With technifying competitions, tech bundled projects and a future defining job fair as its centerpiece, ITEC'22 endures as the premier tech event of Karachi the year.",
       longDescription:
       "ITEC'22 was jointly organized by the Departments of Software Engineering and Computer Science & Information Technology of NED University of Engi- neering and Technology on July 19-20, 2022.  Prof. Dr. Sarosh H. Lodi (Vice Chancellor, NED University) was the Chief Guest and Mr. Ashraf Kapadia (Managing Director of Systems Limited) was the Guest of Honor. The event was sponsored by companies namely Shispare, SIBISOFT, 10Pearls, Gaditek, Folio3, Geeks of Kolachi, Disrupt Labs,Techwards and others. Students from various universities participated in the event. Competitions included Speed programming, Data Science, Code in the Dark, FIFA, Chess, Hackathon, and UI/UX competition. ",
-      date: "July 19, 2021",
+      date: "July 19, 2022",
       image: itec_22_main,
       type: "hackathon",
       prize: ["Up to 200,000"],
-    },
-    {
-      title: "Koderz Kombat 22 ",
-      description:
-        "The most awaited Koderz Kombat which puts to test participants' problem-solving skills. The winners qualified for round 2 where they had to build a chatmbot and optimize a problem.",
-      longDescription:
-      "The Department of Computer Science & Information technology has always aimed to polish the technical skills and to nurture expertise for its undergraduate students by conducting credible coding competitions for all the CS & IT Programmes. These competitions help our students in keeping up their momentum with other techies around and keep them aware of emerging technologies. Participants would be exposed to strengthening their programming skills and career-changing opportunities by getting themselves involved in coding contests. Koders Kombat is being organized with the help of Koders Club, an official Computer Science & Information Technology community, with a sensational mission of enticing all the tech-enthusiasts to boost their competence and problem solving skills. Considering the significance of technical backing, it is mandatory for every student to appear in these coding competitions.",
-      date: "December 15, 2021",
-      image: koderzkombat_22_main,
-      type: "hackathons",
     },
     // above are past events.
     {
@@ -84,16 +87,16 @@ function ClubActivities() {
       title: "Koderz Kombat Fall 2023",
       description:
         "A new series of challenges coupled with even greater winning prizes. The most anticipated event of the year returns this fall Stay tuned for more information.",
-      date: "November 15, 2023",
-      image: pic,
+      date: "July 15, 2023",
+      image: koderzkombat_23_future,
       type: "hackathon",
     },
     {
       title: "Web Kode Fall 2023",
       description:
         "Missed out on Web Kode Spring 23? Worry not because the best web development competition is returning this fall as well. Stay tuned.",
-      date: "November 15, 2023",
-      image: pic,
+      date: "July 15, 2023",
+      image: webkode_23_future,
       type: "workshop",
     },
     {
@@ -101,17 +104,10 @@ function ClubActivities() {
       description:
         "The biggest series of competitions is returning this fall. From gaming to coding, from photography to football, there are competitions for everyone.",
       date: "December 11, 2023",
-      image: pic,
+      image: itec_23_main_future,
       type: "workshop",
     },
-    {
-      title: "Hackathon 2023",
-      description:
-        "Keep polishing your APIs game as you will be needing it this fall with the return of Hackathon 2023. Stay tuned for more information.",
-      date: "October 21, 2023",
-      image: pic,
-      type: "workshop",
-    },
+
   ];
   const pastEvents = events.filter((event) => {
     const eventDate = new Date(event.date);
@@ -206,7 +202,7 @@ function ClubActivities() {
              */}
              <Row className="align-items-center">
   <Col xs={3}>
-  <span className="text-light">Date: 9-June, 23</span>
+  <span className="text-light">Date: 9 June, 23</span>
   </Col>
   <Col xs={6} className="d-flex justify-content-center">
     <h3 className="event-heading text-center text-light">
@@ -229,7 +225,7 @@ function ClubActivities() {
             {/* <h3 className="event-heading text-center text-light">{ongoingEvents[1].title}</h3> */}
             <Row className="align-items-center">
   <Col xs={3}>
-    <span className="text-light">Date: 9-June, 23</span>
+    <span className="text-light">Date: 9 June, 23</span>
   </Col>
   <Col xs={6} className="d-flex justify-content-center">
     <h3 className="event-heading text-center text-light">
