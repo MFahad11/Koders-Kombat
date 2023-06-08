@@ -80,7 +80,7 @@ state: {
       }
   return (
     <>
-      <div>
+      <div style={{backgroundColor:"backgroundColor: rgb(201, 117, 81,0.6) !important;"}}>
         <input type="text" placeholder="Search events" value={searchQuery} onChange={handleSearchInputChange} />
         <select value={eventTypeFilter} onChange={handleEventTypeFilterChange}>
           <option value="all">All events</option>

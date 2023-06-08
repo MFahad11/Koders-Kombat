@@ -37,7 +37,7 @@ function NavBar() {
             </Link>
             <NavDropdown title="Events" id="collasible-nav-dropdown">
               <NavDropdown.Item onClick={()=>{setShow(true)}}>Calendar</NavDropdown.Item>
-              <Dialog show={show} setShow={setShow} elem={<Calendar/>} title={"Events Calendar"} navigate="/"/>
+              <Dialog show={show} setShow={setShow} elem={<Calendar/>} title={"Events Calendar"} navigate="/" page="calendar"/>
               <NavDropdown.Item>
               <Link to="event" spy={true} smooth={true} offset={-70} duration={600} style={{color:"black",textDecoration:"none"}}>
                   Ongoing Events
