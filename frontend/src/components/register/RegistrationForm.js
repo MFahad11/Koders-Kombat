@@ -17,10 +17,10 @@ function RegisterForm() {
   const handleParticipationTypeChange = event => setParticipationType(event.target.value);
   const handleTeamNameChange = event => setTeamName(event.target.value);
   const handleTeamMembersChange = event => setTeamMembers(event.target.value.split(','));
-  const navigate=useNavigate()
-  const location=useLocation().pathname.split('/')[2]
+  const navigate = useNavigate()
+  const location = useLocation().pathname.split('/')[2]
 
-  const handleSubmit = async(event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
@@ -30,23 +30,23 @@ function RegisterForm() {
       toast.error("Please fill in all required fields");
     } else {
       setValidated(true);
-      const { data } = await axios.post('http://localhost:4500/api/user/register', { fullName, email, participationType, teamName, teamMembers });
+      const { data } = await axios.post('https://techtribe.onrender.com/api/user/register', { fullName, email, participationType, teamName, teamMembers });
       if (data.status === "create") {
         toast.success("Registered success!!!")
       } else {
         toast.info("You are already registered")
       }
-    setFullName("");
-    setEmail("");
-    setParticipationType("");
-    setTeamName("");
-    setTeamMembers([])
-    navigate('/')
-  };
+      setFullName("");
+      setEmail("");
+      setParticipationType("");
+      setTeamName("");
+      setTeamMembers([])
+      navigate('/')
+    };
   }
   return (
     <><Form noValidate validated={validated} onSubmit={handleSubmit}>
-{ location!=='workshop' && <Form.Group controlId="participationType">
+      {location !== 'workshop' && <Form.Group controlId="participationType">
         <Form.Label>Participation Type</Form.Label>
         <Form.Control required as="select" value={participationType} onChange={handleParticipationTypeChange}>
           <option value="">--Please select--</option>
@@ -55,17 +55,17 @@ function RegisterForm() {
         </Form.Control>
       </Form.Group>}
       {
-        participationType==="solo" && (
+        participationType === "solo" && (
           <>
-      <Form.Group controlId="lastName">
-        <Form.Label>Full Name</Form.Label>
-        <Form.Control required type="text" placeholder="Enter your full name" value={fullName} onChange={handleFullNameChange} />
-      </Form.Group>
+            <Form.Group controlId="lastName">
+              <Form.Label>Full Name</Form.Label>
+              <Form.Control required type="text" placeholder="Enter your full name" value={fullName} onChange={handleFullNameChange} />
+            </Form.Group>
 
-      <Form.Group controlId="email">
-        <Form.Label>Email Address</Form.Label>
-        <Form.Control required type="email" placeholder="Enter your email address" value={email} onChange={handleEmailChange} />
-      </Form.Group>
+            <Form.Group controlId="email">
+              <Form.Label>Email Address</Form.Label>
+              <Form.Control required type="email" placeholder="Enter your email address" value={email} onChange={handleEmailChange} />
+            </Form.Group>
           </>
         )
       }
@@ -93,10 +93,10 @@ function RegisterForm() {
   );
 }
 const RegistrationForm = () => {
-  const [show,setShow]=useState(true)
+  const [show, setShow] = useState(true)
   return (
     <>
-      <Dialog show={show} setShow={setShow} elem={<RegisterForm/>} title={"Registeration Form"}/>
+      <Dialog show={show} setShow={setShow} elem={<RegisterForm />} title={"Registeration Form"} />
     </>
   )
 }

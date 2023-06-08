@@ -16,7 +16,7 @@ const LoginScreen = () => {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:4500/api/user/login",
+        "https://techtribe.onrender.com/api/user/login",
         { email, password }
       );
       console.log(data)
