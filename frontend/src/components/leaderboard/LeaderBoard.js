@@ -4,31 +4,29 @@ import './LeaderBoard.css'
 import Dialog from '../modal/Modal';
 const events = [
   {
-    "name": "Hackbot Fest",
-    "type": "solo",
+    "name": "Hackathon 22",
+    "type": "Team",
     "leaderboard": [
       {
         "rank": 1,
-        "name": "Sameed Hussain",
-        "department": "CSIT"
+        "name": "Team Interninators",
+        "department": "TCIT"
       },
       {
         "rank": 2,
-        "name": "Akhlaq Ahmed Shaikh",
-   
+        "name": "Call Back Crew",
         "department": "CSIT"
       },
       {
         "rank": 3,
-        "name": "Fahad Ahad",
-    
+        "name": "Team Abbas Ibtesam",
         "department": "CSIT"
       }
     ]
   },
   {
     "name": "Koderz Kombat'22",
-    "type": "team",
+    "type": "Team",
     "leaderboard": [
       {
         "rank": 1,
@@ -53,7 +51,7 @@ const events = [
   },
   {
     "name": "Koderz Kombat'23",
-    "type": "team",
+    "type": "Team",
     "leaderboard": [
       {
         "rank": 1,
@@ -77,7 +75,7 @@ const events = [
   },
   {
     "name": "WEB KODE'23",
-    "type": "team",
+    "type": "Team",
     "leaderboard": [
       {
         "rank": 1,
@@ -94,8 +92,51 @@ const events = [
       {
         "rank": 3,
         "name": "TIEST Developers",
-    
         "department": "CSIT"
+      }
+    ]
+  },
+  {
+    "name": "ITEC 22 Speed Programming",
+    "type": "Solo",
+    "leaderboard": [
+      {
+        "rank": 1,
+        "name": "Ali Ahmed",
+        "department": "CSIT"
+      },
+      {
+        "rank": 2,
+        "name": "Mahira Khan",
+     
+        "department": "SE"
+      },
+      {
+        "rank": 3,
+        "name": "Jamal Ajmal",
+        "department": "CSIT"
+      }
+    ]
+  },
+  {
+    "name": "ITEC 22 Chess Competition",
+    "type": "Solo",
+    "leaderboard": [
+      {
+        "rank": 1,
+        "name": "Munazza Hussain",
+        "department": "SE"
+      },
+      {
+        "rank": 2,
+        "name": "Saad Raza",
+     
+        "department": "CSIT"
+      },
+      {
+        "rank": 3,
+        "name": "Wajahat Siddiqui",
+        "department": "SE"
       }
     ]
   },
@@ -128,19 +169,19 @@ function Leaderboard() {
   <div className="leaderboard-dropdowns">
     <Dropdown className="leaderboard-dropdown">
       <Dropdown.Toggle variant="primary" id="event-type-dropdown">
-        {click===0?"Type":eventType.toUpperCase()}
+        {click===0?"Type":eventType}
       </Dropdown.Toggle>
       <Dropdown.Menu>
         <Dropdown.Item
-          value={'solo'}
-          name={'solo'}
+          value={'Solo'}
+          name={'Solo'}
           onClick={handleEventTypeChange}
         >
           Solo Event
         </Dropdown.Item>
         <Dropdown.Item
-          value={'team'}
-          name={'team'}
+          value={'Team'}
+          name={'Team'}
           onClick={handleEventTypeChange}
         >
           Team Event
