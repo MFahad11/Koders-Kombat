@@ -109,7 +109,7 @@ const EventDetailsPage = () => {
         </Row>
         <Row className="mt-4 text-light">
           <h3 className="winners-heading">Winners</h3>
-        <Col xs={12} className="table-container">
+        <Col xs={12} className="table-container-winner">
     {data && data.participants && data.participants.length > 0 ? (
       <table>
         <thead>
