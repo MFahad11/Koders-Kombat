@@ -3,18 +3,25 @@
   font-weight: bold;
   color: #ffffff;
   margin-bottom: 16px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); 
 }
 
 .event-date {
   font-size: 24px;
   color: #ffffff;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); 
 }
 
 .description-text {
-  font-size: 18px;
+  text-align: left;
+  font-size: 20px;
   line-height: 1.5;
   color: #ffffff;
   margin-bottom: 32px;
+  margin-left: 250px;
+  margin-right: 250px; 
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 1); 
+
 }
 
 /* Add any additional styles for the gallery/slider, leaderboard, and sponsor sections as needed */
