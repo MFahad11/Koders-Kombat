@@ -1,47 +1,20 @@
-.event-detail-page {
-  color: white !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  color: rgba(0, 0, 0, 0.87);
-  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  border-radius: 4px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
-  overflow: hidden;
-  background-color: rgba(60, 60, 60, 0.4);
-  padding: 32px;
-  margin-left: 32px;
-  margin-right: 32px;
-  margin-bottom: 5px;
+.event-name {
+  font-size: 48px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 16px;
 }
 
-@media screen and (max-width: 767px) {
-  .event-detail-page {
-    flex-direction: column;
-    margin: 0;
-    padding: 16px;
-  }
+.event-date {
+  font-size: 24px;
+  color: #ffffff;
 }
 
-
-.event-image-gallery {
-  margin-bottom: 30px;
+.description-text {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #ffffff;
+  margin-bottom: 32px;
 }
 
-.event-details {
-
-  padding: 30px;
-}
-
-.event-details h1 {
-  margin-top: 0;
-}
-
-.event-details p {
-  margin-bottom: 20px;
-}
-
-.event-details button {
-  margin-top: 20px;
-}
+/* Add any additional styles for the gallery/slider, leaderboard, and sponsor sections as needed */

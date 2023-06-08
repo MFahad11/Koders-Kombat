@@ -11,7 +11,7 @@ function Dialog({show,setShow,elem,title,navigate:nav,page}) {
   return (
     <>
       <Modal show={show} onHide={handleClose} animation={true} backdrop="static" keyboard={false} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
-        <div style={page==="calendar"?{background:"aqua"}:{}}><Modal.Header closeButton>
+        <div><Modal.Header closeButton>
           <Modal.Title>{title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>

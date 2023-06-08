@@ -1,49 +1,115 @@
-import React from 'react';
-import { Link, NavLink, useLocation } from 'react-router-dom';
-import { Container, Row, Col, Button } from 'react-bootstrap';
-import Gallery from '../gallery/Gallery';
-import './EventDetails.css'
-const EventDetailPage = () => {
-  const {state}=useLocation();
-  console.log(state)
-  return (
-<>
-    <div className="event-detail-page">
+// import React from 'react';
+// import { Link, NavLink, useLocation } from 'react-router-dom';
+// import { Container, Row, Col, Button } from 'react-bootstrap';
+// import Gallery from '../gallery/Gallery';
+// import './EventDetails.css'
+// const EventDetailPage = () => {
+//   const {state}=useLocation();
+//   console.log(state)
+//   return (
+// <>
+//     <div className="event-detail-page">
     
-      <Container>
-        <Row>
-          <Col md={6}>
-            <div className="event-image-gallery">
-              <Gallery />
-            </div>
+//       <Container>
+//         <Row>
+//           <Col md={6}>
+//             <div className="event-image-gallery">
+//               <Gallery />
+//             </div>
+//           </Col>
+//           <Col md={6}>
+//             <div className="event-details">
+//               <h1>{state.title}</h1>
+//               <p>{state.date}</p>
+//               <p>{state.description}</p>
+//               <Button>
+//               <NavLink to='/' style={{textDecoration:"none",color:"white"}}>Back</NavLink>
+//               </Button>
+//               {
+//                 !state.start?
+//                 state.type==="hackathons"?
+//                 (<Button className='ms-2'>
+// <NavLink to={`/leaderboard`} style={{textDecoration:"none",color:"white"}}>
+//                   Leaderboard
+//                 </NavLink>
+//               </Button>
+//               ):"":(<Button className='ms-2'>
+// <NavLink to={`/registeration/${state.type}`} style={{textDecoration:"none",color:"white"}}>
+//                   Register
+//                 </NavLink>
+//               </Button>)}
+//             </div>
+//           </Col>
+//         </Row>
+//       </Container>
+//     </div></>
+//   );
+// };
+
+// export default EventDetailPage;
+import React, { useState, useEffect } from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import './EventDetails.css';
+import { useLocation } from 'react-router-dom';
+import Gallery from '../gallery/Gallery';
+import NavBar from '../navbar/Navbar';
+import events from '../data';
+
+const EventDetailsPage = () => {
+  const { state } = useLocation();
+  const [data, setData] = useState({});
+
+  useEffect(() => {
+    const eventData = events.find((item) => item.title === state?.title);
+    setData(eventData);
+  }, [state]);
+
+  return (
+    <>
+      <NavBar />
+      <Container style={{color: "rgba(0, 0, 0, 0.87)",
+  transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+  borderRadius: "4px",
+  boxShadow: "rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px",
+  overflow: "hidden",
+  backgroundColor: "rgba(60, 60, 60, 0.4)"}}>
+        <Row className="mt-4 text-light">
+          <Col xs={12} className="text-center">
+            <h1 className="event-name">{data.title}</h1>
+            <p className="event-date">{data.date}</p>
           </Col>
-          <Col md={6}>
-            <div className="event-details">
-              <h1>{state.title}</h1>
-              <p>{state.date}</p>
-              <p>{state.description}</p>
-              <Button>
-              <NavLink to='/' style={{textDecoration:"none",color:"white"}}>Back</NavLink>
-              </Button>
-              {
-                !state.start?
-                state.type==="hackathons"?
-                (<Button className='ms-2'>
-<NavLink to={`/leaderboard`} style={{textDecoration:"none",color:"white"}}>
-                  Leaderboard
-                </NavLink>
-              </Button>
-              ):"":(<Button className='ms-2'>
-<NavLink to={`/registeration/${state.type}`} style={{textDecoration:"none",color:"white"}}>
-                  Register
-                </NavLink>
-              </Button>)}
-            </div>
+        </Row>
+
+        <Row className="mt-4 text-light">
+          <Col xs={12}>
+            <p className="description-text">{data.longDescription}</p>
+          </Col>
+        </Row>
+
+        <Row className="mt-4 text-light">
+          <Col xs={12}>
+            {/* Add your gallery/slider component here */}
+            {/* Example: <GallerySlider /> */}
+            <Gallery />
+          </Col>
+        </Row>
+
+        <Row className="mt-4">
+          <Col xs={12}>
+            {/* Add your leaderboard component here */}
+            {/* Example: <Leaderboard /> */}
+          </Col>
+        </Row>
+
+        <Row className="mt-4">
+          <Col xs={12}>
+            {/* Add your sponsor component here */}
+            {/* Example: <Sponsors /> */}
           </Col>
         </Row>
       </Container>
-    </div></>
+    </>
   );
 };
 
-export default EventDetailPage;
+export default EventDetailsPage;

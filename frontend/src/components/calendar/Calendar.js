@@ -2,20 +2,21 @@ import React, { useState } from 'react';
 import FullCalendar from '@fullcalendar/react';
 import Modal from 'react-modal';
 import dayGridPlugin from '@fullcalendar/daygrid';
-import RegistrationForm from '../register/RegistrationForm';
+// import RegistrationForm from '../register/RegistrationForm';
 import './Calendar.css'
-import Dialog from '../modal/Modal';
-import Membership from '../membership/Membership';
-import EventDetails from '../eventdetails/EventDetails';
+// import Dialog from '../modal/Modal';
+// import Membership from '../membership/Membership';
+// import EventDetails from '../eventdetails/EventDetails';
 import { Navigate, useNavigate } from 'react-router-dom';
+import events from '../data';
 Modal.setAppElement("#root")
 const Calendar = () => {
   const navigate=useNavigate()
   const [searchQuery, setSearchQuery] = useState('');
   const [eventTypeFilter, setEventTypeFilter] = useState('all');
-  const [show, setShow] = useState(false);
-  const [data,setData]=useState({})
-  const [type,setType]=useState("")
+  // const [show, setShow] = useState(false);
+  // const [data,setData]=useState({})
+  // const [type,setType]=useState("")
   const [events, setEvents] = useState([
 // Workshop event
 {
@@ -51,7 +52,8 @@ const Calendar = () => {
   location: '789 Oak St, Anytown USA',
   description: 'Join us for a thought-provoking talk on the ethical considerations surrounding artificial intelligence.',
   registerLink: 'https://example.com/guest-lecture-registration'
-}
+},
+
 
       ]);
       const handleSearchInputChange = (event) => {
@@ -80,15 +82,35 @@ state: {
       }
   return (
     <>
-      <div style={{backgroundColor:"backgroundColor: rgb(201, 117, 81,0.6) !important;"}}>
-        <input type="text" placeholder="Search events" value={searchQuery} onChange={handleSearchInputChange} />
-        <select value={eventTypeFilter} onChange={handleEventTypeFilterChange}>
-          <option value="all">All events</option>
-          <option value="workshop">Workshops</option>
-          <option value="lecture">Guest lectures</option>
-          <option value="hackathon">Hackathon</option>
-          {/* Add more event types here */}
-        </select>
+      <div>
+      <div className="row">
+  <div className="col-sm-5">
+    <div className="input-group mb-3">
+      <input
+        type="text"
+        className="form-control"
+        placeholder="Search events"
+        value={searchQuery}
+        onChange={handleSearchInputChange}
+      />
+    </div>
+  </div>
+  <div className="col-sm-3">
+    <div className="input-group mb-3">
+      <select
+        className="form-select"
+        value={eventTypeFilter}
+        onChange={handleEventTypeFilterChange}
+      >
+        <option value="all">All events</option>
+        <option value="workshop">Workshops</option>
+        <option value="lecture">Guest lectures</option>
+        <option value="hackathon">Hackathon</option>
+        {/* Add more event types here */}
+      </select>
+    </div>
+  </div>
+</div>
       </div>
       <FullCalendar plugins={[dayGridPlugin]} initialView="dayGridMonth" events={filteredEvents}
         eventClick={(event) => handleEventClick(event)} editable={true}/>
