@@ -49,24 +49,24 @@ const events = [
       prize: ["Up to 200,000"],
     },
     // above are past events.
-    // {
-    //   title: "Web Kode",
-    //   description:
-    //     "A coding event where participants compete to design and implement the most elegant and efficient software solutions.",
-    //   start: "June 1, 2023",
-    //   endDate: "June 10, 2023",
-    //   image: pic,
-    //   type: "workshop",
-    // },
-    // {
-    //   title: "Koderz Kombat",
-    //   description:
-    //     "A collaborative coding event where programmers pair up to exchange and improve each other's code, fostering learning and innovation.",
-    //   start: "June 3, 2023",
-    //   endDate: "June 13, 2023",
-    //   image: pic,
-    //   type: "workshop",
-    // },
+    {
+      title: "Web Kode",
+      description:
+        "A coding event where participants compete to design and implement the most elegant and efficient software solutions.",
+      start: "June 1, 2023",
+      endDate: "June 10, 2023",
+      image: pic,
+      type: "workshop",
+    },
+    {
+      title: "Koderz Kombat",
+      description:
+        "A collaborative coding event where programmers pair up to exchange and improve each other's code, fostering learning and innovation.",
+      start: "June 3, 2023",
+      endDate: "June 13, 2023",
+      image: pic,
+      type: "workshop",
+    },
     {
       title: "Koderz Kombat Fall 2023",
       description:

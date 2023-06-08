@@ -51,7 +51,7 @@ function ClubActivities() {
     ],
   };
 
-  const renderEventCards = (events) => {
+  const renderEventCards = (events,btnText) => {
     return events.map((event, index) => {
       return (
         <Col key={index} md={4} className="mb-4">
@@ -63,11 +63,18 @@ function ClubActivities() {
               <Button
                 variant="primary"
                 onClick={() => {
+                  if(btnText==="Learn More"){
                   navigate(`/event/detail`, {
                     state: {
                       ...event,
                     },
-                  });
+                  })}else{
+                    navigate(`/event/detail`, {
+                    state: {
+                      ...event,
+                    },
+                  })
+                  };
                 }}
               >
                 {event.start ? "Register Now" : "Learn More"}
@@ -162,7 +169,7 @@ function ClubActivities() {
         {pastEvents.length > 0 && (
           <>
             <h3 className="text-light">Past Events</h3>
-            <Slider {...settings}>{renderEventCards(pastEvents)}</Slider>
+            <Slider {...settings}>{renderEventCards(pastEvents,"Learn More")}</Slider>
             <hr className="hr" />
           </>
         )}
@@ -170,7 +177,7 @@ function ClubActivities() {
         {upcomingEvents.length > 0 && (
           <>
             <h3 className="text-light">Upcoming Events</h3>
-            <Slider {...settings}>{renderEventCards(upcomingEvents)}</Slider>
+            <Slider {...settings}>{renderEventCards(upcomingEvents,"Register")}</Slider>
           </>
         )}
       </Container>
