@@ -69,15 +69,16 @@ function ClubActivities() {
                       ...event,
                     },
                   })}else{
-                    navigate(`/event/detail`, {
+                    if(index!==2){
+                    navigate(`/registeration/${event.type}`, {
                     state: {
                       ...event,
                     },
                   })
-                  };
+                  }};
                 }}
               >
-                {event.start ? "Register Now" : "Learn More"}
+                {index===2?"Open soon!":btnText}
               </Button>
             </Card.Body>
             <Card.Footer>

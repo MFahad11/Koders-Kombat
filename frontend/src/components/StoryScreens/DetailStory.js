@@ -203,8 +203,7 @@ const DetailStory = () => {
 
               </div>
 
-              <div className='story-content' >
-
+              <div className='story-content' style={{ marginTop: "87.8rem"}}>
 
 
                 <div className='content' dangerouslySetInnerHTML={{ __html: (story.content) }}>

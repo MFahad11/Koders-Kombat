@@ -25,7 +25,9 @@ function RegisterForm() {
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.stopPropagation();
-    } else if (!fullName || !email || !participationType) {
+    }
+    if(participationType==="solo"){
+    if (!fullName || !email ) {
       // Check if any required field is empty
       toast.error("Please fill in all required fields");
     } else {
@@ -42,7 +44,28 @@ function RegisterForm() {
       setTeamName("");
       setTeamMembers([])
       navigate('/')
-    };
+    }}else if(participationType==="team"){
+      if (!teamName || !email || !teamMembers ) {
+        // Check if any required field is empty
+        toast.error("Please fill in all required fields");
+      } else {
+        setValidated(true);
+        const { data } = await axios.post('https://techtribe.onrender.com/api/user/register', { fullName, email, participationType, teamName, teamMembers });
+        if (data.status === "create") {
+          toast.success("Registered success!!!")
+        } else {
+          toast.info("You are already registered")
+        }
+        setFullName("");
+        setEmail("");
+        setParticipationType("");
+        setTeamName("");
+        setTeamMembers([])
+        navigate('/')
+      }
+    }else{
+      toast.error("Please fill in all required fields");
+    }
   }
   return (
     <><Form noValidate validated={validated} onSubmit={handleSubmit}>

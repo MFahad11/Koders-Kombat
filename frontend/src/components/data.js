@@ -81,7 +81,7 @@ const events = [
         "Missed out on Web Kode Spring 23? Worry not because the best web development competition is returning this fall as well. Stay tuned.",
       date: "July 15, 2023",
       image: webkode_23_future,
-      type: "workshop",
+      type: "hackathon",
     },
     {
       title: "ITEC 2023",
