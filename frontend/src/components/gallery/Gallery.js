@@ -1,20 +1,33 @@
 import ImageGallery from 'react-image-gallery';
 import React from 'react';
+import gallery_image_1 from "../../assets/gallery_image_1.jpg"
+import gallery_image_2 from "../../assets/gallery_image_2.jpg"
+import gallery_image_3 from "../../assets/gallery_image_3.jpg"
+import gallery_image_4 from "../../assets/gallery_image_4.jpg"
+import gallery_image_5 from "../../assets/gallery_image_5.jpg"
 import './Gallery.css';
 
 const Gallery = () => {
   const images = [
     {
-      original: 'https://picsum.photos/id/1018/1000/600/',
-      thumbnail: 'https://picsum.photos/id/1018/250/150/',
+      original: gallery_image_1,
+      thumbnail: gallery_image_1,
     },
     {
-      original: 'https://picsum.photos/id/1015/1000/600/',
-      thumbnail: 'https://picsum.photos/id/1015/250/150/',
+      original: gallery_image_2,
+      thumbnail: gallery_image_2,
     },
     {
-      original: 'https://picsum.photos/id/1019/1000/600/',
-      thumbnail: 'https://picsum.photos/id/1019/250/150/',
+      original: gallery_image_3,
+      thumbnail: gallery_image_3,
+    },
+    {
+      original: gallery_image_4,
+      thumbnail: gallery_image_4,
+    },
+    {
+      original: gallery_image_5,
+      thumbnail: gallery_image_5,
     },
   ];
   
