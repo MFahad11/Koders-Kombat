@@ -16,6 +16,11 @@ const events = [
       date: "December 15, 2022",
       image: koderzkombat_22_main,
       type: "hackathons",
+      participants: [
+        { rank: 1, name: "Code Morphers", department: "SE" },
+        { rank: 2, name: "Team Pluto", department: "CSIT" },
+        { rank: 3, name: "Tiest Developers", department: "TIEST(CS)" },
+      ],
     },
     {
       title: "ICONICS 2022",
@@ -36,6 +41,11 @@ const events = [
       image: hackathon_22_main,
       type: "hackathon",
       prize: ["Rs 30,000", "Rs 20,000"],
+      participants: [
+        { rank: 1, name: "Team Interninators", department: "TCIT" },
+        { rank: 2, name: "Call Back Crew", department: "CSIT" },
+        { rank: 3, name: "Team Abbas Ibtesam", department: "CSIT" },
+      ],
     },
     {
       title: "ITEC 2022",
@@ -47,6 +57,11 @@ const events = [
       image: itec_22_main,
       type: "hackathon",
       prize: ["Up to 200,000"],
+      participants: [
+        { rank: 1, name: "Munazza Hussain", department: "SE" },
+        { rank: 2, name: "Saad Raza", department: "CSIT" },
+        { rank: 3, name: "Wajahat Siddiqui", department: "SE" },
+      ],
     },
     // above are past events.
     {
