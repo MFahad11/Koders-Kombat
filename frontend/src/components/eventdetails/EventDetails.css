@@ -3,18 +3,65 @@
   font-weight: bold;
   color: #ffffff;
   margin-bottom: 16px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); 
+}
+.winners-heading {
+  text-align: center;
+  font-size: 38px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 16px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); 
 }
 
 .event-date {
   font-size: 24px;
   color: #ffffff;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); 
 }
 
 .description-text {
-  font-size: 18px;
+  text-align: left;
+  font-size: 19px;
   line-height: 1.5;
   color: #ffffff;
   margin-bottom: 32px;
+  margin-left: 250px;
+  margin-right: 250px; 
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 1); 
+  background-color: rgba(184, 107, 74, 0.8);
+  padding: 20px;
+  border-radius: 10px; 
 }
 
-/* Add any additional styles for the gallery/slider, leaderboard, and sponsor sections as needed */
+table {
+  border-collapse: collapse;
+  margin: auto;
+  width: 20%;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  white-space: nowrap;
+
+}
+
+th {
+  font-weight: bold;
+}
+
+
+
+tbody td {
+  vertical-align: top;
+}
+
+th:not(:last-child),
+td:not(:last-child) {
+  padding-right: 150px;
+}
+.table-container {
+  margin-bottom: 60px;
+}

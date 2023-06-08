@@ -2,6 +2,8 @@
 .image-gallery {
     display: flex;
     justify-content: center;
+    max-width: 50%;
+    margin: 0 auto;
   }
   
   .image-gallery-slide img {

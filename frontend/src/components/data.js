@@ -16,12 +16,17 @@ const events = [
       date: "December 15, 2022",
       image: koderzkombat_22_main,
       type: "hackathons",
+      participants: [
+        { rank: 1, name: "Code Morphers", department: "SE" },
+        { rank: 2, name: "Team Pluto", department: "CSIT" },
+        { rank: 3, name: "Tiest Developers", department: "TIEST(CS)" },
+      ],
     },
     {
       title: "ICONICS 2022",
       description: "ICONICS provides an international forum for the presentation and dissemination of technological advances, research and innovation in the fast paced field of Computer Science and Software Engineering.",
       longDescription:
-        "NED University of Engineering and Technology, one of the oldest institute for imparting engineering education in Pakistan announces 3rd International Conference on Innovations in Computer Science & Software Engineering (ICONICS'22). The conference will provide a platform for researchers both national and international to exchange novel and contemporary ideas in the emerging fields of computing. The conference aims to provide a forum for researchers from academia and industry to meet and share cutting-edge development in the field of Computer Science & Software Engineering. The conference seeks to bring together a wide spectrum of international experts to help create a conducive environment for collaboration and knowledge transfer. The conference will particularly act as a bridge between academia and major industry movers to help promote an active research environment in the country. The conference solicits significant contributions in all major fields of Computer Science and Software Engineering from conceptual and practical aspects. Authors are invited to contribute to the conference by submitting articles that illustrate research results, surveying works and industrial experiences that describe significant advances in the field of computer science and software engineering.The 3rd edition of International Conference on Innovations in Computer Science and Software Engineering (ICONICS 2022) was held on 14-15 December 2022. The conference was chaired by Dr. Muhammad Mubashir Khan. TrendMicro was the Platinum sponsor and Telec the Bronze sponsor. OctDaily and MazikGlobal were the other sponsors . The conference was also supported by HEC Sindh and Pakistan, and IEEE Karachi Section. During this two days’ conference, excellent thought-provoking talks about the latest research trends in Artificial Intelligence, Machine & Deep learning, Data Science, Cyber and Information Security, Cloud Computing, Quantum Computing and Internet of Things were delivered. Researchers presented 29 different papers to enlighten more than 500 of our young participants from different universities all over Karachi and professionals from all over the country and even abroad. Along with the technical sessions Koderz Kombat, a coding competition, a hackathon and a poster exhibition were also the part of the conference activities that provided an opportunity for the students to stand out and demonstrate their skills.",
+        "NED University of Engineering and Technology, one of the oldest institute for imparting engineering education in Pakistan announces 3rd International Conference on Innovations in Computer Science & Software Engineering (ICONICS'22). The conference will provide a platform for researchers both national and international to exchange novel and contemporary ideas in the emerging fields of computing. The conference aims to provide a forum for researchers from academia and industry to meet and share cutting-edge development in the field of Computer Science & Software Engineering. The conference seeks to bring together a wide spectrum of international experts to help create a conducive environment for collaboration and knowledge transfer. The conference will particularly act as a bridge between academia and major industry movers to help promote an active research environment in the country.",
       date: "December 14, 2022",
       image: iconics_22_main,
       type: "hackathons",
@@ -36,6 +41,11 @@ const events = [
       image: hackathon_22_main,
       type: "hackathon",
       prize: ["Rs 30,000", "Rs 20,000"],
+      participants: [
+        { rank: 1, name: "Team Interninators", department: "TCIT" },
+        { rank: 2, name: "Call Back Crew", department: "CSIT" },
+        { rank: 3, name: "Team Abbas Ibtesam", department: "CSIT" },
+      ],
     },
     {
       title: "ITEC 2022",
@@ -47,6 +57,11 @@ const events = [
       image: itec_22_main,
       type: "hackathon",
       prize: ["Up to 200,000"],
+      participants: [
+        { rank: 1, name: "Munazza Hussain", department: "SE" },
+        { rank: 2, name: "Saad Raza", department: "CSIT" },
+        { rank: 3, name: "Wajahat Siddiqui", department: "SE" },
+      ],
     },
     // above are past events.
     {
