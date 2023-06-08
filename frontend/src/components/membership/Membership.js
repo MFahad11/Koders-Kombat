@@ -8,7 +8,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
-const Membership = () => {
+const Membership = ({ handleMembershipSubmit }) => {
   const navigate=useNavigate()
   const [file,setFile]=useState("")
   const [validated, setValidated] = useState(false);
@@ -47,6 +47,7 @@ const Membership = () => {
       if (response.status === 200) {
         if (data.status === "create") {
           toast.success("Your Request have been received!!")
+          handleMembershipSubmit();
         } else {
           toast.info("You are already a member")
           setDisabled(false)

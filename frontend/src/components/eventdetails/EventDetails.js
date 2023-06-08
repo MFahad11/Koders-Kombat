@@ -107,7 +107,7 @@ const EventDetailsPage = () => {
             {/* Example: <Sponsors /> */}
           </Col>
         </Row>
-        <Row className="mt-4 text-light">
+        <Row className="mt-4 text-light ">
           <h3 className="winners-heading">Winners</h3>
         <Col xs={12} className="table-container-winner">
     {data && data.participants && data.participants.length > 0 ? (

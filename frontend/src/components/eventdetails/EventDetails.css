@@ -34,14 +34,14 @@
   border-radius: 10px; 
 }
 
-table {
+.table-container-winner table {
   border-collapse: collapse;
   margin: auto;
   width: 20%;
 }
 
-th,
-td {
+.table-container-winner th,
+.table-container-winner td {
   padding: 8px;
   text-align: left;
   white-space: nowrap;
@@ -58,8 +58,8 @@ tbody td {
   vertical-align: top;
 }
 
-th:not(:last-child),
-td:not(:last-child) {
+.table-container-winner th:not(:last-child),
+.table-container-winner td:not(:last-child) {
   padding-right: 150px;
 }
 .table-container-winner {

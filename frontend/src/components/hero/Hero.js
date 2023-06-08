@@ -6,6 +6,9 @@ import Membership from '../membership/Membership';
 
 function Hero() {
   const [show, setShow] = useState(false);
+  const handleModalClose = () => {
+    setShow(false);
+  };
   return (
 <div className="hero-container d-flex flex-column justify-content-center align-items-right" id='hero'>
   <Container fluid>
@@ -17,7 +20,7 @@ function Hero() {
       </Col>
     </Row>
   </Container>
-  <Dialog show={show} setShow={setShow} elem={<Membership />} title={"Membership Form"} navigate='/'/>
+  <Dialog show={show} setShow={setShow} elem={<Membership handleMembershipSubmit={handleModalClose}/>} title={"Membership Form"} handleModalClose={handleModalClose} navigate='/'/>
 </div>
 
 
