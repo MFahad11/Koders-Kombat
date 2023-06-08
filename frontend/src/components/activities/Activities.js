@@ -235,11 +235,11 @@ function ClubActivities() {
              */}
              <Row className="align-items-center">
   <Col xs={3}>
-  <span className="text-light">Date:09:06:2023</span>
+  <span className="text-light">Date: 9-June, 23</span>
   </Col>
   <Col xs={6} className="d-flex justify-content-center">
     <h3 className="event-heading text-center text-light">
-      <img className="me-2 rounded-circle img-fluid" src={logo1} style={{ width: '50px', height: '50px' }} />
+      {/* <img className="me-2 rounded-circle img-fluid" src={logo1} style={{ width: '50px', height: '50px' }} /> */}
       {ongoingEvents[0].title}
     </h3>
   </Col>
@@ -258,11 +258,11 @@ function ClubActivities() {
             {/* <h3 className="event-heading text-center text-light">{ongoingEvents[1].title}</h3> */}
             <Row className="align-items-center">
   <Col xs={3}>
-    <span className="text-light">Date:09:06:2023</span>
+    <span className="text-light">Date: 9-June, 23</span>
   </Col>
   <Col xs={6} className="d-flex justify-content-center">
     <h3 className="event-heading text-center text-light">
-      <img className="me-2 rounded-circle img-fluid" src={logo2} style={{ width: '50px', height: '50px' }} />
+      {/* <img className="me-2 rounded-circle img-fluid" src={logo2} style={{ width: '50px', height: '50px' }} /> */}
       {ongoingEvents[1].title}
     </h3>
   </Col>

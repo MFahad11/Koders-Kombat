@@ -60,7 +60,7 @@ const Home = () => {
 
 
   return (
-    <div className="Inclusive-home-page">
+    <div className="Inclusive-home-page" >
       {loading ?
 
         <div className="skeleton_emp">

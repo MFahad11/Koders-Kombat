@@ -34,19 +34,19 @@ const Header = () => {
 
     return (
 
-        <header>
-            <div className="averager">
+        <header >
+            <div className="averager" >
             {location==='/blog'?<Link to={'/'}>
-                <FiArrowLeft />
+                <FiArrowLeft style={{color:"rgba(48,86,81,255)",fontSize:"1.5rem"}}/>
             </Link>:""}
-                <Link to="/blog" className="logo">
+                <Link to="/blog" className="logo ms-5">
                     <h5>
-                        KodersHUB
+                        KODERSHUB
 
                     </h5>
                 </Link>
                 {/* <SearchForm /> */}
-                <div className='header_options'>
+                <div className='header_options ms-auto'>
 
                     {auth ?
                         <div className="auth_options">

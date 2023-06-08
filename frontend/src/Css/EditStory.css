@@ -50,13 +50,13 @@
 }
 
 .ck-editor__top {
-    border: rgb(235, 235, 235) solid 1px !important;
+    border: none;
     border-bottom: none !important;
     padding: 0.6rem 1rem !important;
 }
 
 .ck-content {
-    border: rgb(235, 235, 235) solid 1px !important;
+    border: none !important;
 }
 
 .ck-toolbar__items,

@@ -16,7 +16,7 @@ exports.createUser = async (payload,path) => {
     let MailGenerator=new Mailgen({
       theme:'default',
       product:{
-        name:"SCC NEDUET",
+        name:"TechTribe",
         link:'https://mailgen.js/'
       }
     })
@@ -59,7 +59,7 @@ exports.createUser = async (payload,path) => {
       let MailGenerator=new Mailgen({
         theme:'default',
         product:{
-          name:"SCC NEDUET",
+          name:"TechTribe",
           link:'https://mailgen.js/'
         }
       })

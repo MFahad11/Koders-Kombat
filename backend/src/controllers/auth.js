@@ -40,6 +40,7 @@ const login  = catchAsync (async(req,res,next) => {
     }
 
     const user = await memberModel.findOne({email}).select("+password")
+        console.log(user)
 
     if(!user) {
         

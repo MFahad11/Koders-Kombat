@@ -9,7 +9,9 @@
         width: 100%;
     }
 }
-
+.ck.ck-toolbar{
+    background-color: rgb(201, 117, 81,0.6) !important;
+}
 .Inclusive-addStory-page .addStory-form {
     position: relative;
     width: 650px;
@@ -24,7 +26,9 @@
     height: 55px;
     outline: 0;
     border: none;
-    border: rgb(235, 235, 235) solid 1px;
+    /* border: rgb(235, 235, 235) solid 1px; */
+  background-color: rgb(201, 117, 81,0.6) !important;
+  color: white;
     font-size: 1.4rem;
     padding-left: 1rem;
     font-weight: 450;
@@ -50,13 +54,13 @@
 }
 
 .ck-editor__top {
-    border: rgb(235, 235, 235) solid 1px !important;
+    border: none !important;
     border-bottom: none !important;
     padding: 0.6rem 1rem !important;
 }
 
 .ck-content {
-    border: rgb(235, 235, 235) solid 1px !important;
+    border: none !important;
 }
 
 .ck-toolbar__items,
@@ -67,6 +71,8 @@
 .ck-editor__editable {
     height: 250px;
     padding: 0.5rem 1rem !important;
+    color: white;
+    background-color: rgb(201, 117, 81,0.6) !important;
 }
 
 .ck-editor__editable:focus {
@@ -74,7 +80,7 @@
 }
 
 .StoryImageField {
-    border: rgb(235, 235, 235) solid 1px;
+    /* border: rgb(235, 235, 235) solid 1px; */
     width: 100%;
     height: 240px;
     border-radius: 3px;
@@ -110,7 +116,7 @@
 
 .addStory-btn {
     width: 100%;
-    background-color: #0063a5;
+    background-color: rgb(201, 117, 81) !important;
     padding: 0.7rem;
     color: white;
     margin-top: 1.9rem;
@@ -121,7 +127,7 @@
 
 .dis-btn {
     width: 100%;
-    background-color: #0063a5;
+    background-color: rgb(201, 117, 81) !important;
     padding: 0.7rem;
     color: white;
     margin-top: 1.9rem;
@@ -157,4 +163,9 @@
     color: black;
     font-weight: bold;
     padding-left: 1rem;
+}
+
+.ck.ck-button{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
 }

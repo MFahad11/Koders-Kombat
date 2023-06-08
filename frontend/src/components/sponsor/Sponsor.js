@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import logo from './Copy of Gaditek-logo.png'
-import logo1 from './oct_daily.jpg'
+import logo from './Copy_of_Gaditek-logo-removebg-preview.png'
+import logo1 from './Untitled design (1).jpg'
 import './Sponsor.css'
 const sponsors = [
   {
@@ -11,7 +11,7 @@ const sponsors = [
   },
   {
     name: 'Oct Daily',
-    logo: logo,
+    logo: logo1,
     website: 'https://www.linkedin.com/company/octdaily?trk=public_post_main-feed-card-text',
   },
   // {

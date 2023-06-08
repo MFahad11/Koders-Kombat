@@ -191,34 +191,6 @@ const DetailStory = () => {
                     </li>
 
                   </ul>
-{/* 
-                  {
-                    !activeUser.username &&
-                    <div className='comment-info-wrap'>
-
-                      <i onClick={(prev) => {
-                        setSidebarShowStatus(!sidebarShowStatus)
-                      }}>
-                        <FaRegComment />
-                      </i>
-
-
-                      <b className='commentCount'>{story.commentCount}</b>
-
-                    </div>
-                  } */}
-
-                  {/* {activeUser && story.author &&
-                    story.author._id === activeUser._id ?
-                    <div className="top_story_transactions">
-                      <Link className='editStoryLink' to={`/story/${story.slug}/edit`}>
-                        <FiEdit />
-                      </Link>
-                      <span className='deleteStoryLink' onClick={handleDelete}>
-                        <RiDeleteBin6Line />
-                      </span>
-                    </div> : null
-                  } */}
                 </div>
 
               </div>
@@ -233,10 +205,7 @@ const DetailStory = () => {
 
               <div className='story-content' >
 
-                <div className="story-banner-img">
-                  <img src={story.image} alt={story.title} />
 
-                </div>
 
                 <div className='content' dangerouslySetInnerHTML={{ __html: (story.content) }}>
                 </div>
