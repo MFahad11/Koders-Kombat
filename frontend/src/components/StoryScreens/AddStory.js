@@ -46,7 +46,7 @@ const AddStory = () => {
                 'Content-Type': 'multipart/form-data',
                 authorization: `Bearer ${localStorage.getItem("authToken")}`,
               }})
-            toast.success("Story Added!!")
+            toast.success("Blog Uploaded Successfully")
 
             clearInputs()
             setTimeout(() => {
