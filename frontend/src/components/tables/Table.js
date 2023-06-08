@@ -10,14 +10,16 @@ function EventScheduleTable({index}) {
     { time: '12.30 PM', name: 'The Hour Of Judgement', venue: 'Smart Class Room CSIT Department' },
     { time: '1.00 PM', name: 'Namaz Break', venue: 'Jama-e-Masjid NED' },
     { time: '2.00 PM', name: 'Lunch Time', venue: 'Rooms 1 & 2 CSIT Department' },
-    { time: '3.00 PM', name: 'Closing Ceremony & Awards Distribution', venue: 'Civil AV Hall' }],    [{ time: '8.30 AM', name: 'Registration', venue: 'Conference Room A' },
-    { time: '9.00 AM', name: 'Opening Keynote', venue: 'Main Hall' },
-    { time: '10.00 AM', name: 'Workshop: Introduction to React', venue: 'Workshop Room 1' },
-    { time: '11.30 AM', name: 'Panel Discussion: Future of Technology', venue: 'Conference Room B' },
-    { time: '1.00 PM', name: 'Lunch Break', venue: 'Cafeteria' },
-    { time: '2.00 PM', name: 'Hackathon Begins', venue: 'Lab 1' },
-    { time: '4.30 PM', name: 'Networking Session', venue: 'Lounge Area' },
-    { time: '6.00 PM', name: 'Closing Ceremony', venue: 'Main Hall' }]
+    { time: '3.00 PM', name: 'Closing Ceremony & Awards Distribution', venue: 'Civil AV Hall' }],
+    [{ time: '8.30 AM', name: 'Reporting Time', venue: 'Civil AV Hall' },
+    { time: '9.00 AM', name: 'Opening Ceremony', venue: 'Civil AV Hall' },
+    { time: '9.30 AM', name: 'Reporting To Competition Arena', venue: 'Lab 2 & 5 CSIT Department' },
+    { time: '10.00 AM', name: 'Briefing On Competition Guidelines', venue: 'Lab 2 & 5 CSIT Department' },
+    { time: '10.30 AM', name: 'Koderz Kombat', venue: 'Lab 2 & 5 CSIT Department' },
+    { time: '12.30 PM', name: 'The Hour Of Judgement', venue: 'Lab 2 & 5 CSIT Department' },
+    { time: '1.00 PM', name: 'Namaz Break', venue: 'Jama-e-Masjid NED' },
+    { time: '2.00 PM', name: 'Lunch Time', venue: 'Rooms 1 & 2 CSIT Department' },
+    { time: '3.00 PM', name: 'Closing Ceremony & Awards Distribution', venue: 'Civil AV Hall' }]
   ];
   return (
     <Table bordered={false} className="event-schedule-table text-light">
