@@ -78,7 +78,7 @@ function ClubActivities() {
                   }};
                 }}
               >
-                {index===2?"Open soon!":btnText}
+                {(index===2 && btnText==="Register")?"Open soon!":btnText}
               </Button>
             </Card.Body>
             <Card.Footer>

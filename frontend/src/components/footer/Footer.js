@@ -21,7 +21,7 @@ const Footer = () => {
               NED University Of Engineering & Technology <br />
               Karachi, Sindh, Pakistan<br />
               Phone: (123) 456-7890 <br />
-              Email: <a href="mailto:info@gmail.com" style={{textDecoration:"none"}} className="text-primary">info@gmail.com</a>
+              Email: <a href="mailto:koderazklubcsit@gmail.com" style={{textDecoration:"none"}} className="text-primary">koderazklubcsit@gmail.com</a>
             </p>
           </Col>
           <Col md={4}>
