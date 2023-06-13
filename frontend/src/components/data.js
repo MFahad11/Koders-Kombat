@@ -69,7 +69,7 @@ const events = [
       description:
         "A coding event where participants compete to design and implement the most elegant and efficient software solutions.",
       start: "June 1, 2023",
-      endDate: "June 10, 2023",
+      endDate: "June 13, 2023",
       image: pic,
       type: "workshop",
     },

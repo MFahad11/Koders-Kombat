@@ -26,7 +26,7 @@ function ClubActivities() {
     const eventEndDate = new Date(event.endDate);
     return eventstart <= now && eventEndDate >= now;
   });
-
+  console.log(ongoingEvents)
   const settings = {
     dots: false,
     infinite: false,
