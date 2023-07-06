@@ -29,7 +29,7 @@ const Profile = () => {
             setLoading(true)
 
             try {
-                const { data } = await axios.get("https://techtribe.onrender.com/api/user/profile", config)
+                const { data } = await axios.get("http://localhost:4500/api/user/profile", config)
                  
                 setUser(data.data)
 

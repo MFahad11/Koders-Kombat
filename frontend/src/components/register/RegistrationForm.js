@@ -32,7 +32,7 @@ function RegisterForm() {
       toast.error("Please fill in all required fields");
     } else {
       setValidated(true);
-      const { data } = await axios.post('https://techtribe.onrender.com/api/user/register', { fullName, email, participationType, teamName, teamMembers });
+      const { data } = await axios.post('http://localhost:4500/api/user/register', { fullName, email, participationType, teamName, teamMembers });
       if (data.status === "create") {
         toast.success("Registered success!!!")
       } else {
@@ -50,7 +50,7 @@ function RegisterForm() {
         toast.error("Please fill in all required fields");
       } else {
         setValidated(true);
-        const { data } = await axios.post('https://techtribe.onrender.com/api/user/register', { fullName, email, participationType, teamName, teamMembers });
+        const { data } = await axios.post('http://localhost:4500/api/user/register', { fullName, email, participationType, teamName, teamMembers });
         if (data.status === "create") {
           toast.success("Registered success!!!")
         } else {

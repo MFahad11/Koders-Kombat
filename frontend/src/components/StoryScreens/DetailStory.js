@@ -8,7 +8,6 @@ import { RiDeleteBin6Line } from 'react-icons/ri'
 import { FiEdit, FiArrowLeft } from 'react-icons/fi'
 import { FaRegComment } from 'react-icons/fa'
 import { BsBookmarkPlus, BsThreeDots, BsBookmarkFill } from 'react-icons/bs'
-import CommentSidebar from '../CommentScreens/CommentSidebar';
 
 const DetailStory = () => {
   const [likeStatus, setLikeStatus] = useState(false)
@@ -28,7 +27,7 @@ const DetailStory = () => {
       setLoading(true)
       var activeUser = {}
       try {
-        const { data } = await axios.get("https://techtribe.onrender.com/api/user/private", {
+        const { data } = await axios.get("http://localhost:4500/api/user/private", {
           headers: {
             "Content-Type": "application/json",
             authorization: `Bearer ${localStorage.getItem("authToken")}`,
@@ -44,7 +43,7 @@ const DetailStory = () => {
       }
 
       try {
-        const { data } = await axios.post(`https://techtribe.onrender.com/api/story/${slug}`, { activeUser })
+        const { data } = await axios.post(`http://localhost:4500/api/story/${slug}`, { activeUser })
         setStory(data.data)
         setLikeStatus(data.likeStatus)
         setLikeCount(data.data.likeCount)
@@ -197,9 +196,9 @@ const DetailStory = () => {
 
               <div className="CommentFieldEmp">
 
-                <CommentSidebar slug={slug} sidebarShowStatus={sidebarShowStatus} setSidebarShowStatus={setSidebarShowStatus}
+                {/* <CommentSidebar slug={slug} sidebarShowStatus={sidebarShowStatus} setSidebarShowStatus={setSidebarShowStatus}
                   activeUser={activeUser}
-                />
+                /> */}
 
               </div>
 

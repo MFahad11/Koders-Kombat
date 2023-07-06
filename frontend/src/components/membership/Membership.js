@@ -38,7 +38,7 @@ const Membership = ({ handleMembershipSubmit }) => {
         profileImg: data_obj.get('profileImg'),
       };
       // form.reset();
-      const response = await axios.post("https://techtribe.onrender.com/api/user/membership", payload, {
+      const response = await axios.post("http://localhost:4500/api/user/membership", payload, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }

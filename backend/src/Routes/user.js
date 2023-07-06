@@ -6,10 +6,9 @@ const upload=require('../middleware/multer')
 const { getAccessToRoute } = require("../middleware/auth");
 router.post("/membership", upload.single("profileImg"),userController.createUser);
 router.post("/register",userController.createParticipents);
-// router.put("/user/:id", userController.updatePayment);
+
 router.post("/login",authController.login)
 router.get("/profile",getAccessToRoute ,userController.profile)
-// router.post("/:slug/addStoryToReadList",getAccessToRoute ,addStoryToReadList)
-router.get("/readList",getAccessToRoute ,userController.readListPage)
+
 router.get("/private",getAccessToRoute,authController.getPrivateData)
 module.exports = router;

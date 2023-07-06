@@ -21,7 +21,7 @@ const PrivateRoute =( ) => {
             },
         };
         try {
-            const { data } = await axios.get("https://techtribe.onrender.com/api/user/private", config); 
+            const { data } = await axios.get("http://localhost:4500/api/user/private", config); 
 
             setAuth(true)
             setActiveUser(data.user)

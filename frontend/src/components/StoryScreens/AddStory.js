@@ -41,7 +41,7 @@ const AddStory = () => {
         }
         
         try {
-            const { data } = await axios.post("https://techtribe.onrender.com/api/story/addstory", payload,
+            const { data } = await axios.post("http://localhost:4500/api/story/addstory", payload,
             {headers: {
                 'Content-Type': 'multipart/form-data',
                 authorization: `Bearer ${localStorage.getItem("authToken")}`,

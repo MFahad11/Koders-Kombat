@@ -88,10 +88,3 @@ exports.createUser = async (payload,path) => {
       return response
     }
   };
-  exports.updatePayment = async (payload) => {
-    const createPayload = {
-      user: payload.user,
-      payment: true,
-    };
-    return await userRepo.update(createPayload);
-  };

@@ -42,9 +42,3 @@ exports.createParticipants=async(payload)=>{
     }
     
 }
-exports.update=async(payload)=>{
-    return userModel.updateOne({_id:payload.user},{$set:{
-        "payment":payload.payment
-    }})
-    
-}

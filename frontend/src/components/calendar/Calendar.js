@@ -2,11 +2,7 @@ import React, { useState } from 'react';
 import FullCalendar from '@fullcalendar/react';
 import Modal from 'react-modal';
 import dayGridPlugin from '@fullcalendar/daygrid';
-// import RegistrationForm from '../register/RegistrationForm';
 import './Calendar.css'
-// import Dialog from '../modal/Modal';
-// import Membership from '../membership/Membership';
-// import EventDetails from '../eventdetails/EventDetails';
 import iconics_22_main from "../../assets/iconics_22_main.jpg"
 import hackathon_22_main from "../../assets/hackathon_22_main.jpg"
 import itec_22_main from "../../assets/itec_22_main.jpg"
@@ -14,8 +10,7 @@ import koderzkombat_22_main from "../../assets/koderzkombat_22_main.jpg"
 import itec_23_main_future from "../../assets/itec_23_main_future.jpg"
 import webkode_23_future from "../../assets/webkode_23_future.jpg"
 import koderzkombat_23_future from "../../assets/koderzkombat_23_future.jpg"
-import { Navigate, useNavigate } from 'react-router-dom';
-import events from '../data';
+import {useNavigate } from 'react-router-dom';
 Modal.setAppElement("#root")
 const Calendar = () => {
   const navigate=useNavigate()
@@ -151,7 +146,6 @@ state: {
         <option value="workshop">Workshops</option>
         <option value="lecture">Guest lectures</option>
         <option value="hackathon">Hackathon</option>
-        {/* Add more event types here */}
       </select>
     </div>
   </div>
@@ -159,7 +153,6 @@ state: {
       </div>
       <FullCalendar plugins={[dayGridPlugin]} initialView="dayGridMonth" events={filteredEvents}
         eventClick={(event) => handleEventClick(event)} editable={true}/>
-        {/* <Dialog show={show} setShow={setShow} elem={<EventDetails props={data}/>} title={type}/> */}
     </>
   )
 }

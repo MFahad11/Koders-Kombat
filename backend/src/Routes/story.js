@@ -2,8 +2,8 @@ const express = require("express")
 // const imageupload = require("../Helpers/Libraries/imageUpload");
 const upload=require('../middleware/multer')
 const { getAccessToRoute } = require("../middleware/auth");
-const {addStory,getAllStories,detailStory,likeStory, editStory, deleteStory, editStoryPage } = require("../controllers/story")
-const { checkStoryExist, checkUserAndStoryExist } = require("../middleware/databaseErrorhandler");
+const {addStory,getAllStories,detailStory} = require("../controllers/story")
+const { checkStoryExist } = require("../middleware/databaseErrorhandler");
 
 const router = express.Router() ;
 
@@ -12,13 +12,6 @@ router.post("/addstory" ,[getAccessToRoute, upload.single('image')],addStory)
 
 router.post("/:slug", checkStoryExist, detailStory)
 
-router.post("/:slug/like",[getAccessToRoute,checkStoryExist] ,likeStory)
-
-router.get("/editStory/:slug",[getAccessToRoute,checkStoryExist,checkUserAndStoryExist] , editStoryPage)
-
-router.put("/:slug/edit",[getAccessToRoute,checkStoryExist,checkUserAndStoryExist, upload.single("image")] ,editStory)
-
-router.delete("/:slug/delete",[getAccessToRoute,checkStoryExist,checkUserAndStoryExist] ,deleteStory)
 
 router.get("/getAllStories",getAllStories)
 

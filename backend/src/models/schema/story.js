@@ -1,5 +1,4 @@
 const mongoose = require("mongoose")
-const Comment = require("./comment")
 const slugify = require("slugify")
 
 const StorySchema = new mongoose.Schema({
